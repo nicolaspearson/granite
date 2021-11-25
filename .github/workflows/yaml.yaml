@@ -1,0 +1,26 @@
+name: yaml
+'on':
+  push:
+    branches:
+      - master
+    paths:
+      - '**.yaml'
+      - '**.yml'
+  pull_request:
+    paths:
+      - '**.yaml'
+      - '**.yml'
+  repository_dispatch:
+    types:
+      - yaml
+jobs:
+  lint:
+    if: "!(github.event.client_payload.scope == 'job' && !contains(github.event.client_payload.jobs, 'lint'))"
+    name: lint
+    runs-on: ubuntu-latest
+    container: cytopia/yamllint:latest
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@master
+      - name: Lint yaml files
+        run: yamllint -d yamllint.yaml .

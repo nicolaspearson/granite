@@ -1,0 +1,12 @@
+**/.cache/**
+**/.errors/**
+**/.vscode/**
+**/.yarn/**
+**/build/**
+**/coverage/**
+**/dist/**
+**/lib/**
+**/public/**
+**/typedocs/**
+**/*.css
+**/*.svg

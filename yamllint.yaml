@@ -1,0 +1,15 @@
+extends: relaxed
+
+ignore: |
+  .github/workflows/*.yaml
+
+rules:
+  colons:
+    level: error
+  empty-lines:
+    level: error
+  indentation:
+    level: error
+  line-length:
+    max: 400
+    level: error

@@ -1,0 +1,46 @@
+## Binaries
+build/
+dist/
+lib/
+
+## Dotenv
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+## ESLint
+.eslintcache
+
+## Jest
+coverage/
+
+## macOS
+.DS_Store
+
+## IDE
+.idea
+*.idea*
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.atom-build.yml
+.vscode
+
+## Typedoc
+typedoc/
+
+## TypeScript
+tsconfig.tsbuildinfo
+
+## Yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+node_modules

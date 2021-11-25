@@ -1,0 +1,72 @@
+version: '3.8'
+
+networks:
+  development:
+    driver: bridge
+
+services:
+  #########################
+  ##      Backend        ##
+  #########################
+
+  svc-consents:
+    build:
+      args:
+        APP: svc-consents
+      context: .
+      dockerfile: packages/backend/Dockerfile
+    env_file:
+      - packages/backend/svc-consents/.env.development
+    ports:
+      - 3001:3000
+    networks:
+      - development
+    container_name: svc-consents
+
+  #########################
+  ##     Persistence     ##
+  #########################
+
+  db:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_USER=granite
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=development
+    ports:
+      - 5432:5432
+    networks:
+      - development
+    container_name: granite-db
+
+  db-integration:
+    image: postgres:13-alpine
+    environment:
+      - POSTGRES_USER=granite
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_DB=integration
+    ports:
+      - 5433:5432
+    networks:
+      - development
+    container_name: granite-db-integration
+
+  redis:
+    image: redis:6-alpine
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 6379:6379
+    networks:
+      - development
+    container_name: granite-redis
+
+  redis-integration:
+    image: redis:6-alpine
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 6380:6379
+    networks:
+      - development
+    container_name: granite-redis-integration

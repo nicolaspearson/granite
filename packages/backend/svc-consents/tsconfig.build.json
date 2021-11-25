@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.backend.json",
+  "compilerOptions": {
+    "declaration": false,
+    "declarationMap": false,
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "removeComments": true,
+    "rootDir": "../.."
+  },
+  "include": ["src", "types", "../../../types"]
+}

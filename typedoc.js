@@ -1,0 +1,23 @@
+module.exports = {
+  exclude: [
+    '**/__mocks__/**',
+    '**/__test__/**',
+    '**/.cache/**',
+    '**/.yarn/**',
+    '**/bin/**',
+    '**/dist/**',
+    '**/docs/**',
+    '**/examples/**',
+    '**/test/**',
+    '**/public/**',
+    '**/*.test.css',
+    '**/*.test.tsx',
+    '**/*.test.scss',
+    '**/*.test.svg',
+    '**/*.d.ts',
+  ],
+  excludeExternals: true,
+  excludePrivate: true,
+  excludeProtected: true,
+  theme: 'default',
+};
