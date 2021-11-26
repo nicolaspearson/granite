@@ -27,13 +27,6 @@ coverage/
 *.njsproj
 *.sln
 .atom-build.yml
-.vscode
-
-## Typedoc
-typedoc/
-
-## TypeScript
-tsconfig.tsbuildinfo
 
 ## Yarn
 .yarn/*

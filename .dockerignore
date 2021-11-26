@@ -24,10 +24,8 @@
 **/.gitignore
 **/Dockerfile
 **/jest.config.js
-**/typedoc.js
 **/config/
 **/dist/
-**/docs/
 **/html/
 **/input/
 **/test/

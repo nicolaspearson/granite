@@ -28,7 +28,7 @@ async function bootstrap() {
   app.use(helmet());
 
   // Set the global API route prefix
-  app.setGlobalPrefix('/api-v1');
+  app.setGlobalPrefix('/api/v1/consents');
 
   // Configure swagger
   const documentBuilder = new DocumentBuilder()
@@ -37,7 +37,7 @@ async function bootstrap() {
     .setVersion('1.0');
   Object.values(ApiGroup).forEach((g) => documentBuilder.addTag(g));
   const document = SwaggerModule.createDocument(app, documentBuilder.build());
-  SwaggerModule.setup('docs/consents', app, document);
+  SwaggerModule.setup('consents', app, document);
 
   if (process.env.NODE_ENV === Environment.Development) {
     // TODO: Add database seeding mechanism

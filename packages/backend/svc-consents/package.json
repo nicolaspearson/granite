@@ -21,9 +21,9 @@
   ],
   "scripts": {
     "build": "rimraf dist && yarn exec:tsc --build $(pwd)/tsconfig.build.json",
-    "docs": "yarn exec:typedoc --tsconfig $(pwd)/tsconfig.build.json --out $(pwd)/typedoc $(pwd)/src",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "yarn exec:eslint --parser-options \"{ tsconfigRootDir: $(pwd), project: '$(pwd)/tsconfig.json' }\" --cache-file $(pwd)/.eslintcache $(pwd)/src $(pwd)/test",
+    "lint:ts": "yarn exec:eslint --cache-file $(pwd)/.eslintcache $(pwd)",
+    "lint": "yarn lint:ts && yarn exec:prettier -c $(pwd)",
+    "lint:fix": "yarn lint:ts --fix && yarn exec:prettier -w $(pwd)",
     "start:debug": "yarn start:dev --debug",
     "start:dev": "nest start -p tsconfig.build.json --watch",
     "start:docker": "yarn exec:docker-compose up -d --build svc-consents && yarn exec:docker-compose logs -f svc-consents",

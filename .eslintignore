@@ -7,6 +7,5 @@
 **/dist/**
 **/lib/**
 **/public/**
-**/typedocs/**
 **/*.css
 **/*.svg

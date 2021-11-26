@@ -163,7 +163,7 @@ module.exports = {
       /**
        * JavaScript configuration file rules
        */
-      files: ['**/*.config.{j,t}s?(x)', '**/.eslintrc.js', '**/typedoc.js'],
+      files: ['**/*.config.{j,t}s?(x)', '**/.eslintrc.js'],
       rules: {
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-var-requires': 'off',

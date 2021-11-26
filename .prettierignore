@@ -1,5 +1,5 @@
-.husky/
-.yarn/
+.husky/**
+.yarn/**
 .dockerignore
 .editorconfig
 .env*
@@ -28,4 +28,3 @@ yarn.lock
 **/dist/**
 **/lib/**
 **/public/**
-**/typedoc/**
