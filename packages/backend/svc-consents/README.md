@@ -31,7 +31,7 @@ yarn workspace svc-consents test:unit
 yarn workspace svc-consents test:integration
 ```
 
-Swagger: http://localhost:3000/docs/consents/#/
+Swagger docs are served on [localhost](http://localhost:3000/docs/consents/#/).
 
 ## Database
 
