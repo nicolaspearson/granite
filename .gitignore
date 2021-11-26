@@ -5,10 +5,6 @@ lib/
 
 ## Dotenv
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
 ## ESLint
 .eslintcache
@@ -27,13 +23,6 @@ coverage/
 *.njsproj
 *.sln
 .atom-build.yml
-.vscode
-
-## Typedoc
-typedoc/
-
-## TypeScript
-tsconfig.tsbuildinfo
 
 ## Yarn
 .yarn/*

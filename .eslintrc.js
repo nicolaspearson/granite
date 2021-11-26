@@ -8,6 +8,7 @@ module.exports = {
     /**
      * Global rules
      */
+    'eslint-comments/disable-enable-pair': 'off',
     'max-len': [
       'error',
       {
@@ -23,6 +24,7 @@ module.exports = {
     ],
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-self-assign': 'off',
     'no-void': ['error', { allowAsStatement: true }],
     'object-curly-spacing': [2, 'always'],
     // See configuration in https://www.npmjs.com/package/eslint-plugin-ordered-imports#configuration
@@ -71,8 +73,6 @@ module.exports = {
     'unicorn/numeric-separators-style': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-array-callback-reference': 'off',
-    'no-self-assign': 'off',
-    'eslint-comments/disable-enable-pair': 'off',
   },
   overrides: [
     {
@@ -128,8 +128,9 @@ module.exports = {
             format: ['camelCase', 'UPPER_CASE'],
           },
         ],
-        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
         '@typescript-eslint/restrict-template-expressions': ['error', { allowAny: true }],
+        '@typescript-eslint/no-unsafe-call': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
       },
     },
     {
@@ -162,7 +163,7 @@ module.exports = {
       /**
        * JavaScript configuration file rules
        */
-      files: ['**/*.config.{j,t}s?(x)', '**/.eslintrc.js', '**/typedoc.js'],
+      files: ['**/*.config.{j,t}s?(x)', '**/.eslintrc.js'],
       rules: {
         '@typescript-eslint/no-unsafe-assignment': 'off',
         '@typescript-eslint/no-var-requires': 'off',

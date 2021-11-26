@@ -1,7 +1,8 @@
-.husky/
-.yarn/
+.husky/**
+.yarn/**
 .dockerignore
 .editorconfig
+.env*
 .eslintignore
 .gitignore
 .pnp.cjs
@@ -9,10 +10,14 @@
 .prettierignore
 .prettierrc
 .yarnrc
+db/**
 Dockerfile
 LICENSE
+package.json
 yarn.lock
 *.css
+*.http
+*.sh
 *.spec.ts.snap
 *.svg
 *.zip
@@ -26,4 +31,3 @@ yarn.lock
 **/dist/**
 **/lib/**
 **/public/**
-**/typedoc/**

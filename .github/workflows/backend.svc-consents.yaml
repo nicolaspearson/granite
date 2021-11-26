@@ -37,15 +37,13 @@ jobs:
       - name: Install node
         uses: actions/setup-node@master
         with:
-          node-version: 15.x
+          node-version: 16.x
       - name: Install yarn
-        run: yarn
+        run: yarn install --immutable
       - name: Build package
         run: yarn workspace $PACKAGE build
       - name: Lint package
         run: yarn workspace $PACKAGE lint
-      - name: Build package docs
-        run: yarn workspace $PACKAGE docs
   test_unit:
     name: Test Unit
     runs-on: ubuntu-latest
@@ -55,9 +53,9 @@ jobs:
       - name: Install node
         uses: actions/setup-node@master
         with:
-          node-version: 15.x
+          node-version: 16.x
       - name: Install yarn
-        run: yarn
+        run: yarn install --immutable
       - name: Run package unit tests
         run: yarn workspace $PACKAGE test:unit
   test_integration:
@@ -69,8 +67,8 @@ jobs:
       - name: Install node
         uses: actions/setup-node@master
         with:
-          node-version: 15.x
+          node-version: 16.x
       - name: Install yarn
-        run: yarn
+        run: yarn install --immutable
       - name: Run package integration tests
         run: yarn workspace $PACKAGE test:integration
