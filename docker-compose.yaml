@@ -32,7 +32,7 @@ services:
     environment:
       - POSTGRES_USER=granite
       - POSTGRES_PASSWORD=secret
-      - POSTGRES_DB=development
+      - POSTGRES_DB=granite
     ports:
       - 5432:5432
     networks:
@@ -44,7 +44,7 @@ services:
     environment:
       - POSTGRES_USER=granite
       - POSTGRES_PASSWORD=secret
-      - POSTGRES_DB=integration
+      - POSTGRES_DB=granite
     ports:
       - 5433:5432
     networks:

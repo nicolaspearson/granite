@@ -2,6 +2,7 @@
 .yarn/
 .dockerignore
 .editorconfig
+.env*
 .eslintignore
 .gitignore
 .pnp.cjs
@@ -11,6 +12,7 @@
 .yarnrc
 Dockerfile
 LICENSE
+package.json
 yarn.lock
 *.css
 *.spec.ts.snap
