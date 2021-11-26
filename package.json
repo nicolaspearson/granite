@@ -25,6 +25,7 @@
     "exec:eslint": "eslint --cache",
     "exec:jest": "jest --coverage --detectOpenHandles --color --forceExit",
     "exec:prettier": "prettier",
+    "exec:script:generate-migration": "./shell/generate-migration.sh",
     "exec:ts-node": "ts-node -T -r tsconfig-paths/register",
     "exec:tsc": "tsc",
     "lint:markdown": "markdownlint -c markdownlint.yaml $(find . -name '*.md' -not -path './.yarn/*')",

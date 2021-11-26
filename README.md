@@ -36,11 +36,17 @@ Optionally install [yamllint](https://yamllint.readthedocs.io/)
 The preference / consent management service.
 
 ```bash
+# Make a copy of the .env.example
+cp packages/backend/svc-consents/.env.example packages/backend/svc-consents/.env
+
 # Build the package
 yarn workspace svc-consents build
 
 # Lint the package
 yarn workspace svc-consents lint
+
+# Start the service in dev mode
+yarn workspace svc-consents start:dev
 
 # Execute the unit tests for the package
 yarn workspace svc-consents test:unit

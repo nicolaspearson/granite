@@ -48,20 +48,20 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .default(false),
     TYPEORM_ENTITIES: Joi.string()
       .description('The path to the entities to be used by TypeORM')
-      .default('dist/backend/svc-consents/src/db/entities/*.js'),
+      .default('dist/db/entities/*.js'),
     TYPEORM_HOST: Joi.string()
       .hostname()
       .description('The database host to be used by TypeORM')
       .required(),
     TYPEORM_MIGRATIONS_DIR: Joi.string()
       .description('The path to the migrations dir to be used by TypeORM')
-      .default('dist/backend/svc-consents/src/db/migrations'),
+      .default('dist/db/migrations'),
     TYPEORM_MIGRATIONS_RUN: Joi.boolean()
       .description('Whether or not TypeORM should run migrations')
       .default(true),
     TYPEORM_MIGRATIONS: Joi.string()
       .description('The path to the migrations to be used by TypeORM')
-      .default('dist/backend/svc-consents/src/db/migrations/*.js'),
+      .default('dist/db/migrations/*.js'),
     TYPEORM_PASSWORD: Joi.string()
       .description('The database password to be used by TypeORM')
       .example('secret')

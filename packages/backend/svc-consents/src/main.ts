@@ -1,13 +1,16 @@
-import helmet from 'helmet';
+import * as helmet from 'helmet';
+import { Connection } from 'typeorm';
 
 import { LogLevel } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
+import { seed } from '$/db/utils/seeder.util';
 import { ApiGroup } from '$/enum/api-group.enum';
 import { Environment } from '$/enum/environment.enum';
 import { MainModule } from '$/main.module';
+import { getContentResourcePolicy } from '$/utils/helmet.utils';
 
 async function bootstrap() {
   const logLevel = [process.env.LOG_LEVEL || 'log'] as LogLevel[];
@@ -25,22 +28,26 @@ async function bootstrap() {
 
   // Helmet can help protect the app from some well-known web
   // vulnerabilities by setting the appropriate HTTP headers.
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: getContentResourcePolicy(),
+    }),
+  );
 
   // Set the global API route prefix
-  app.setGlobalPrefix('/api/v1/consents');
+  app.setGlobalPrefix('/v1/consents');
 
   // Configure swagger
-  const documentBuilder = new DocumentBuilder()
+  const builder = new DocumentBuilder()
     .setTitle('Consent Management Service API')
-    .setDescription('The consent management service RESTful interface.')
     .setVersion('1.0');
-  Object.values(ApiGroup).forEach((g) => documentBuilder.addTag(g));
-  const document = SwaggerModule.createDocument(app, documentBuilder.build());
-  SwaggerModule.setup('consents', app, document);
+  Object.values(ApiGroup).forEach((g) => builder.addTag(g));
+  const document = SwaggerModule.createDocument(app, builder.build());
+  SwaggerModule.setup('docs/consents', app, document);
 
   if (process.env.NODE_ENV === Environment.Development) {
-    // TODO: Add database seeding mechanism
+    // Seed the database with fixtures in the development environment
+    await seed(app.get<Connection>(Connection));
   }
 
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion

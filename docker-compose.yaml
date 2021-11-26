@@ -16,7 +16,7 @@ services:
       context: .
       dockerfile: packages/backend/Dockerfile
     env_file:
-      - packages/backend/svc-consents/.env.development
+      - packages/backend/svc-consents/.env
     ports:
       - 3001:3000
     networks:
@@ -37,6 +37,8 @@ services:
       - 5432:5432
     networks:
       - development
+    volumes:
+      - ./db/scripts:/docker-entrypoint-initdb.d
     container_name: granite-db
 
   db-integration:

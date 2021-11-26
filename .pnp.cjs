@@ -1609,8 +1609,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/rxjs", null],
             ["axios", "npm:0.24.0"],
             ["cache-manager", null],
-            ["class-transformer", null],
-            ["class-validator", null],
+            ["class-transformer", "npm:0.5.1"],
+            ["class-validator", "npm:0.13.2"],
             ["iterare", "npm:1.2.1"],
             ["reflect-metadata", "npm:0.1.13"],
             ["rxjs", "npm:7.4.0"],
@@ -1828,7 +1828,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/nestjs__common", null],
             ["@types/nestjs__core", null],
             ["@types/reflect-metadata", null],
-            ["@types/swagger-ui-express", null],
+            ["@types/swagger-ui-express", "npm:4.1.3"],
             ["fastify-swagger", null],
             ["lodash", "npm:4.17.21"],
             ["path-to-regexp", "npm:3.2.0"],
@@ -2428,6 +2428,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/supertest", "npm:2.0.11"],
             ["@types/superagent", "npm:4.1.13"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/swagger-ui-express", [
+        ["npm:4.1.3", {
+          "packageLocation": "./.yarn/cache/@types-swagger-ui-express-npm-4.1.3-0c91a9cfb5-1c990fa8c1.zip/node_modules/@types/swagger-ui-express/",
+          "packageDependencies": [
+            ["@types/swagger-ui-express", "npm:4.1.3"],
+            ["@types/express", "npm:4.17.13"],
+            ["@types/serve-static", "npm:1.13.10"]
           ],
           "linkType": "HARD",
         }]
@@ -3795,6 +3806,26 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/cjs-module-lexer-npm-1.2.2-473ce063ea-977f3f042b.zip/node_modules/cjs-module-lexer/",
           "packageDependencies": [
             ["cjs-module-lexer", "npm:1.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["class-transformer", [
+        ["npm:0.5.1", {
+          "packageLocation": "./.yarn/cache/class-transformer-npm-0.5.1-96b5161e6c-f191c8b4cc.zip/node_modules/class-transformer/",
+          "packageDependencies": [
+            ["class-transformer", "npm:0.5.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["class-validator", [
+        ["npm:0.13.2", {
+          "packageLocation": "./.yarn/cache/class-validator-npm-0.13.2-915206252c-0deb4c29fa.zip/node_modules/class-validator/",
+          "packageDependencies": [
+            ["class-validator", "npm:0.13.2"],
+            ["libphonenumber-js", "npm:1.9.43"],
+            ["validator", "npm:13.7.0"]
           ],
           "linkType": "HARD",
         }]
@@ -7645,6 +7676,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["libphonenumber-js", [
+        ["npm:1.9.43", {
+          "packageLocation": "./.yarn/cache/libphonenumber-js-npm-1.9.43-925d52ea37-0e5112fbe9.zip/node_modules/libphonenumber-js/",
+          "packageDependencies": [
+            ["libphonenumber-js", "npm:1.9.43"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["lines-and-columns", [
         ["npm:1.2.4", {
           "packageLocation": "./.yarn/cache/lines-and-columns-npm-1.2.4-d6c7cc5799-0c37f9f7fa.zip/node_modules/lines-and-columns/",
@@ -10234,12 +10274,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:16.11.10"],
             ["@types/supertest", "npm:2.0.11"],
+            ["@types/swagger-ui-express", "npm:4.1.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.4.0"],
             ["@typescript-eslint/parser", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.4.0"],
+            ["class-transformer", "npm:0.5.1"],
+            ["class-validator", "npm:0.13.2"],
             ["common-tags", "npm:1.8.2"],
             ["eslint", "npm:8.3.0"],
             ["eslint-config-prettier", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.0.0"],
+            ["express", "npm:4.17.1"],
             ["granite", "workspace:."],
             ["helmet", "npm:4.6.0"],
             ["jest", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:27.3.1"],
@@ -10285,7 +10329,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.1.6"],
             ["@types/express", "npm:4.17.13"],
-            ["express", null],
+            ["express", "npm:4.17.1"],
             ["swagger-ui-dist", "npm:3.52.5"]
           ],
           "packagePeers": [
@@ -11228,6 +11272,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["validate-npm-package-license", "npm:3.0.4"],
             ["spdx-correct", "npm:3.1.1"],
             ["spdx-expression-parse", "npm:3.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["validator", [
+        ["npm:13.7.0", {
+          "packageLocation": "./.yarn/cache/validator-npm-13.7.0-624277e841-2b83283de1.zip/node_modules/validator/",
+          "packageDependencies": [
+            ["validator", "npm:13.7.0"]
           ],
           "linkType": "HARD",
         }]
