@@ -3,11 +3,12 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { HealthController } from '$/health/health.controller';
 
 describe('Health Controller', () => {
+  let module: TestingModule;
   let controller: HealthController;
   const response = { status: 'OK' };
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
+  beforeAll(async () => {
+    module = await Test.createTestingModule({
       controllers: [HealthController],
     }).compile();
     controller = module.get<HealthController>(HealthController);
@@ -19,5 +20,9 @@ describe('Health Controller', () => {
 
   test('should return status ok', () => {
     expect(controller.getHealth()).toEqual(response);
+  });
+
+  afterAll(async () => {
+    await module.close();
   });
 });

@@ -2365,6 +2365,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@types/pg", [
+        ["npm:8.6.1", {
+          "packageLocation": "./.yarn/cache/@types-pg-npm-8.6.1-6de7239b4b-a44710ff06.zip/node_modules/@types/pg/",
+          "packageDependencies": [
+            ["@types/pg", "npm:8.6.1"],
+            ["@types/node", "npm:16.11.10"],
+            ["pg-protocol", "npm:1.5.0"],
+            ["pg-types", "npm:2.2.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@types/prettier", [
         ["npm:2.4.2", {
           "packageLocation": "./.yarn/cache/@types-prettier-npm-2.4.2-290f200354-76e230b2d1.zip/node_modules/@types/prettier/",
@@ -10504,6 +10516,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/node", "npm:16.11.10"],
+            ["@types/pg", "npm:8.6.1"],
             ["@types/supertest", "npm:2.0.11"],
             ["@types/swagger-ui-express", "npm:4.1.3"],
             ["@typescript-eslint/eslint-plugin", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.4.0"],
@@ -11282,7 +11295,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mssql", null],
             ["@types/mysql2", null],
             ["@types/oracledb", null],
-            ["@types/pg", null],
+            ["@types/pg", "npm:8.6.1"],
             ["@types/pg-native", null],
             ["@types/pg-query-stream", null],
             ["@types/redis", null],

@@ -16,6 +16,16 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
   private readonly logger: Logger = new Logger(TypeOrmConfigService.name);
 
   createTypeOrmOptions(): TypeOrmModuleOptions | Promise<TypeOrmModuleOptions> {
+    const connectionOptions = TypeOrmConfigService.creatConnectionOptions();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { password, ...optionsWithoutPassword } = connectionOptions;
+    this.logger.debug(oneLineTrim`
+      TypeORM options: ${JSON.stringify(optionsWithoutPassword)}
+    `);
+    return connectionOptions;
+  }
+
+  static creatConnectionOptions() {
     const connectionOptions: MergedConnectionOptions = {
       type: 'postgres',
       host: process.env.TYPEORM_HOST,
@@ -38,11 +48,11 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
         logging: ['schema', 'error'],
         synchronize: false, // Never auto create database schema
         dropSchema: false, // Never auto drop the schema in each connection
-        migrationsRun: true, // Run migrations automatically with each application launch
+        migrationsRun: true, // Run migrations automatically on each application launch
       };
       Object.assign(connectionOptions, productionOptions);
     } else {
-      // Development options that will always recreate the schema automatically and avoid migrations
+      // Development options that will always recreate the schema automatically and skip migrations
       const developmentOptions: ConnectionOptions = {
         type: 'postgres',
         logging: ['error', 'schema', 'warn'],
@@ -52,13 +62,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       };
       Object.assign(connectionOptions, developmentOptions);
     }
-    // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-    const { password, ...optionsWithoutPassword } = connectionOptions;
-    this.logger.debug(oneLineTrim`
-      TypeORM options: ${JSON.stringify(optionsWithoutPassword)}
-    `);
+
     return connectionOptions;
   }
 }
-
-// Base ConnectionOptions that will be updated based on precedence
