@@ -5,6 +5,7 @@ import { Connection, createConnection } from 'typeorm';
 
 import { ExceptionFilter, INestApplication, ValidationPipe } from '@nestjs/common';
 import { ModuleMetadata, Type } from '@nestjs/common/interfaces';
+import { ConfigModule } from '@nestjs/config';
 import { Test, TestingModule, TestingModuleBuilder } from '@nestjs/testing';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
@@ -32,6 +33,14 @@ export async function setupIntegrationTestModule(options: SetupOptions): Promise
   module: TestingModule;
 }> {
   const imports = [...(options.metadata?.imports ?? [])];
+
+  imports.push(
+    ConfigModule.forRoot({
+      isGlobal: true,
+      ignoreEnvFile: true,
+      ignoreEnvVars: false,
+    }),
+  );
 
   if (options.dbSchema) {
     const connection = await setupDatabase(options.dbSchema, options.seederFn);
