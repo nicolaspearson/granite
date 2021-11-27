@@ -10,7 +10,7 @@ import { seed } from '$/db/utils/seeder.util';
 import { ApiGroup } from '$/enum/api-group.enum';
 import { Environment } from '$/enum/environment.enum';
 import { MainModule } from '$/main.module';
-import { getContentResourcePolicy } from '$/utils/helmet.utils';
+import { getContentResourcePolicy } from '$/utils/helmet.util';
 
 async function bootstrap() {
   const logLevel = [process.env.LOG_LEVEL || 'log'] as LogLevel[];
