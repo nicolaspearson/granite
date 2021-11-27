@@ -94,7 +94,6 @@ export async function setupIntegrationTestModule(options: SetupOptions): Promise
 }
 
 async function setupDatabase(schema: string, seederFn?: SeederFunction): Promise<Connection> {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const client = new Client({
     user: process.env.TYPEORM_USERNAME,
     host: process.env.TYPEORM_HOST,

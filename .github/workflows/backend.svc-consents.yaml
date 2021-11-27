@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Using node.js ${{ matrix.node-version }}
+      - name: Setup node.js
         uses: actions/setup-node@master
         with:
           node-version: 16
@@ -52,7 +52,7 @@ jobs:
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Using node.js ${{ matrix.node-version }}
+      - name: Setup node.js
         uses: actions/setup-node@master
         with:
           node-version: 16
@@ -68,7 +68,7 @@ jobs:
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Using node.js ${{ matrix.node-version }}
+      - name: Setup node.js
         uses: actions/setup-node@master
         with:
           node-version: 16
@@ -78,12 +78,14 @@ jobs:
         run: yarn workspace $PACKAGE test:integration:ci
     services:
       postgres:
-        image: postgres:13
+        image: postgres:14-alpine
         env:
           POSTGRES_DB: granite
           POSTGRES_PORT: 5432
           POSTGRES_PASSWORD: secret
           POSTGRES_USER: granite
+        ports:
+          - 5432:5432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
