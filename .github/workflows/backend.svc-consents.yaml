@@ -99,8 +99,9 @@ jobs:
           --health-timeout 5s
           --health-retries 5
     env:
-      TYPEORM_HOST: localhost
-      TYPEORM_PORT: 5432
-      TYPEORM_DATABASE: granite
+      TYPEORM_USERNAME: ${{ matrix.database-user }}
+      TYPEORM_PASSWORD: ${{ matrix.database-password }}
+      TYPEORM_HOST: ${{ matrix.database-host }}
+      TYPEORM_PORT: ${{ matrix.database-port }}
+      TYPEORM_DATABASE: ${{ matrix.database-name }}
       TYPEORM_SCHEMA: public
-      TYPEORM_USERNAME: granite
