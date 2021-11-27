@@ -1057,9 +1057,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/config@npm:^1.1.3":
-  version: 1.1.3
-  resolution: "@nestjs/config@npm:1.1.3"
+"@nestjs/config@npm:^1.1.5":
+  version: 1.1.5
+  resolution: "@nestjs/config@npm:1.1.5"
   dependencies:
     dotenv: 10.0.0
     dotenv-expand: 5.1.0
@@ -1071,7 +1071,7 @@ __metadata:
     "@nestjs/common": ^7.0.0 || ^8.0.0
     reflect-metadata: ^0.1.13
     rxjs: ^6.0.0 || ^7.2.0
-  checksum: b4db03deec7a24e63c23e2d1ef50cc00200238772b6b9a1dd869d78549900b3e11e47828f6cd3608779c2cd3f15a0f5c87cc1b80da7e119d4317d67f750b9ec8
+  checksum: ae468f4d7d8d7b8dec30af3413e672aaa77d6f3889a6ceaad5ecf8dbc9771d102b6e5aa126190a98f52bcfa82ed565b1fcf0b58da45e254723ee3d21bdb267eb
   languageName: node
   linkType: hard
 
@@ -3684,7 +3684,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:^2.4.0":
+"eslint-import-resolver-typescript@npm:^2.5.0":
   version: 2.5.0
   resolution: "eslint-import-resolver-typescript@npm:2.5.0"
   dependencies:
@@ -3815,15 +3815,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-unicorn@npm:^35.0.0":
-  version: 35.0.0
-  resolution: "eslint-plugin-unicorn@npm:35.0.0"
+"eslint-plugin-unicorn@npm:^39.0.0":
+  version: 39.0.0
+  resolution: "eslint-plugin-unicorn@npm:39.0.0"
   dependencies:
     "@babel/helper-validator-identifier": ^7.14.9
     ci-info: ^3.2.0
     clean-regexp: ^1.0.0
     eslint-template-visitor: ^2.3.2
     eslint-utils: ^3.0.0
+    esquery: ^1.4.0
+    indent-string: 4
     is-builtin-module: ^3.1.0
     lodash: ^4.17.21
     pluralize: ^8.0.0
@@ -3831,9 +3833,10 @@ __metadata:
     regexp-tree: ^0.1.23
     safe-regex: ^2.1.1
     semver: ^7.3.5
+    strip-indent: ^3.0.0
   peerDependencies:
-    eslint: ">=7.28.0"
-  checksum: d7ba6f5b80a527f0a2c16572922b325009418086a53cdfcbcca711c1f4f863e4eae8692b046c10e6213beeee208f880f88b140806207a68a7d04cf8680677d19
+    eslint: ">=7.32.0"
+  checksum: a20bee80f1a5a5e4a5984394ba8f9e1669f89f186e92af5eec6bf1f0d90afe3a578b1ed124667b33843a7cac6e0476a86bb1a4ccf8f3293b8d21ae427f4b5168
   languageName: node
   linkType: hard
 
@@ -4639,26 +4642,26 @@ __metadata:
     eslint: ^8.3.0
     eslint-config-prettier: ^8.3.0
     eslint-import-resolver-node: ^0.3.6
-    eslint-import-resolver-typescript: ^2.4.0
+    eslint-import-resolver-typescript: ^2.5.0
     eslint-plugin-eslint-comments: ^3.2.0
     eslint-plugin-import: ^2.25.3
     eslint-plugin-jest: ^25.3.0
     eslint-plugin-node: ^11.1.0
     eslint-plugin-ordered-imports: ^0.5.0
-    eslint-plugin-unicorn: ^35.0.0
+    eslint-plugin-unicorn: ^39.0.0
     husky: ^7.0.4
     jest: ^27.3.1
     jest-environment-node: ^27.3.1
     lint-staged: ^12.1.2
     markdownlint-cli: ^0.30.0
-    prettier: ^2.4.1
+    prettier: ^2.5.0
     pretty-quick: ^3.1.2
     ts-jest: ^27.0.7
     ts-loader: ^9.2.6
     ts-node: ^10.4.0
     tsconfig-paths: ^3.12.0
     typescript: 4.3.5
-    webpack: ^5.64.3
+    webpack: ^5.64.4
   languageName: unknown
   linkType: soft
 
@@ -4922,7 +4925,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"indent-string@npm:^4.0.0":
+"indent-string@npm:4, indent-string@npm:^4.0.0":
   version: 4.0.0
   resolution: "indent-string@npm:4.0.0"
   checksum: 824cfb9929d031dabf059bebfe08cf3137365e112019086ed3dcff6a0a7b698cb80cf67ccccde0e25b9e2d7527aa6cc1fed1ac490c752162496caba3e6699612
@@ -7416,7 +7419,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.4.1":
+"prettier@npm:^2.5.0":
   version: 2.5.0
   resolution: "prettier@npm:2.5.0"
   bin:
@@ -8513,7 +8516,7 @@ __metadata:
     $: "link:./src"
     "@nestjs/cli": ^8.1.5
     "@nestjs/common": ^8.2.3
-    "@nestjs/config": ^1.1.3
+    "@nestjs/config": ^1.1.5
     "@nestjs/core": ^8.2.3
     "@nestjs/platform-express": ^8.2.3
     "@nestjs/schematics": ^8.0.5
@@ -8542,7 +8545,7 @@ __metadata:
     jest: ^27.3.1
     joi: ^17.4.2
     pg: ^8.7.1
-    prettier: ^2.4.1
+    prettier: ^2.5.0
     reflect-metadata: ^0.1.13
     rimraf: ^3.0.2
     rxjs: ^7.4.0
@@ -8555,7 +8558,7 @@ __metadata:
     tsconfig-paths: ^3.12.0
     typeorm: ^0.2.41
     typescript: 4.3.5
-    webpack: ^5.64.3
+    webpack: ^5.64.4
   languageName: unknown
   linkType: soft
 
@@ -9345,7 +9348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"watchpack@npm:^2.2.0":
+"watchpack@npm:^2.2.0, watchpack@npm:^2.3.0":
   version: 2.3.0
   resolution: "watchpack@npm:2.3.0"
   dependencies:
@@ -9436,9 +9439,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.64.3":
-  version: 5.64.3
-  resolution: "webpack@npm:5.64.3"
+"webpack@npm:^5.64.4":
+  version: 5.64.4
+  resolution: "webpack@npm:5.64.4"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -9462,14 +9465,14 @@ __metadata:
     schema-utils: ^3.1.0
     tapable: ^2.1.1
     terser-webpack-plugin: ^5.1.3
-    watchpack: ^2.2.0
+    watchpack: ^2.3.0
     webpack-sources: ^3.2.2
   peerDependenciesMeta:
     webpack-cli:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: dc773c260b5db95d7c0e9aec079e9ed30a154420e3fc7fb46bd4f9b98714f322d8effe6534d5a3a17157f2c514a6edb26494585de4f1c92329980e04de235dd3
+  checksum: 62ac598291374fa5269c80fcd82ad3cbf8e8c3f837c2bf6ea80812812154d9f4d3390c6fdc1ce85323e6fdd46132e3e3db08cde9a1b4d61197879e867c7c1375
   languageName: node
   linkType: hard
 
