@@ -31,13 +31,16 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15, 16]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Install node
+      - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: 16.x
+          node-version: ${{ matrix.node-version }}
       - name: Install yarn
         run: yarn install --immutable
       - name: Build package
@@ -47,13 +50,18 @@ jobs:
   test_unit:
     name: Test Unit
     runs-on: ubuntu-latest
+    needs:
+      - build
+    strategy:
+      matrix:
+        node-version: [14, 15, 16]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Install node
+      - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: 16.x
+          node-version: ${{ matrix.node-version }}
       - name: Install yarn
         run: yarn install --immutable
       - name: Run package unit tests
@@ -61,14 +69,34 @@ jobs:
   test_integration:
     name: Test Integration
     runs-on: ubuntu-latest
+    needs:
+      - build
+    strategy:
+      matrix:
+        node-version: [14, 15, 16]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Install node
+      - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: 16.x
+          node-version: ${{ matrix.node-version }}
       - name: Install yarn
         run: yarn install --immutable
       - name: Run package integration tests
         run: yarn workspace $PACKAGE test:integration:ci
+    services:
+      postgres:
+        image: postgres:13-alpine
+        env:
+          POSTGRES_DB: granite
+          POSTGRES_PASSWORD: secret
+          POSTGRES_USER: granite
+        ports:
+          - 5432:5432
+        options: '--health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10'
+    env:
+      TYPEORM_HOST: postgres
+      TYPEORM_PORT: 5432
+      TYPEORM_DATABASE: granite
+      TYPEORM_SCHEMA: public
