@@ -2,6 +2,7 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  Index,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -11,16 +12,11 @@ export default class User {
   @PrimaryGeneratedColumn('uuid')
   uuid!: Uuid;
 
-  @Column({ name: 'email_address', length: 250 })
-  emailAddress!: string;
+  @Column({ name: 'email', unique: true })
+  @Index('IDX_USER_EMAIL', { synchronize: false })
+  email!: Email;
 
-  @Column({ name: 'first_name', length: 250 })
-  firstName!: string;
-
-  @Column({ name: 'last_name', length: 250 })
-  lastName!: string;
-
-  @Column({ name: 'password', length: 100 })
+  @Column({ name: 'password', select: false })
   password!: string;
 
   @CreateDateColumn({ name: 'created_at', type: 'timestamp with time zone' })

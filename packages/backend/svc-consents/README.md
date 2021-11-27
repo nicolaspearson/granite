@@ -8,6 +8,7 @@ The consent management service.
 - [ ] Add `consent` database entity.
 - [ ] Create `user` module.
 - [ ] Create `consent` module.
+- [ ] TODO items in code comments.
 
 ## Getting Started
 
@@ -31,7 +32,7 @@ yarn workspace svc-consents test:unit
 yarn workspace svc-consents test:integration
 ```
 
-Swagger docs are served on [localhost](http://localhost:3000/docs/consents/#/).
+Swagger documentation is served on [localhost](http://localhost:3000/docs/consents/#/).
 
 ## Database
 
@@ -53,9 +54,7 @@ The database structure can be seen below:
 erDiagram
     USER {
         uuid uuid
-        string email_address
-        string first_name
-        string last_name
+        string email
         string password
         date created_at
         date updated_at

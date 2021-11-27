@@ -3,10 +3,13 @@ import { ModuleMetadata } from '@nestjs/common/interfaces';
 import { TestingModule } from '@nestjs/testing';
 
 import { AppModule } from '$/app/app.module';
+import { ErrorFilter } from '$/filters/error.filter';
+import { DtoValidationPipe } from '$/pipes/dto-validation.pipe';
 
 import { setupIntegrationTestModule } from '#/integration/setup-integration-test';
 
 interface Options {
+  dbSchema: string;
   metadata?: ModuleMetadata;
   overrides?: { token: string; value: unknown }[];
   port?: number;
@@ -17,9 +20,12 @@ export async function setupApplication(options?: Options): Promise<{
   module: TestingModule;
 }> {
   const setup = await setupIntegrationTestModule({
+    dbSchema: options?.dbSchema,
     disableLogging: true,
     enableCors: true,
     enableHelmet: true,
+    globalFilters: [new ErrorFilter()],
+    globalPipes: [new DtoValidationPipe()],
     globalPrefix: '/v1/consents',
     metadata: {
       ...options?.metadata,

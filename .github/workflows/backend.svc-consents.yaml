@@ -71,4 +71,4 @@ jobs:
       - name: Install yarn
         run: yarn install --immutable
       - name: Run package integration tests
-        run: yarn workspace $PACKAGE test:integration
+        run: yarn workspace $PACKAGE test:integration:ci

@@ -12,7 +12,7 @@ describe('Health Module', () => {
   beforeEach(jest.clearAllMocks);
 
   beforeAll(async () => {
-    const setup = await setupApplication();
+    const setup = await setupApplication({ dbSchema: 'integration_health' });
     app = setup.application;
   });
 

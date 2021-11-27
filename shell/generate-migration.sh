@@ -26,7 +26,7 @@ wait_time=10
 
 echo "Starting database"
 yarn workspace "$1" db:start
-echo "Waiting $wait_time seconds for the database to start $1 $2 $3"
+echo "Waiting $wait_time seconds for the database to start"
 sleep $wait_time
 echo "yarn workspace $1 db:migration:run $TYPEORM_ENTITIES"
 yarn workspace "$1" db:migration:run
