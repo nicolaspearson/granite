@@ -1,9 +1,10 @@
 {
-  "extends": "./tsconfig.build.json",
+  "extends": "../tsconfig.backend.json",
   "compilerOptions": {
-    "composite": false,
-    "esModuleInterop": true,
-    "rootDir": "."
+    "baseUrl": ".",
+    "paths": {
+      "$/*": ["src/*"]
+    }
   },
   "include": ["src", "test", "types", "../../../types"]
 }

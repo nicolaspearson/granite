@@ -13,8 +13,8 @@
     "clean:jest": "jest --clearCache",
     "clean:yarn": "yarn cache clean --all",
     "clean": "yarn clean:jest && yarn clean:yarn",
-    "db:attach": "yarn exec:docker-compose exec db psql granite-db development",
-    "db:attach:integration": "yarn exec:docker-compose exec db-integration psql granite-db-integration integration",
+    "db:attach": "yarn exec:docker-compose exec db psql granite-db granite",
+    "db:attach:integration": "yarn exec:docker-compose exec db-integration psql granite-db-integration granite",
     "db:logs:integration": "yarn exec:docker-compose logs -f db-integration",
     "db:logs": "yarn exec:docker-compose logs -f db",
     "db:start:integration": "yarn exec:docker-compose up -d --force-recreate db-integration",
@@ -23,11 +23,11 @@
     "doctor": "yarn dlx @yarnpkg/doctor .",
     "exec:docker-compose": "docker-compose -f docker-compose.yaml",
     "exec:eslint": "eslint --cache",
-    "exec:jest": "jest --coverage --detectOpenHandles --color --forceExit",
+    "exec:jest": "jest --coverage --color --forceExit",
     "exec:prettier": "prettier",
+    "exec:script:generate-migration": "./shell/generate-migration.sh",
     "exec:ts-node": "ts-node -T -r tsconfig-paths/register",
     "exec:tsc": "tsc",
-    "exec:typedoc": "typedoc",
     "lint:markdown": "markdownlint -c markdownlint.yaml $(find . -name '*.md' -not -path './.yarn/*')",
     "lint:yaml": "yamllint -d yamllint.yaml .",
     "lint": "yarn lint:markdown && yarn lint:yaml",
@@ -64,6 +64,7 @@
     "husky": "^7.0.4",
     "jest": "^27.3.1",
     "jest-environment-node": "^27.3.1",
+    "lint-staged": "^12.1.2",
     "markdownlint-cli": "^0.30.0",
     "prettier": "^2.4.1",
     "pretty-quick": "^3.1.2",
@@ -71,10 +72,20 @@
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",
-    "typedoc": "^0.22.10",
     "typescript": "4.3.5",
     "webpack": "^5.64.3"
   },
-  "workspaces": ["packages/frontend/*", "packages/backend/*"],
+  "lint-staged": {
+    "**/*.md": [
+      "yarn lint:markdown"
+    ],
+    "**/*.yaml": [
+      "yarn lint:yaml"
+    ]
+  },
+  "workspaces": [
+    "packages/backend/*",
+    "packages/frontend/*"
+  ],
   "packageManager": "yarn@3.1.0"
 }
