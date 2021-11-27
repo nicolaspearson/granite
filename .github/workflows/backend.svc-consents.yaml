@@ -73,7 +73,7 @@ jobs:
       - build
     strategy:
       matrix:
-        node-version: [16]
+        node-version: [14, 15, 16]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
@@ -94,9 +94,10 @@ jobs:
           POSTGRES_USER: granite
         ports:
           - 5432:5432
-        options: '--health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10'
+        options: ' --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10 '
     env:
       TYPEORM_HOST: postgres
       TYPEORM_PORT: 5432
       TYPEORM_DATABASE: granite
       TYPEORM_SCHEMA: public
+      TYPEORM_USERNAME: granite
