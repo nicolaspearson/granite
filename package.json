@@ -23,7 +23,7 @@
     "doctor": "yarn dlx @yarnpkg/doctor .",
     "exec:docker-compose": "docker-compose -f docker-compose.yaml",
     "exec:eslint": "eslint --cache",
-    "exec:jest": "jest --coverage --color --forceExit",
+    "exec:jest": "jest --coverage --color --forceExit --runInBand",
     "exec:prettier": "prettier",
     "exec:script:generate-migration": "./shell/generate-migration.sh",
     "exec:ts-node": "ts-node -T -r tsconfig-paths/register",

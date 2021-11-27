@@ -24,35 +24,26 @@ export class UserRepository extends AbstractRepository<User> {
     return this.manager.createQueryBuilder(User, 'user');
   }
 
-  create(
-    data: { attributes: DeepPartial<User>; user: User },
-    manager: EntityManager,
-  ): Promise<User> {
+  create(data: { attributes: DeepPartial<User> }): Promise<User> {
     const payload: QueryDeepPartialEntity<User> = {
       ...data.attributes,
     };
     if (data.attributes.password) {
       payload.password = generateSalt(data.attributes.password, "'bf', 8");
     }
-    return manager.save(User, payload as User);
+    return this.manager.save(User, payload as User);
   }
 
-  delete(uuid: Uuid, manager: EntityManager): Promise<DeleteResult> {
-    return manager
-      .createQueryBuilder()
-      .delete()
-      .from(User)
-      .where('"userUuid" = :uuid', { uuid })
-      .execute();
+  delete(uuid: Uuid): Promise<DeleteResult> {
+    return this.userQuery().delete().where({ uuid }).execute();
   }
 
   findByEmail(email: string): Promise<User | undefined> {
-    return this.userQuery().clone().where({ email }).getOne();
+    return this.userQuery().where({ email }).getOne();
   }
 
   findByValidCredentials(email: Email, password: string): Promise<User | undefined> {
     return this.userQuery()
-      .clone()
       .where({ email })
       .andWhere('user.password = crypt(:password, user.password)', { password })
       .getOne();

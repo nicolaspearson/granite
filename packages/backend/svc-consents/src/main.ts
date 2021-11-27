@@ -9,7 +9,9 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { seed } from '$/db/utils/seeder.util';
 import { ApiGroup } from '$/enum/api-group.enum';
 import { Environment } from '$/enum/environment.enum';
+import { ErrorFilter } from '$/filters/error.filter';
 import { MainModule } from '$/main.module';
+import { DtoValidationPipe } from '$/pipes/dto-validation.pipe';
 import { getContentResourcePolicy } from '$/utils/helmet.util';
 
 async function bootstrap() {
@@ -33,6 +35,9 @@ async function bootstrap() {
       contentSecurityPolicy: getContentResourcePolicy(),
     }),
   );
+
+  app.useGlobalFilters(new ErrorFilter());
+  app.useGlobalPipes(new DtoValidationPipe());
 
   // Set the global API route prefix
   app.setGlobalPrefix('/v1/consents');

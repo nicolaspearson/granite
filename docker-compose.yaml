@@ -28,11 +28,11 @@ services:
   #########################
 
   db:
-    image: postgres:13-alpine
+    image: postgres:14-alpine
     environment:
-      - POSTGRES_USER=granite
-      - POSTGRES_PASSWORD=secret
       - POSTGRES_DB=granite
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=granite
     ports:
       - 5432:5432
     networks:
@@ -42,11 +42,11 @@ services:
     container_name: granite-db
 
   db-integration:
-    image: postgres:13-alpine
+    image: postgres:14-alpine
     environment:
-      - POSTGRES_USER=granite
-      - POSTGRES_PASSWORD=secret
       - POSTGRES_DB=granite
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=granite
     ports:
       - 5433:5432
     networks:

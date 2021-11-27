@@ -3,6 +3,7 @@ import * as request from 'supertest';
 import { HttpStatus, INestApplication } from '@nestjs/common';
 
 import { setupApplication } from '#/integration/setup-application';
+import { healthCheckResponseMock } from '#/utils/fixtures';
 
 describe('Health Module', () => {
   let app: INestApplication;
@@ -12,14 +13,15 @@ describe('Health Module', () => {
   beforeEach(jest.clearAllMocks);
 
   beforeAll(async () => {
-    const setup = await setupApplication();
+    const setup = await setupApplication({ dbSchema: 'integration_health' });
     app = setup.application;
   });
 
-  test(`${baseUrl} (GET)`, async () => {
-    const res = await request(app.getHttpServer()).get(baseUrl).expect(HttpStatus.OK);
-    expect(res.body).toEqual({ status: 'OK' });
-    return res;
+  describe(`GET ${baseUrl}`, () => {
+    test('[200] => should return the health status correctly', async () => {
+      const res = await request(app.getHttpServer()).get(baseUrl).expect(HttpStatus.OK);
+      expect(res.body).toEqual(healthCheckResponseMock);
+    });
   });
 
   afterAll(async () => {
