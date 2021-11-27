@@ -31,16 +31,13 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14, 15, 16]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16
       - name: Install yarn
         run: yarn install --immutable
       - name: Build package
@@ -52,16 +49,13 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build
-    strategy:
-      matrix:
-        node-version: [14, 15, 16]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16
       - name: Install yarn
         run: yarn install --immutable
       - name: Run package unit tests
@@ -71,16 +65,13 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build
-    strategy:
-      matrix:
-        node-version: [14, 15, 16]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 16
       - name: Install yarn
         run: yarn install --immutable
       - name: Run package integration tests
