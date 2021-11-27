@@ -2,8 +2,6 @@ import { oneLine } from 'common-tags';
 import { Connection, ObjectType } from 'typeorm';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
-import { Logger } from '@nestjs/common';
-
 import User from '$/db/entities/user.entity';
 import { userFixtures } from '$/db/fixtures/user.fixture';
 
@@ -21,8 +19,6 @@ export async function seed(connection: Connection): Promise<void> {
     CREATE EXTENSION IF NOT EXISTS pgcrypto;
     CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
   `);
-  const logger: Logger = new Logger('Seeder');
-  logger.debug('Seeding the database');
   for (const fixture of fixtures) {
     await connection
       .createQueryBuilder()
@@ -31,5 +27,4 @@ export async function seed(connection: Connection): Promise<void> {
       .values(fixture.values)
       .execute();
   }
-  logger.debug('Seeding complete');
 }

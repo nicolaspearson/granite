@@ -1,5 +1,5 @@
 // Set up test environment variables
 process.env.API_HOST = 'localhost';
 process.env.API_PORT = '3000';
-process.env.ENVIRONMENT = 'development';
-process.env.NODE_ENV = 'development';
+process.env.ENVIRONMENT = 'test';
+process.env.NODE_ENV = 'test';

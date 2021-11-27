@@ -3,6 +3,7 @@ import { ModuleMetadata } from '@nestjs/common/interfaces';
 import { TestingModule } from '@nestjs/testing';
 
 import { AppModule } from '$/app/app.module';
+import { seed } from '$/db/utils/seeder.util';
 import { ErrorFilter } from '$/filters/error.filter';
 import { DtoValidationPipe } from '$/pipes/dto-validation.pipe';
 
@@ -32,6 +33,7 @@ export async function setupApplication(options?: Options): Promise<{
       imports: [...(options?.metadata?.imports ?? []), AppModule],
     },
     overrides: [...(options?.overrides ?? [])],
+    seederFn: seed,
   });
   if (options?.port) {
     await setup.application.listen(options.port, 'localhost');

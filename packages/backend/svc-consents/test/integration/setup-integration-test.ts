@@ -24,7 +24,7 @@ export interface SetupOptions {
   globalPrefix?: string;
   metadata?: ModuleMetadata;
   overrides?: { token: string | symbol | Type<unknown>; value: unknown }[];
-  seeder?: SeederFunction;
+  seederFn?: SeederFunction;
 }
 
 export async function setupIntegrationTestModule(options: SetupOptions): Promise<{
@@ -34,7 +34,7 @@ export async function setupIntegrationTestModule(options: SetupOptions): Promise
   const imports = [...(options.metadata?.imports ?? [])];
 
   if (options.dbSchema) {
-    const connection = await setupDatabase(options.dbSchema, options.seeder);
+    const connection = await setupDatabase(options.dbSchema, options.seederFn);
     imports.push(TypeOrmModule.forRoot(connection.options as never));
   }
 
@@ -84,7 +84,7 @@ export async function setupIntegrationTestModule(options: SetupOptions): Promise
   return { application, module };
 }
 
-async function setupDatabase(schema: string, seeder?: SeederFunction): Promise<Connection> {
+async function setupDatabase(schema: string, seederFn?: SeederFunction): Promise<Connection> {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const client = new Client({
     user: process.env.TYPEORM_USERNAME,
@@ -111,13 +111,13 @@ async function setupDatabase(schema: string, seeder?: SeederFunction): Promise<C
     schema,
     synchronize: true,
     dropSchema: false,
-    logging: ['error', 'warn'],
+    logging: false,
   });
   const connection = await createConnection(connectionOptions);
 
   // Extensions are only created with the migrations, schema sync needs this dependency manually
-  if (seeder) {
-    await seeder(connection);
+  if (seederFn) {
+    await seederFn(connection);
   }
 
   // Close default connection, Nest will open a new one
