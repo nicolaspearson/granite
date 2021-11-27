@@ -87,14 +87,17 @@ jobs:
         run: yarn workspace $PACKAGE test:integration:ci
     services:
       postgres:
-        image: postgres:13-alpine
+        image: postgres:13
         env:
           POSTGRES_DB: granite
+          POSTGRES_PORT: 5432
           POSTGRES_PASSWORD: secret
           POSTGRES_USER: granite
-        ports:
-          - 5432:5432
-        options: ' --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10 '
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     env:
       TYPEORM_HOST: postgres
       TYPEORM_PORT: 5432
