@@ -6,3 +6,6 @@ declare namespace SvcConsents {
     name: string;
   }
 }
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type Mock<T> = { [K in keyof T]?: jest.Mock<any> };

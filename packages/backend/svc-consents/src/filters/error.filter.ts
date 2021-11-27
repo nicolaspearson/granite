@@ -2,7 +2,6 @@ import { Response } from 'express';
 
 import { ArgumentsHost, Catch, ExceptionFilter, HttpException, Logger } from '@nestjs/common';
 
-import { Environment } from '$/enum/environment.enum';
 import { ErrorName } from '$/enum/error-name.enum';
 import { BaseError } from '$/error/base.error';
 
@@ -27,10 +26,6 @@ export class ErrorFilter implements ExceptionFilter {
     const error = this.parseException(exception);
 
     this.logger.warn(JSON.stringify(error));
-    if (process.env.NODE_ENV === Environment.Development) {
-      // Log the raw error to assist with debugging in the development environment
-      console.log(exception);
-    }
 
     response.status(error.code).json(error);
     return error;
@@ -40,11 +35,10 @@ export class ErrorFilter implements ExceptionFilter {
     if (exception instanceof BaseError) {
       return exception;
     }
-
     const { status } = exception;
 
     const error = new BaseError({
-      code: status ? Number(status) : 500,
+      code: status ? Number(status) : /* istanbul ignore next */ 500,
       message: "The server has encountered a situation it doesn't know how to handle.",
       name: this.httpExceptionMapper[500],
     });

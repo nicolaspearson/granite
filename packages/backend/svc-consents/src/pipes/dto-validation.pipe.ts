@@ -16,7 +16,7 @@ export class DtoValidationPipe extends ValidationPipe {
   }
 }
 
-export function exceptionFactory(errors: ValidationError[] = []): BadRequestError {
+export function exceptionFactory(errors: ValidationError[]): BadRequestError {
   return new BadRequestError('Validation failed.', [formatErrors(errors)]);
 }
 

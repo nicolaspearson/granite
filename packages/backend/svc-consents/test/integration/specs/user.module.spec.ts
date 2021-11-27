@@ -6,6 +6,7 @@ import { userFixtures } from '$/db/fixtures/user.fixture';
 import { UserRegistrationRequest } from '$/dto';
 
 import { setupApplication } from '#/integration/setup-application';
+import { userRegistrationRequestMock } from '#/utils/fixtures';
 
 describe('User Module', () => {
   let app: INestApplication;
@@ -21,19 +22,14 @@ describe('User Module', () => {
 
   describe(`POST ${baseUrl}/registration`, () => {
     test('[201] => should allow a user to register', async () => {
-      const dto = {
-        email: 'u1.integration@example.com' as Email,
-        password: 'secret',
-      } as UserRegistrationRequest;
-
       const res = await request(app.getHttpServer())
         .post(`${baseUrl}/registration`)
-        .send(dto)
+        .send(userRegistrationRequestMock)
         .expect(HttpStatus.CREATED);
       expect(res.body).toMatchObject({
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         id: expect.any(String),
-        email: dto.email,
+        email: userRegistrationRequestMock.email,
         consents: [],
       });
     });

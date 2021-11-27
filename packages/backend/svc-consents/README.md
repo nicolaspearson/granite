@@ -6,7 +6,6 @@ The consent management service.
 
 - [ ] Add JWT generation and authentication.
 - [ ] Add `consent` database entity.
-- [ ] Create `user` module.
 - [ ] Create `consent` module.
 - [ ] TODO items in code comments.
 
