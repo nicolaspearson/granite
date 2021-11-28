@@ -1,6 +1,20 @@
 @baseUrl = http://localhost:3000/v1/consents
 
 ########################################################################
+###########                       AUTH                       ###########
+########################################################################
+
+### Authenticates a user
+POST {{baseUrl}}/auth/login HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "secret"
+}
+
+########################################################################
 ###########                      HEALTH                      ###########
 ########################################################################
 
@@ -19,6 +33,6 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "jane.doe@test.com",
+  "email": "jane.doe@example.com",
   "password": "secret"
 }

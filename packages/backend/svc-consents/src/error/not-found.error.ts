@@ -5,13 +5,12 @@ import { ErrorName } from '$/enum/error-name.enum';
 
 import { BaseError } from './base.error';
 
-const DEFAULT_MESSAGE =
-  'The server could not understand the request due to invalid syntax / arguments.';
+const DEFAULT_MESSAGE = 'The requested entity could not be found.';
 
-export class BadRequestError extends BaseError {
+export class NotFoundError extends BaseError {
   @ApiProperty({
     description: 'The HTTP response code.',
-    example: HttpStatus.BAD_REQUEST,
+    example: HttpStatus.NOT_FOUND,
   })
   declare readonly code: number;
 
@@ -30,16 +29,16 @@ export class BadRequestError extends BaseError {
 
   @ApiProperty({
     description: 'The name of the error.',
-    example: ErrorName.BadRequest,
+    example: ErrorName.NotFound,
   })
   declare readonly name: string;
 
   constructor(message?: string, errors?: string[] | Record<string, unknown>[]) {
     super({
-      code: HttpStatus.BAD_REQUEST,
+      code: HttpStatus.NOT_FOUND,
       errors,
       message: message || DEFAULT_MESSAGE,
-      name: ErrorName.BadRequest,
+      name: ErrorName.NotFound,
     });
   }
 }

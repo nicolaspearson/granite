@@ -5,4 +5,5 @@ import { userMock } from '#/utils/fixtures';
 
 export const userMockRepo: Mock<UserRepository> = {
   create: jest.fn().mockResolvedValue(userMock),
+  findByValidCredentials: jest.fn().mockResolvedValue(userMock),
 };

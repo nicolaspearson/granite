@@ -3,6 +3,8 @@ import { ApiProperty } from '@nestjs/swagger';
 
 import { ErrorName } from '$/enum/error-name.enum';
 
+const DEFAULT_MESSAGE = "The server has encountered a situation it doesn't know how to handle.";
+
 export class BaseError extends Error {
   @ApiProperty({
     description: 'The HTTP response code.',
@@ -19,7 +21,7 @@ export class BaseError extends Error {
 
   @ApiProperty({
     description: 'The error message.',
-    example: "The server has encountered a situation it doesn't know how to handle.",
+    example: DEFAULT_MESSAGE,
   })
   message: string;
 
@@ -31,10 +33,9 @@ export class BaseError extends Error {
 
   constructor(error?: SvcConsents.Error) {
     super();
-    this.code = error?.code || 500;
+    this.code = error?.code || HttpStatus.INTERNAL_SERVER_ERROR;
     this.errors = error?.errors || [];
-    this.message =
-      error?.message || "The server has encountered a situation it doesn't know how to handle.";
+    this.message = error?.message || DEFAULT_MESSAGE;
     this.name = error?.name || ErrorName.InternalServerError;
   }
 }
