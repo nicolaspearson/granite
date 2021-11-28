@@ -1,6 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
+import { EventRepository } from '$/db/repositories/event.repository';
 import { EventService } from '$/event/event.service';
+
+import { eventMockRepo } from '#/utils/mocks/repo.mock';
 
 describe('Event Service', () => {
   let module: TestingModule;
@@ -8,7 +11,13 @@ describe('Event Service', () => {
 
   beforeAll(async () => {
     module = await Test.createTestingModule({
-      providers: [EventService],
+      providers: [
+        {
+          provide: EventRepository,
+          useValue: eventMockRepo,
+        },
+        EventService,
+      ],
     }).compile();
     service = module.get<EventService>(EventService);
   });

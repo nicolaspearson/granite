@@ -1,6 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
 import { EventController } from '$/event/event.controller';
+import { EventService } from '$/event/event.service';
+
+import { eventMockService } from '#/utils/mocks/service.mock';
 
 describe('Event Controller', () => {
   let module: TestingModule;
@@ -11,6 +14,7 @@ describe('Event Controller', () => {
   beforeAll(async () => {
     module = await Test.createTestingModule({
       controllers: [EventController],
+      providers: [{ provide: EventService, useValue: eventMockService }],
     }).compile();
     controller = module.get<EventController>(EventController);
   });
