@@ -121,7 +121,7 @@ jobs:
                 "context": "${{ env.DOCKER_CONTEXT_PATH }}",
                 "file": "${{ env.DOCKERFILE }}"
               },
-              "owner": "${{ github.event.pusher && github.event.pusher.name || 'nicolaspearson' }}",
+              "owner": "${{ github.event.pusher && github.event.pusher.name || 'nicolaspearson' }}"
             }
           production_environment: false
           transient_environment: false
