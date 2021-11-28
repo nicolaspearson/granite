@@ -3,10 +3,17 @@ on:
   deployment: null
 
 jobs:
-  docker:
+  deploy:
     name: docker build and publish
     runs-on: ubuntu-latest
     steps:
+      - name: Load deployment variables
+        id: vars
+        run: |
+          ENVIRONMENT=${{ github.event.deployment.payload.environment }}
+          PACKAGE=${{ github.event.deployment.payload.package }}
+          REF="${{ github.event.deployment.ref }}"
+          SHA="${{ github.event.deployment.sha }}"
       - name: Checkout git repository
         uses: actions/checkout@master
       - name: Set up Docker Buildx
