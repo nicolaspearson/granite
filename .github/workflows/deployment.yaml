@@ -1,7 +1,6 @@
-name: publish
+name: deployment
 on:
-  release:
-    types: [published]
+  deployment: null
 
 jobs:
   docker:
