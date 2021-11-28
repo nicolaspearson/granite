@@ -37,14 +37,6 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .valid(...environments)
       .description('The Node runtime environment')
       .default('development'),
-    REDIS_NAME: Joi.string().description('The Redis name').default('svc-consents'),
-    REDIS_DB: Joi.number().description('The Redis DB to use').default(0),
-    REDIS_HOST: Joi.string()
-      .hostname()
-      .description('The Redis server host url')
-      .default('localhost'),
-    REDIS_PORT: Joi.number().port().description('The Redis server port').default(6379),
-    REDIS_PREFIX: Joi.string().description('The Redis key prefix').default('consents:'),
     TYPEORM_CONNECTION: Joi.string()
       .valid('postgres')
       .description('The database connection type to be used by TypeORM')

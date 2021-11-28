@@ -52,23 +52,3 @@ services:
     networks:
       - development
     container_name: granite-db-integration
-
-  redis:
-    image: redis:6-alpine
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-    ports:
-      - 6379:6379
-    networks:
-      - development
-    container_name: granite-redis
-
-  redis-integration:
-    image: redis:6-alpine
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-    ports:
-      - 6380:6379
-    networks:
-      - development
-    container_name: granite-redis-integration
