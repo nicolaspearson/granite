@@ -102,7 +102,7 @@ jobs:
       TYPEORM_SCHEMA: public
       TYPEORM_USERNAME: granite
   docker:
-    # if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main'
     name: docker build and publish
     runs-on: ubuntu-latest
     needs:
@@ -135,28 +135,3 @@ jobs:
           tags: |
             ghcr.io/nicolaspearson/${{ env.PACKAGE }}:latest
             ghcr.io/nicolaspearson/${{ env.PACKAGE }}:${{ github.sha }}
-  deployment:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    needs:
-      - build
-      - test_unit
-      - test_integration
-      - docker
-    steps:
-      - name: Create Github Deployment
-        uses: avakar/create-deployment@v1
-        with:
-          auto_merge: false
-          ref: ${{ github.ref }}
-          required_contexts: ''
-          payload: |
-            {
-              "package": "${{ env.PACKAGE }}",
-              "description": ${{ toJSON(github.event.head_commit.message) }},
-              "owner": "${{ github.event.pusher && github.event.pusher.name || 'nicolaspearson' }}"
-            }
-          production_environment: false
-          transient_environment: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
