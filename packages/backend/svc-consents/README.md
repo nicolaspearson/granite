@@ -8,6 +8,8 @@ The consent management service.
 - [ ] Add `consent` database entity.
 - [ ] Create `consent` module.
 - [ ] TODO items in code comments.
+- [ ] Code documentation (document methods and params)
+- [ ] Remove redis
 
 ## Getting Started
 

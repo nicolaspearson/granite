@@ -15,6 +15,8 @@ describe('Health Controller', () => {
     controller = module.get<HealthController>(HealthController);
   });
 
+  beforeEach(jest.clearAllMocks);
+
   test('should be defined', () => {
     expect(controller).toBeDefined();
   });

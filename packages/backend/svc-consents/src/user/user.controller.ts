@@ -26,14 +26,14 @@ export class UserController {
   })
   @ApiTags(TAG)
   @ApiResponse({
-    status: HttpStatus.BAD_REQUEST,
-    description: 'Invalid payload provided.',
-    type: BadRequestError,
-  })
-  @ApiResponse({
     status: HttpStatus.CREATED,
     description: 'User has successfully registered.',
     type: UserRegistrationResponse,
+  })
+  @ApiResponse({
+    status: HttpStatus.BAD_REQUEST,
+    description: 'Invalid payload provided.',
+    type: BadRequestError,
   })
   register(@Body() dto: UserRegistrationRequest): Promise<UserRegistrationResponse> {
     return this.userService.register(dto.email, dto.password);

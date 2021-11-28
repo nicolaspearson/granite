@@ -1,6 +1,6 @@
 import { BaseAuthRequest } from './base-auth.request.dto';
 
-export class UserRegistrationRequest extends BaseAuthRequest {
+export class LoginRequest extends BaseAuthRequest {
   constructor() {
     super();
   }

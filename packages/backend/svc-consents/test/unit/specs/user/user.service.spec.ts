@@ -12,14 +12,14 @@ describe('User Service', () => {
   let module: TestingModule;
   let service: UserService;
 
-  beforeAll(jest.clearAllMocks);
-
-  beforeEach(async () => {
+  beforeAll(async () => {
     module = await Test.createTestingModule({
       providers: [{ provide: UserRepository, useValue: userMockRepo }, UserService],
     }).compile();
     service = module.get<UserService>(UserService);
   });
+
+  beforeEach(jest.clearAllMocks);
 
   test('should be defined', () => {
     expect(service).toBeDefined();

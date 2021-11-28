@@ -41,7 +41,7 @@ describe('User Module', () => {
       expect(res.status).toEqual(HttpStatus.BAD_REQUEST);
     });
 
-    test('[400] => should throw a bad request error if the user already fails', async () => {
+    test('[400] => should throw a bad request error if the user already exists', async () => {
       const res = await request(app.getHttpServer())
         .post(`${baseUrl}/registration`)
         .send({
