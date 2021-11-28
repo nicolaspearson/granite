@@ -1,7 +1,7 @@
+import { getContentResourcePolicy } from '$/config/helmet.config';
 import { Environment } from '$/enum/environment.enum';
-import { getContentResourcePolicy } from '$/utils/helmet.util';
 
-describe('Helmet Util', () => {
+describe('Helmet Config', () => {
   describe('getContentResourcePolicy', () => {
     afterEach(() => {
       process.env.ENVIRONMENT = Environment.Development;

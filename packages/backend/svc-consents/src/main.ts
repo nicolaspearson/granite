@@ -6,6 +6,7 @@ import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
+import { getContentResourcePolicy } from '$/config/helmet.config';
 import { seed } from '$/db/utils/seeder.util';
 import { ApiGroup } from '$/enum/api-group.enum';
 import { Environment } from '$/enum/environment.enum';
@@ -13,7 +14,6 @@ import { ErrorFilter } from '$/filters/error.filter';
 import { HttpTimeoutInterceptor } from '$/interceptors/http-timeout.interceptor';
 import { MainModule } from '$/main.module';
 import { DtoValidationPipe } from '$/pipes/dto-validation.pipe';
-import { getContentResourcePolicy } from '$/utils/helmet.util';
 
 async function bootstrap() {
   const logLevel = [process.env.LOG_LEVEL || 'log'] as LogLevel[];
