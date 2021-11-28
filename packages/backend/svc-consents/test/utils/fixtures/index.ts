@@ -1,3 +1,5 @@
+import { Request } from 'express';
+
 import Event from '$/db/entities/event.entity';
 import User from '$/db/entities/user.entity';
 import {
@@ -28,6 +30,8 @@ export const eventMock: Event = {
   createdAt: now,
   user: userMock,
 };
+
+// ----------------------------
 
 // Token
 export const jwtTokenMock =
@@ -70,3 +74,18 @@ export const userRegistrationResponseMock = new UserRegistrationResponse({
   email: userMock.email,
   consents: [],
 });
+
+// ----------------------------
+
+// Express
+
+export const requestMock = {
+  body: {},
+  params: {},
+  query: {},
+} as Request;
+
+export const authenticatedRequestMock = {
+  ...requestMock,
+  userUuid: userMock.uuid,
+} as Request;

@@ -38,7 +38,7 @@ export class EventController {
     description: 'An internal error occurred.',
     type: InternalServerError,
   })
-  register(
+  create(
     @Req() req: Request,
     @Body() dto: ConsentEventItemRequest,
   ): Promise<ConsentEventItemResponse> {
