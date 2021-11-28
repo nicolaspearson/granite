@@ -31,19 +31,9 @@
     "lint:markdown": "markdownlint -c markdownlint.yaml $(find . -name '*.md' -not -path './.yarn/*')",
     "lint:yaml": "yamllint -d yamllint.yaml .",
     "lint": "yarn lint:markdown && yarn lint:yaml",
-    "persistence:start:integration": "yarn exec:docker-compose up -d --renew-anon-volumes --force-recreate db-integration redis-integration",
-    "persistence:start": "yarn exec:docker-compose up -d --renew-anon-volumes --force-recreate db redis",
-    "persistence:stop:integration": "docker-compose rm -f -s -v db-integration redis-integration",
     "prettier:fix": "prettier --config .prettierrc --no-editorconfig --write packages/**/*.ts",
     "prettier": "prettier --config .prettierrc --no-editorconfig --check packages/**/*.ts",
-    "postinstall": "husky install",
-    "redis:attach:integration": "yarn exec:docker-compose exec redis-integration redis-cli",
-    "redis:attach": "yarn exec:docker-compose exec redis redis-cli",
-    "redis:logs:integration": "yarn exec:docker-compose logs -f redis-integration",
-    "redis:logs": "yarn exec:docker-compose logs -f redis",
-    "redis:start": "yarn exec:docker-compose up -d --force-recreate redis",
-    "redis:start:integration": "yarn exec:docker-compose up -d --renew-anon-volumes --force-recreate redis-integration",
-    "redis:stop:integration": "docker-compose rm -f -s -v redis-integration"
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@commitlint/cli": "^15.0.0",
