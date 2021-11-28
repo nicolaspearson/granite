@@ -3,9 +3,9 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppModule } from '$/app/app.module';
+import { AuthModule } from '$/auth/auth.module';
 import { getValidationSchema } from '$/config/env.config';
 import { TypeOrmConfigService } from '$/config/typeorm.config';
-import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
