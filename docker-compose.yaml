@@ -12,13 +12,25 @@ services:
   svc-consents:
     build:
       args:
-        APP: svc-consents
+        PACKAGE: svc-consents
       context: .
       dockerfile: packages/backend/Dockerfile
     env_file:
       - packages/backend/svc-consents/.env
-    ports:
-      - 3001:3000
+    environment:
+      - API_HOST=0.0.0.0
+      - API_PORT=3000
+      - TYPEORM_DATABASE=granite
+      - TYPEORM_HOST=db
+      - TYPEORM_PASSWORD=secret
+      - TYPEORM_PORT=5432
+      - TYPEORM_SCHEMA=consents
+      - TYPEORM_USERNAME=granite
+    expose:
+      - 3000
+    depends_on:
+      db:
+        condition: service_healthy
     networks:
       - development
     container_name: svc-consents
@@ -37,6 +49,11 @@ services:
       - 5432:5432
     networks:
       - development
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready']
+      interval: 10s
+      timeout: 5s
+      retries: 5
     volumes:
       - ./db/scripts:/docker-entrypoint-initdb.d
     container_name: granite-db

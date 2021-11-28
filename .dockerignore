@@ -5,29 +5,27 @@
 !.yarn/**
 !.pnp.cjs
 !.pnp.js
+!.pnp.loader.mjs
 !.yarnrc.yml
 !yarn.lock
 !packages/**
 !types/**
 !**/.eslintrc.js
 !**/.prettierrc
+!**/nest-cli.json
 !**/package.json
 !**/tsconfig.json
+!**/tsconfig.backend.json
 !**/tsconfig.build.json
 !**/types/**
 
 # Ignore inside allowed directories (you will most probably never want this in a docker image)
-**/__mocks__/
-**/__test__/
 **/*.md
 **/.env*
 **/.gitignore
 **/Dockerfile
 **/jest.config.js
-**/config/
 **/dist/
-**/html/
-**/input/
 **/test/
 .yarn/sdks/
 .yarn/unplugged/
