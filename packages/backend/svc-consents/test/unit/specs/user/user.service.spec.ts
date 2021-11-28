@@ -30,14 +30,14 @@ describe('User Service', () => {
       const { email, password } = userRegistrationRequestMock;
       const result = await service.register(email, password);
       expect(result).toMatchObject(new UserRegistrationResponse({ ...userMock, consents: [] }));
-      expect(userMockRepo.create).toHaveBeenCalledWith({ attributes: { email, password } });
+      expect(userMockRepo.create).toHaveBeenCalledWith({ email, password });
     });
 
     test("throws when the user's email address already exists", async () => {
       userMockRepo.create?.mockRejectedValueOnce(new Error());
       const { email, password } = userRegistrationRequestMock;
       await expect(service.register(email, password)).rejects.toThrowError(BadRequestError);
-      expect(userMockRepo.create).toHaveBeenCalledWith({ attributes: { email, password } });
+      expect(userMockRepo.create).toHaveBeenCalledWith({ email, password });
     });
   });
 

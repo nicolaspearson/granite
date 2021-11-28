@@ -5,12 +5,12 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
 import { UserRegistrationRequest, UserRegistrationResponse } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
-import { BadRequestError } from '$/error';
+import { BadRequestError, InternalServerError } from '$/error';
 import { UserService } from '$/user/user.service';
 
 const TAG = ApiGroup.User;
 
-@Controller('user')
+@Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
@@ -34,6 +34,11 @@ export class UserController {
     status: HttpStatus.BAD_REQUEST,
     description: 'Invalid payload provided.',
     type: BadRequestError,
+  })
+  @ApiResponse({
+    status: HttpStatus.INTERNAL_SERVER_ERROR,
+    description: 'An internal error occurred.',
+    type: InternalServerError,
   })
   register(@Body() dto: UserRegistrationRequest): Promise<UserRegistrationResponse> {
     return this.userService.register(dto.email, dto.password);

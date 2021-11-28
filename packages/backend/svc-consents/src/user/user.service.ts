@@ -17,7 +17,7 @@ export class UserService {
   async register(email: Email, password: string): Promise<UserRegistrationResponse> {
     this.logger.log(`Registering user with email address: ${email}`);
     try {
-      const user = await this.userRepository.create({ attributes: { email, password } });
+      const user = await this.userRepository.create({ email, password });
       this.logger.log(`Successfully registered user with email address: ${email}`);
       return new UserRegistrationResponse({ uuid: user.uuid, email: user.email, consents: [] });
     } catch (error) {

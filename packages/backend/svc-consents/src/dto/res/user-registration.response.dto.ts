@@ -1,7 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 import { BaseUserResponse } from './base-user.response.dto';
-import { ConsentItemResponse } from './consent-item.response.dto';
+import { ConsentEventItemResponse } from './consent-event-item.response.dto';
 
 export class UserRegistrationResponse extends BaseUserResponse {
   @ApiProperty({
@@ -27,13 +27,13 @@ export class UserRegistrationResponse extends BaseUserResponse {
     ],
     isArray: true,
     required: true,
-    type: /* istanbul ignore next */ () => ConsentItemResponse,
+    type: /* istanbul ignore next */ () => ConsentEventItemResponse,
   })
-  readonly consents: ConsentItemResponse[];
+  readonly consents: ConsentEventItemResponse[];
 
   constructor(data: { uuid: Uuid; email: Email; consents: { id: string; enabled: boolean }[] }) {
     super(data);
     this.email = data.email;
-    this.consents = data.consents.map((c) => new ConsentItemResponse(c));
+    this.consents = data.consents.map((c) => new ConsentEventItemResponse(c));
   }
 }

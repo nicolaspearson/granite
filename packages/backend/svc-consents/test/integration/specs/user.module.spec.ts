@@ -11,7 +11,7 @@ import { userRegistrationRequestMock } from '#/utils/fixtures';
 describe('User Module', () => {
   let app: INestApplication;
 
-  const baseUrl = '/v1/consents/user';
+  const baseUrl = '/v1/consents/users';
 
   beforeEach(jest.clearAllMocks);
 
