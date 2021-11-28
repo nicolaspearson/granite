@@ -7,7 +7,7 @@ import { HttpTimeoutInterceptor } from '$/interceptors/http-timeout.interceptor'
 
 const interceptor = new HttpTimeoutInterceptor();
 
-const executionContext = {
+const contextMock = {
   getArgByIndex: jest.fn().mockReturnThis(),
   getArgs: jest.fn().mockReturnThis(),
   getClass: jest.fn().mockReturnThis(),
@@ -19,7 +19,7 @@ const executionContext = {
   switchToWs: jest.fn().mockReturnThis(),
 } as ExecutionContext;
 
-const callHandler = {
+const callHandlerMock = {
   handle: jest.fn(() => new Observable()),
 };
 
@@ -30,8 +30,8 @@ describe('Http Timeout Interceptor', () => {
 
   describe('intercept', () => {
     test('intercepts and calls the handler', () => {
-      interceptor.intercept(executionContext, callHandler);
-      expect(callHandler.handle).toBeCalledTimes(1);
+      interceptor.intercept(contextMock, callHandlerMock);
+      expect(callHandlerMock.handle).toBeCalledTimes(1);
     });
   });
 });

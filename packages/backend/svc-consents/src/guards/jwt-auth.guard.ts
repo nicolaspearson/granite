@@ -24,7 +24,9 @@ export class JwtAuthGuard implements CanActivate {
 export function validate(jwt: string): SvcConsents.JwtPayload {
   try {
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    return verify(jwt, process.env.JWT_SECRET!) as SvcConsents.JwtPayload;
+    return verify(jwt, process.env.JWT_SECRET!, {
+      ignoreExpiration: false,
+    }) as SvcConsents.JwtPayload;
   } catch (error) {
     throw new UnauthorizedError('Invalid JWT provided.');
   }
