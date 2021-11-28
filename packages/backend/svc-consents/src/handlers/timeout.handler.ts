@@ -12,7 +12,9 @@ export function timeoutHandler(
   return handler.handle().pipe(
     timeout(timeoutMilliseconds),
     catchError((err) => {
+      /* istanbul ignore next */
       if (err instanceof TimeoutError) {
+        /* istanbul ignore next */
         return throwError(() => new RequestTimeoutError());
       }
       // eslint-disable-next-line @typescript-eslint/no-unsafe-return
