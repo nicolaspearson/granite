@@ -6,7 +6,7 @@ import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { AuthService } from '$/auth/auth.service';
 import { JwtResponse, LoginRequest } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
-import { BadRequestError } from '$/error';
+import { BadRequestError, InternalServerError } from '$/error';
 
 const TAG = ApiGroup.Auth;
 
@@ -39,6 +39,11 @@ export class AuthController {
     status: HttpStatus.NOT_FOUND,
     description: 'Invalid login credentials provided.',
     type: BadRequestError,
+  })
+  @ApiResponse({
+    status: HttpStatus.INTERNAL_SERVER_ERROR,
+    description: 'An internal error occurred.',
+    type: InternalServerError,
   })
   authenticate(@Body() dto: LoginRequest): Promise<JwtResponse> {
     return this.authService.authenticate(dto.email, dto.password);

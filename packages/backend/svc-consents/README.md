@@ -2,14 +2,6 @@
 
 The consent management service.
 
-## TODO
-
-- [ ] Add JWT generation and authentication.
-- [ ] Add `consent` database entity.
-- [ ] Create `consent` module.
-- [ ] TODO items in code comments.
-- [ ] Code documentation (document methods and params)
-
 ## Getting Started
 
 ```bash

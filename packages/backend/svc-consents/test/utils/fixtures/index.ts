@@ -1,10 +1,16 @@
+import { Request } from 'express';
+
+import Event from '$/db/entities/event.entity';
 import User from '$/db/entities/user.entity';
 import {
+  ConsentEventItemRequest,
+  ConsentEventItemResponse,
   JwtResponse,
   LoginRequest,
   UserRegistrationRequest,
   UserRegistrationResponse,
 } from '$/dto';
+import { EventType } from '$/enum/event-type.enum';
 
 const now = new Date();
 
@@ -14,7 +20,18 @@ export const userMock: User = {
   email: 'u1.integration@example.com' as Email,
   password: 'secret',
   createdAt: now,
+  events: [],
 };
+
+export const eventMock: Event = {
+  id: 1,
+  type: EventType.Email,
+  enabled: true,
+  createdAt: now,
+  user: userMock,
+};
+
+// ----------------------------
 
 // Token
 export const jwtTokenMock =
@@ -32,6 +49,17 @@ export const loginRequestMock: LoginRequest = {
 
 export const jwtResponseMock = new JwtResponse({ token: jwtTokenMock });
 
+// Event
+export const consentEventItemRequestMock: ConsentEventItemRequest = {
+  id: eventMock.type,
+  enabled: eventMock.enabled,
+};
+
+export const consentEventItemResponseMock = new ConsentEventItemResponse({
+  id: eventMock.type,
+  enabled: eventMock.enabled,
+});
+
 // Health
 export const healthCheckResponseMock = { status: 'OK' };
 
@@ -46,3 +74,18 @@ export const userRegistrationResponseMock = new UserRegistrationResponse({
   email: userMock.email,
   consents: [],
 });
+
+// ----------------------------
+
+// Express
+
+export const requestMock = {
+  body: {},
+  params: {},
+  query: {},
+} as Request;
+
+export const authenticatedRequestMock = {
+  ...requestMock,
+  userUuid: userMock.uuid,
+} as Request;

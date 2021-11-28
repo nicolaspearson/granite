@@ -19,6 +19,9 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .valid(...environments)
       .description('The pre-defined deployment environment')
       .required(),
+    HTTP_TIMEOUT: Joi.number()
+      .description('The maximum number of milliseconds before a request will be timed out.')
+      .default(10 * 1000),
     JWT_ALGORITHM: Joi.string()
       .valid('HS256')
       .description('The algorithm used to encode the JWT')

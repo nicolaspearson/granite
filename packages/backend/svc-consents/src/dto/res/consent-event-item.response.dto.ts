@@ -1,6 +1,6 @@
 import { ApiProperty } from '@nestjs/swagger';
 
-export class ConsentItemResponse {
+export class ConsentEventItemResponse {
   @ApiProperty({
     description: 'The id of the consent.',
     examples: ['email_notifications', 'sms_notifications'],

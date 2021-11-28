@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/unbound-method */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import { BadRequestException } from '@nestjs/common';
+import { BadRequestException, ExecutionContext } from '@nestjs/common';
 
 import { ErrorName } from '$/enum/error-name.enum';
 import { BadRequestError } from '$/error';
@@ -11,10 +12,11 @@ import { ErrorFilter } from '$/filters/error.filter';
 const jsonMock = jest.fn().mockReturnThis();
 
 const contextMock = {
-  getArgs: jest.fn().mockReturnThis(),
   getArgByIndex: jest.fn().mockReturnThis(),
-  switchToRpc: jest.fn().mockReturnThis(),
-  switchToWs: jest.fn().mockReturnThis(),
+  getArgs: jest.fn().mockReturnThis(),
+  getClass: jest.fn().mockReturnThis(),
+  getHandler: jest.fn().mockReturnThis(),
+  getRequest: jest.fn().mockReturnThis(),
   getType: jest.fn().mockReturnThis(),
   switchToHttp: jest.fn(() => {
     return {
@@ -31,7 +33,9 @@ const contextMock = {
       }),
     };
   }),
-};
+  switchToRpc: jest.fn().mockReturnThis(),
+  switchToWs: jest.fn().mockReturnThis(),
+} as ExecutionContext;
 
 const badRequestErrorMock: SvcConsents.Error = {
   code: 400,

@@ -1,6 +1,5 @@
 import {
   AbstractRepository,
-  DeepPartial,
   DeleteResult,
   EntityManager,
   EntityRepository,
@@ -24,14 +23,12 @@ export class UserRepository extends AbstractRepository<User> {
     return this.manager.createQueryBuilder(User, 'user');
   }
 
-  create(data: { attributes: DeepPartial<User> }): Promise<User> {
-    const payload: QueryDeepPartialEntity<User> = {
-      ...data.attributes,
+  create(data: { email: Email; password: string }): Promise<User> {
+    const user: QueryDeepPartialEntity<User> = {
+      email: data.email,
+      password: generateSalt(data.password, "'bf', 8"),
     };
-    if (data.attributes.password) {
-      payload.password = generateSalt(data.attributes.password, "'bf', 8");
-    }
-    return this.manager.save(User, payload as User);
+    return this.manager.save(User, user as User);
   }
 
   delete(uuid: Uuid): Promise<DeleteResult> {

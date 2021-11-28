@@ -1,4 +1,5 @@
 @baseUrl = http://localhost:3000/v1/consents
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMzQzYzZhYzUtMmI3Mi00YzQxLWE5ZWItMjhmNWFlNDlhZjgwIiwiaWF0IjoxNjM4MTA4OTUzLCJleHAiOjE2MzgxMDk4NTMsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJiNjFiMjI1Ny02NmY1LTRlYWYtYmEyZC00MTA2NjdjYWVjMjAifQ.IbDHN1dbgfems8mZspjF27WgKfzhvt6vgaadtS6IBrA
 
 ########################################################################
 ###########                       AUTH                       ###########
@@ -15,6 +16,21 @@ Content-Type: application/json
 }
 
 ########################################################################
+###########                      EVENT                       ###########
+########################################################################
+
+### Creates a new consent event for the authenticated user
+POST {{baseUrl}}/events HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "id": "email_notifications",
+  "enabled": true
+}
+
+########################################################################
 ###########                      HEALTH                      ###########
 ########################################################################
 
@@ -28,7 +44,7 @@ Content-Type: application/json
 ########################################################################
 
 ### Register a new user
-POST {{baseUrl}}/user/registration HTTP/1.1
+POST {{baseUrl}}/users/registration HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
