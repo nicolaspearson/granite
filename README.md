@@ -91,8 +91,3 @@ Project configuration:
 - Each package has its own specific `scripts`, `dependencies` and `devDependencies`.
 - There is no `node_modules` directory, dependencies are committed to the repo via `.yarn/cache`.
   This greatly speeds up CI builds when the monorepo starts to grow.
-
-### Dependency Constraints
-
-The latest version of NestJS (v 8.2.3) does not work with Typescript (v 4.5.2) in Yarn 2 Plug 'n
-Play mode. It fails to correctly resolve `@nestjs/...` dependencies.
