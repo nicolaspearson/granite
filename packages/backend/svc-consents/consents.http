@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000/v1/consents
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMzQzYzZhYzUtMmI3Mi00YzQxLWE5ZWItMjhmNWFlNDlhZjgwIiwiaWF0IjoxNjM4MTA4OTUzLCJleHAiOjE2MzgxMDk4NTMsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJiNjFiMjI1Ny02NmY1LTRlYWYtYmEyZC00MTA2NjdjYWVjMjAifQ.IbDHN1dbgfems8mZspjF27WgKfzhvt6vgaadtS6IBrA
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMzQzYzZhYzUtMmI3Mi00YzQxLWE5ZWItMjhmNWFlNDlhZjgwIiwiaWF0IjoxNjM4MTczMTg3LCJleHAiOjE2MzgxNzQwODcsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJkYzcyYzQyNC04YTVhLTQzODUtYjRiMC1lYzVhZDhlOWFiYTUifQ._CLo1i1LLUxtAEo5-ZIwaTPWWE9wvNbYXhGrFUNHBh4
 
 ########################################################################
 ###########                       AUTH                       ###########
@@ -43,12 +43,24 @@ Content-Type: application/json
 ###########                       USER                       ###########
 ########################################################################
 
+### Get the authenticated user's profile
+GET {{baseUrl}}/user HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+### Delete the authenticated user's account
+DELETE {{baseUrl}}/user HTTP/1.1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
 ### Register a new user
 POST {{baseUrl}}/users/registration HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "jane.doe@example.com",
+  "email": "alex.doe@example.com",
   "password": "secret"
 }

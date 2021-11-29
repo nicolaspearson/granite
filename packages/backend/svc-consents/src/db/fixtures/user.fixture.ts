@@ -14,4 +14,16 @@ export const userFixtures: QueryDeepPartialEntity<User>[] = [
     password: hashPassword('secret'),
     createdAt: new Date(),
   },
+  {
+    uuid: '60625825-4bc5-4b53-be6f-73d090f3f34b' as Uuid,
+    email: 'jane.doe@example.com' as Email,
+    password: hashPassword('secret'),
+    createdAt: new Date(),
+  },
+  {
+    uuid: '16fcbe9d-cded-4c0e-aa5a-8ce7dbad1107' as Uuid,
+    email: 'deletable-user@example.com' as Email,
+    password: hashPassword('secret'),
+    createdAt: new Date(),
+  },
 ];

@@ -1,20 +1,93 @@
 import { oneLineTrim } from 'common-tags';
+import { Request } from 'express';
 
-import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  HttpCode,
+  HttpStatus,
+  Post,
+  Req,
+  UseGuards,
+} from '@nestjs/common';
+import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
-import { UserRegistrationRequest, UserRegistrationResponse } from '$/dto';
+import { UserProfileResponse, UserRegistrationRequest, UserRegistrationResponse } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
-import { BadRequestError, InternalServerError } from '$/error';
+import { BadRequestError, InternalServerError, UnauthorizedError } from '$/error';
+import { JwtAuthGuard } from '$/guards/jwt-auth.guard';
 import { UserService } from '$/user/user.service';
 
 const TAG = ApiGroup.User;
 
-@Controller('users')
+@Controller()
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
-  @Post('registration')
+  @Get('user')
+  @HttpCode(HttpStatus.OK)
+  @UseGuards(JwtAuthGuard)
+  @ApiOperation({
+    summary: 'Allows a user to retrieve their profile.',
+    description: "Returns the authenticated user's profile",
+  })
+  @ApiTags(TAG)
+  @ApiBearerAuth()
+  @ApiResponse({
+    status: HttpStatus.OK,
+    description: 'User profile successfully retrieved.',
+    type: UserProfileResponse,
+  })
+  @ApiResponse({
+    status: HttpStatus.UNAUTHORIZED,
+    description: 'Access denied.',
+    type: UnauthorizedError,
+  })
+  @ApiResponse({
+    status: HttpStatus.INTERNAL_SERVER_ERROR,
+    description: 'An internal error occurred.',
+    type: InternalServerError,
+  })
+  profile(@Req() req: Request): Promise<UserProfileResponse> {
+    // We can use a non-null assertion below because the userUuid must exist on the
+    // request because it is verified and added to the request by the JwtAuthGuard.
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    return this.userService.profile(req.userUuid!);
+  }
+
+  @Delete('user')
+  @HttpCode(HttpStatus.NO_CONTENT)
+  @UseGuards(JwtAuthGuard)
+  @ApiOperation({
+    summary: 'Allows a user to delete their account.',
+    description: 'Deletes the account of the authenticated user.',
+  })
+  @ApiTags(TAG)
+  @ApiBearerAuth()
+  @ApiResponse({
+    status: HttpStatus.NO_CONTENT,
+    description: 'User has been successfully deleted.',
+  })
+  @ApiResponse({
+    status: HttpStatus.UNAUTHORIZED,
+    description: 'Access denied.',
+    type: UnauthorizedError,
+  })
+  @ApiResponse({
+    status: HttpStatus.INTERNAL_SERVER_ERROR,
+    description: 'An internal error occurred.',
+    type: InternalServerError,
+  })
+  delete(@Req() req: Request): Promise<void> {
+    // We can use a non-null assertion below because the userUuid must exist on the
+    // request because it is verified and added to the request by the JwtAuthGuard.
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    return this.userService.delete(req.userUuid!);
+  }
+
+  @Post('users/registration')
   @HttpCode(HttpStatus.CREATED)
   @ApiOperation({
     summary: 'Allows a new user to register.',

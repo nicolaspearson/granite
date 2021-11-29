@@ -1,10 +1,10 @@
 module.exports = Object.assign({}, require(`../../jest.config.js`), {
   collectCoverageFrom: [
     'src/**/*.controller.ts',
-    '!src/**/*.dto.ts', // TODO: Enable this once all user controller methods are implemented.
+    'src/**/*.dto.ts',
     'src/**/*.module.ts',
-    '!src/**/*.repository.ts', // TODO: Enable this once all user controller methods are implemented.
-    '!src/**/*.service.ts',
+    'src/**/*.repository.ts',
+    'src/**/*.service.ts',
     '!src/main.module.ts',
   ],
   coverageThreshold: {

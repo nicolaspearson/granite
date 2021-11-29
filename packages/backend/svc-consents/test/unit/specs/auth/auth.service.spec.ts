@@ -3,7 +3,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { AuthService } from '$/auth/auth.service';
 import { UserRepository } from '$/db/repositories/user.repository';
 import { JwtResponse } from '$/dto';
-import { NotFoundError } from '$/error';
+import { InternalServerError, NotFoundError } from '$/error';
 import { TokenService } from '$/token/token.service';
 
 import { jwtPayloadMock, jwtTokenMock, loginRequestMock } from '#/utils/fixtures';
@@ -54,12 +54,12 @@ describe('Auth Service', () => {
       expect(tokenMockService.generate).not.toHaveBeenCalled();
     });
 
-    test('throws when the database transaction fails', async () => {
-      userMockRepo.findByValidCredentials?.mockRejectedValueOnce(new Error());
+    test('throws when jwt generation fails', async () => {
+      tokenMockService.generate?.mockRejectedValueOnce(new Error());
       const { email, password } = loginRequestMock;
-      await expect(service.authenticate(email, password)).rejects.toThrowError(NotFoundError);
+      await expect(service.authenticate(email, password)).rejects.toThrowError(InternalServerError);
       expect(userMockRepo.findByValidCredentials).toHaveBeenCalledWith(email, password);
-      expect(tokenMockService.generate).not.toHaveBeenCalled();
+      expect(tokenMockService.generate).toHaveBeenCalledWith(jwtPayloadMock);
     });
   });
 

@@ -2,7 +2,13 @@ import * as request from 'supertest';
 
 import { HttpStatus, INestApplication } from '@nestjs/common';
 
-import { ConsentEventItemRequest, JwtResponse } from '$/dto';
+import { userFixtures } from '$/db/fixtures/user.fixture';
+import {
+  ConsentEventItemRequest,
+  ConsentEventItemResponse,
+  ConsentEventResponse,
+  JwtResponse,
+} from '$/dto';
 import { EventType } from '$/enum/event-type.enum';
 
 import { getJwt } from '#/integration/auth.util';
@@ -35,9 +41,16 @@ describe('Event Module', () => {
         } as ConsentEventItemRequest)
         .expect(HttpStatus.CREATED);
       expect(res.body).toMatchObject({
-        id: EventType.Email,
-        enabled: true,
-      });
+        user: {
+          id: userFixtures[0].uuid,
+        },
+        consents: [
+          {
+            id: EventType.Email,
+            enabled: true,
+          } as ConsentEventItemResponse,
+        ],
+      } as ConsentEventResponse);
     });
 
     test('[400] => should throw a bad request error if validation fails', async () => {
@@ -52,7 +65,6 @@ describe('Event Module', () => {
     });
 
     test('[401] => should throw an unauthorized error if a valid jwt is not provided', async () => {
-      expect(jwt.token).toBeDefined();
       const res = await request(app.getHttpServer())
         .post(baseUrl)
         .set('Authorization', `Bearer ${jwtResponseMock.token}`)

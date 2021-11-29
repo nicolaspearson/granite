@@ -1,11 +1,11 @@
 import { Request } from 'express';
 
 import { Body, Controller, HttpCode, HttpStatus, Post, Req, UseGuards } from '@nestjs/common';
-import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
-import { ConsentEventItemRequest, ConsentEventItemResponse } from '$/dto';
+import { ConsentEventItemRequest, ConsentEventResponse } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
-import { BadRequestError, InternalServerError } from '$/error';
+import { BadRequestError, InternalServerError, UnauthorizedError } from '$/error';
 import { EventService } from '$/event/event.service';
 import { JwtAuthGuard } from '$/guards/jwt-auth.guard';
 
@@ -23,10 +23,11 @@ export class EventController {
     description: 'Creates a new consent event for the authenticated user',
   })
   @ApiTags(TAG)
+  @ApiBearerAuth()
   @ApiResponse({
     status: HttpStatus.CREATED,
     description: 'Consent event has been successfully created.',
-    type: ConsentEventItemResponse,
+    type: ConsentEventResponse,
   })
   @ApiResponse({
     status: HttpStatus.BAD_REQUEST,
@@ -34,14 +35,18 @@ export class EventController {
     type: BadRequestError,
   })
   @ApiResponse({
+    status: HttpStatus.UNAUTHORIZED,
+    description: 'Access denied.',
+    type: UnauthorizedError,
+  })
+  @ApiResponse({
     status: HttpStatus.INTERNAL_SERVER_ERROR,
     description: 'An internal error occurred.',
     type: InternalServerError,
   })
-  create(
-    @Req() req: Request,
-    @Body() dto: ConsentEventItemRequest,
-  ): Promise<ConsentEventItemResponse> {
+  create(@Req() req: Request, @Body() dto: ConsentEventItemRequest): Promise<ConsentEventResponse> {
+    // We can use a non-null assertion below because the userUuid must exist on the
+    // request because it is verified and added to the request by the JwtAuthGuard.
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return this.eventService.create(dto.id, dto.enabled, req.userUuid!);
   }

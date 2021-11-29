@@ -1,6 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
+import { HealthCheckResponse } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
 
 const TAG = ApiGroup.Health;
@@ -16,8 +17,9 @@ export class HealthController {
   @ApiResponse({
     status: 200,
     description: 'This service is healthy.',
+    type: HealthCheckResponse,
   })
-  getHealth(): { status: string } {
-    return { status: 'OK' };
+  getHealth(): HealthCheckResponse {
+    return new HealthCheckResponse({ status: 'OK' });
   }
 }

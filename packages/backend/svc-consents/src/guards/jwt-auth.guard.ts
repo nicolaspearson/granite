@@ -14,7 +14,7 @@ export class JwtAuthGuard implements CanActivate {
     if (!authorizationHeader) {
       throw new UnauthorizedError('The JWT is missing from the request.');
     }
-    const jwt = authorizationHeader.split('Bearer ')[1];
+    const jwt = authorizationHeader.replace(/Bearer /gi, '');
     const jwtPayload = validate(jwt);
     req.userUuid = jwtPayload.uuid;
     return true;

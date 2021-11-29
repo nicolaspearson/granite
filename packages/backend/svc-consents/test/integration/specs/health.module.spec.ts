@@ -20,7 +20,7 @@ describe('Health Module', () => {
   describe(`GET ${baseUrl}`, () => {
     test('[200] => should return the health status correctly', async () => {
       const res = await request(app.getHttpServer()).get(baseUrl).expect(HttpStatus.OK);
-      expect(res.body).toEqual(healthCheckResponseMock);
+      expect(res.body).toMatchObject(healthCheckResponseMock);
     });
   });
 
