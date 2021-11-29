@@ -17,6 +17,8 @@ export class EventRepository extends AbstractRepository<Event> {
   }
 
   create(data: { enabled: boolean; type: EventType; userUuid: Uuid }): Promise<Event> {
+    // TODO: Check if the user exists before attempting to save the event.
+    // The user might have deleted their account but still has a valid JWT.
     return this.manager.save(Event, {
       enabled: data.enabled,
       type: data.type,
@@ -25,6 +27,8 @@ export class EventRepository extends AbstractRepository<Event> {
   }
 
   findByUserUuid(userUuid: Uuid): Promise<Event[]> {
+    // We use DISTINCT ON to only return the latest entry in the
+    // event table grouped by `type` and ordered by `created_at`
     return this.eventQuery()
       .where('user.uuid = :userUuid', { userUuid })
       .distinctOn(['event.type'])

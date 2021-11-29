@@ -9,7 +9,7 @@ const environments: Environment[] = [
   Environment.Test,
 ];
 
-// Joi object keys follow the env variable format
+// Joi object keys follow the UPPER snake case convention.
 /* eslint-disable @typescript-eslint/naming-convention */
 export function getValidationSchema(): Joi.ObjectSchema {
   return Joi.object({

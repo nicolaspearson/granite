@@ -11,7 +11,7 @@ export class HealthController {
   @Get('/')
   @ApiOperation({
     summary: 'Get the health status of this service.',
-    description: 'Provides the health status of the current application.',
+    description: 'Provides the health status of the service.',
   })
   @ApiTags(TAG)
   @ApiResponse({

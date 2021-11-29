@@ -13,7 +13,7 @@ const VALID_PASSWORD_REGEX = /^[A-Za-z0-9!@#$%^&*()_+=\[{\]};:<>'" |.\?,-]*$/;
 @ValidatorConstraint({ name: 'isValidPassword', async: false })
 export class IsValidPasswordConstraint implements ValidatorConstraintInterface {
   validate(text: string, _: ValidationArguments): boolean {
-    // TODO: Check password strength
+    // TODO: Add a check here that will test the strength of the password.
     return (
       text !== undefined &&
       text.length >= 6 &&

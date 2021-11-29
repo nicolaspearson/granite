@@ -25,6 +25,11 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
     return connectionOptions;
   }
 
+  /**
+   * Creates the connection configuration that will be used by TypeORM.
+   *
+   * @returns The {@link MergedConnectionOptions} connection options which TypeORM will use.
+   */
   static creatConnectionOptions() {
     const connectionOptions: MergedConnectionOptions = {
       type: 'postgres',

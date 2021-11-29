@@ -19,6 +19,7 @@ export class BadRequestError extends BaseError {
     description: 'An array of error details.',
     example: [],
     isArray: true,
+    type: Object,
   })
   declare readonly errors: string[] | Record<string, unknown>[];
 
