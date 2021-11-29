@@ -17,7 +17,7 @@ export class BaseAuthRequest {
 
   @ApiProperty({
     description: "The user's password.",
-    example: 'MyP4ssw0rd',
+    example: 'secret',
     required: true,
     type: String,
   })

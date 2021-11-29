@@ -30,7 +30,7 @@ export default class Event {
     onUpdate: 'CASCADE',
     nullable: false,
   })
-  @JoinColumn()
+  @JoinColumn({ name: 'user_uuid' })
   @Index('IDX_EVENT_USER_UUID')
   user!: User;
 }

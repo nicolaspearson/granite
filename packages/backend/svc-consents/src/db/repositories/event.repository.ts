@@ -25,6 +25,14 @@ export class EventRepository extends AbstractRepository<Event> {
   }
 
   findByUserUuid(userUuid: Uuid): Promise<Event[]> {
-    return this.eventQuery().where('user.uuid = :userUuid', { userUuid }).getMany();
+    return this.eventQuery()
+      .where('user.uuid = :userUuid', { userUuid })
+      .distinctOn(['event.type'])
+      .orderBy({
+        'event.type': 'DESC',
+        // eslint-disable-next-line @typescript-eslint/naming-convention
+        'event.created_at': 'DESC',
+      })
+      .getMany();
   }
 }

@@ -46,6 +46,7 @@ async function bootstrap() {
 
   // Configure swagger
   const builder = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle('Consent Management Service API')
     .setVersion('1.0');
   Object.values(ApiGroup).forEach((g) => builder.addTag(g));
