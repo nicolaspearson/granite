@@ -16,6 +16,7 @@ export class ErrorFilter implements ExceptionFilter {
     403: ErrorName.Forbidden.toString(),
     404: ErrorName.NotFound.toString(),
     408: ErrorName.RequestTimeout.toString(),
+    422: ErrorName.UnprocessableEntity.toString(),
     500: ErrorName.InternalServerError.toString(),
     501: ErrorName.NotImplemented.toString(),
   };
