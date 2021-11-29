@@ -5,7 +5,8 @@ import { ErrorName } from '$/enum/error-name.enum';
 
 import { BaseError } from './base.error';
 
-const DEFAULT_MESSAGE = "The server has encountered a situation it doesn't know how to handle.";
+export const DEFAULT_MESSAGE =
+  "The server has encountered a situation it doesn't know how to handle.";
 
 export class InternalServerError extends BaseError {
   @ApiProperty({

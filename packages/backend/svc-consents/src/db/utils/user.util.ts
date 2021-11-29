@@ -1,5 +1,10 @@
+/**
+ * Escapes unicode characters from the provided raw string value.
+ *
+ * @param value The raw string value.
+ * @returns The escaped string.
+ */
 function escapePostgresString(value: string) {
-  // Escape unicode characters
   return `E'${value.replace(/(\\)/g, `\\\\`).replace(/(\')/g, `\\'`)}'`;
 }
 

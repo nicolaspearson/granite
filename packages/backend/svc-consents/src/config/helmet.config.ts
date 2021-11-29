@@ -2,6 +2,13 @@ import { ContentSecurityPolicyOptions } from 'helmet/dist/middlewares/content-se
 
 import { Environment } from '$/enum/environment.enum';
 
+/**
+ * Creates the content security policy configuration which helmet should use.
+ *
+ * In development we return a relaxed set of directives to serve the swagger documentation.
+ *
+ * @returns The {@link ContentSecurityPolicyOptions} in development, and true in production.
+ */
 export function getContentResourcePolicy(): boolean | ContentSecurityPolicyOptions {
   if (process.env.ENVIRONMENT !== Environment.Production) {
     return {

@@ -19,7 +19,7 @@ async function bootstrap() {
   const logLevel = [process.env.LOG_LEVEL || 'log'] as LogLevel[];
   const app = await NestFactory.create(MainModule, {
     // Cross-origin resource sharing (CORS) is a mechanism that
-    // allows resources to be requested from another domain.
+    // allows resources to be requested from another domain
     cors: {
       credentials: true,
       methods: 'DELETE,HEAD,GET,OPTIONS,PATCH,POST,PUT',
@@ -30,13 +30,14 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
 
   // Helmet can help protect the app from some well-known web
-  // vulnerabilities by setting the appropriate HTTP headers.
+  // vulnerabilities by setting the appropriate HTTP headers
   app.use(
     helmet({
       contentSecurityPolicy: getContentResourcePolicy(),
     }),
   );
 
+  // Register global filters, pipes, and interceptors
   app.useGlobalFilters(new ErrorFilter());
   app.useGlobalPipes(new DtoValidationPipe());
   app.useGlobalInterceptors(new HttpTimeoutInterceptor());
@@ -58,6 +59,7 @@ async function bootstrap() {
     await seed(app.get<Connection>(Connection));
   }
 
+  // Serve the application
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   await app.listen(configService.get<number>('API_PORT')!, configService.get<string>('API_HOST')!);
 }

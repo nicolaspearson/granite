@@ -26,7 +26,10 @@ export class UserRepository extends AbstractRepository<User> {
 
   private userQuery(options?: UserQueryOptions): SelectQueryBuilder<User> {
     const query = this.manager.createQueryBuilder(User, 'user');
+    // The event join is optional, and is included in the query by setting this option to true.
     if (options?.events) {
+      // We use DISTINCT ON to only return the latest entry in the
+      // event table grouped by `type` and ordered by `created_at`
       query.leftJoinAndSelect('user.events', 'events').distinctOn(['events.type']).orderBy({
         'events.type': 'DESC',
         // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -39,6 +42,7 @@ export class UserRepository extends AbstractRepository<User> {
   create(data: { email: Email; password: string }): Promise<User> {
     const user: QueryDeepPartialEntity<User> = {
       email: data.email,
+      // The pgcrypto extension salts and hashes the user's password
       password: generateSalt(data.password, "'bf', 8"),
     };
     return this.manager.save(User, user as User);
@@ -61,6 +65,7 @@ export class UserRepository extends AbstractRepository<User> {
   }
 
   findByValidCredentials(email: Email, password: string): Promise<User | undefined> {
+    // We use the pgcrypto extension to compare the hashed password to the plain text version
     return this.userQuery()
       .where({ email })
       .andWhere('user.password = crypt(:password, user.password)', { password })

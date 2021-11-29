@@ -51,4 +51,12 @@ erDiagram
         date created_at
         date updated_at
     }
+    USER ||--o{ EVENT : userUuid
+    EVENT {
+        integer id
+        string type
+        boolean enabled
+        date created_at
+        uuid userUuid
+    }
 ```

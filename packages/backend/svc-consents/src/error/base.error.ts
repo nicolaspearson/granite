@@ -3,7 +3,7 @@ import { ApiProperty } from '@nestjs/swagger';
 
 import { ErrorName } from '$/enum/error-name.enum';
 
-const DEFAULT_MESSAGE = "The server has encountered a situation it doesn't know how to handle.";
+import { DEFAULT_MESSAGE } from './internal-server.error';
 
 export class BaseError extends Error {
   @ApiProperty({

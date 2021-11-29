@@ -25,6 +25,8 @@ export class EventRepository extends AbstractRepository<Event> {
   }
 
   findByUserUuid(userUuid: Uuid): Promise<Event[]> {
+    // We use DISTINCT ON to only return the latest entry in the
+    // event table grouped by `type` and ordered by `created_at`
     return this.eventQuery()
       .where('user.uuid = :userUuid', { userUuid })
       .distinctOn(['event.type'])
