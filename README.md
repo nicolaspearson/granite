@@ -55,6 +55,12 @@ yarn workspace svc-consents test:unit
 yarn workspace svc-consents test:integration
 ```
 
+##### Swagger
+
+Swagger documentation is served on [localhost](http://localhost:3000/docs/consents/#/).
+
+![Swagger](./assets/screenshots/swagger.png)
+
 ## Project Overview
 
 ### Configuration Files

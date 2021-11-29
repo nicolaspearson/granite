@@ -17,6 +17,7 @@ export class HealthController {
   @ApiResponse({
     status: 200,
     description: 'This service is healthy.',
+    type: HealthCheckResponse,
   })
   getHealth(): HealthCheckResponse {
     return new HealthCheckResponse({ status: 'OK' });
