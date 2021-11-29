@@ -13,7 +13,7 @@ export async function bootstrap(): Promise<void> {
   const outputPath = resolve(process.cwd(), '../../..', 'types/api/svc-consents.d.ts');
   await convertSwaggerToDts({
     document,
-    namespace: 'SvcConsents',
+    namespace: 'SvcConsentsApi',
     outputPath,
   });
   console.log(`Declaration files generated and exported to: ${outputPath}`);

@@ -18,6 +18,7 @@ Optionally install [yamllint](https://yamllint.readthedocs.io/).
 3. Install the extensions listed in `.vscode/extensions.json`
 4. Switch to the `granite` workspace by opening `.vscode/granite.code-workspace`, and clicking on
    the "Open Workspace" button.
+5. Ensure that you have docker installed and running.
 
 ## Project Overview
 

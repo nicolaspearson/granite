@@ -2,7 +2,7 @@
 /**
  * Note: This file is auto generated and should NOT be edited manually.
  */
-declare namespace SvcConsents {
+declare namespace SvcConsentsApi {
   export interface BadRequestError {
     /**
      * The HTTP response code.

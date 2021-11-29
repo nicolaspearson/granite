@@ -1,7 +1,6 @@
 ## Binaries
 build/
 dist/
-lib/
 
 ## ESLint
 .eslintcache
