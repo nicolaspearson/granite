@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000/v1/consents
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMzQzYzZhYzUtMmI3Mi00YzQxLWE5ZWItMjhmNWFlNDlhZjgwIiwiaWF0IjoxNjM4MTczMTg3LCJleHAiOjE2MzgxNzQwODcsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJkYzcyYzQyNC04YTVhLTQzODUtYjRiMC1lYzVhZDhlOWFiYTUifQ._CLo1i1LLUxtAEo5-ZIwaTPWWE9wvNbYXhGrFUNHBh4
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNjA2MjU4MjUtNGJjNS00YjUzLWJlNmYtNzNkMDkwZjNmMzRiIiwiaWF0IjoxNjM4MTk0NzM4LCJleHAiOjE2MzgxOTU2MzgsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJmY2VjOGU3Yi00NzkzLTQ0MTktYWQwNC04OWYwYzllMGJiNGYifQ.4Bn8zC87C6JutvZPyFVXPkkQG456PXuoGHYj9d3F5X0
 
 ########################################################################
 ###########                       AUTH                       ###########
@@ -11,7 +11,7 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "john.doe@example.com",
+  "email": "jane.doe@example.com",
   "password": "secret"
 }
 
