@@ -5,8 +5,11 @@ import User from '$/db/entities/user.entity';
 import {
   ConsentEventItemRequest,
   ConsentEventItemResponse,
+  ConsentEventResponse,
+  HealthCheckResponse,
   JwtResponse,
   LoginRequest,
+  UserProfileResponse,
   UserRegistrationRequest,
   UserRegistrationResponse,
 } from '$/dto';
@@ -17,7 +20,7 @@ const now = new Date();
 // Database entities
 export const userMock: User = {
   uuid: '7a39a121-fdbf-45db-9353-a006bde4261a' as Uuid,
-  email: 'u1.integration@example.com' as Email,
+  email: 'test@example.com' as Email,
   password: 'secret',
   createdAt: now,
   events: [],
@@ -29,6 +32,11 @@ export const eventMock: Event = {
   enabled: true,
   createdAt: now,
   user: userMock,
+};
+
+export const userMockWithEvents: User = {
+  ...userMock,
+  events: [eventMock],
 };
 
 // ----------------------------
@@ -56,14 +64,25 @@ export const consentEventItemRequestMock: ConsentEventItemRequest = {
 };
 
 export const consentEventItemResponseMock = new ConsentEventItemResponse({
-  id: eventMock.type,
+  type: eventMock.type,
   enabled: eventMock.enabled,
 });
 
+export const consentEventResponseMock = new ConsentEventResponse({
+  uuid: userMock.uuid,
+  events: [eventMock],
+});
+
 // Health
-export const healthCheckResponseMock = { status: 'OK' };
+export const healthCheckResponseMock = new HealthCheckResponse({ status: 'OK' });
 
 // User
+export const userProfileResponseMock = new UserProfileResponse({
+  uuid: userMock.uuid,
+  email: userMock.email,
+  events: [eventMock],
+});
+
 export const userRegistrationRequestMock: UserRegistrationRequest = {
   email: userMock.email,
   password: userMock.password,
@@ -72,7 +91,7 @@ export const userRegistrationRequestMock: UserRegistrationRequest = {
 export const userRegistrationResponseMock = new UserRegistrationResponse({
   uuid: userMock.uuid,
   email: userMock.email,
-  consents: [],
+  events: [],
 });
 
 // ----------------------------

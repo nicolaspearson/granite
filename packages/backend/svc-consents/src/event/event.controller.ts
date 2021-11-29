@@ -30,14 +30,14 @@ export class EventController {
     type: ConsentEventResponse,
   })
   @ApiResponse({
-    status: HttpStatus.UNAUTHORIZED,
-    description: 'Access denied.',
-    type: UnauthorizedError,
-  })
-  @ApiResponse({
     status: HttpStatus.BAD_REQUEST,
     description: 'Invalid payload provided.',
     type: BadRequestError,
+  })
+  @ApiResponse({
+    status: HttpStatus.UNAUTHORIZED,
+    description: 'Access denied.',
+    type: UnauthorizedError,
   })
   @ApiResponse({
     status: HttpStatus.INTERNAL_SERVER_ERROR,

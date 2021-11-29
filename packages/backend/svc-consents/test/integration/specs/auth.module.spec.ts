@@ -3,7 +3,7 @@ import * as request from 'supertest';
 import { HttpStatus, INestApplication } from '@nestjs/common';
 
 import { userFixtures } from '$/db/fixtures/user.fixture';
-import { LoginRequest } from '$/dto';
+import { JwtResponse, LoginRequest } from '$/dto';
 
 import { setupApplication } from '#/integration/setup-application';
 
@@ -31,7 +31,7 @@ describe('Auth Module', () => {
       expect(res.body).toMatchObject({
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         token: expect.any(String),
-      });
+      } as JwtResponse);
     });
 
     test('[400] => should throw a bad request error if validation fails', async () => {
@@ -55,7 +55,7 @@ describe('Auth Module', () => {
       const res = await request(app.getHttpServer())
         .post(`${baseUrl}/login`)
         .send({
-          email: 'brand-new@example.com',
+          email: 'brand-new-user@example.com',
           password: 'secret',
         } as LoginRequest);
       expect(res.status).toEqual(HttpStatus.NOT_FOUND);

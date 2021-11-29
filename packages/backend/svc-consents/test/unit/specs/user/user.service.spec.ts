@@ -29,7 +29,7 @@ describe('User Service', () => {
     test('should allow a user to register', async () => {
       const { email, password } = userRegistrationRequestMock;
       const result = await service.register(email, password);
-      expect(result).toMatchObject(new UserRegistrationResponse({ ...userMock, consents: [] }));
+      expect(result).toMatchObject(new UserRegistrationResponse({ ...userMock, events: [] }));
       expect(userMockRepo.create).toHaveBeenCalledWith({ email, password });
     });
 

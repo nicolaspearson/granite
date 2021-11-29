@@ -2,7 +2,9 @@ import { oneLine } from 'common-tags';
 import { Connection, ObjectType } from 'typeorm';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
+import Event from '$/db/entities/event.entity';
 import User from '$/db/entities/user.entity';
+import { eventFixtures } from '$/db/fixtures/email.fixtures';
 import { userFixtures } from '$/db/fixtures/user.fixture';
 
 type Entity = ObjectType<Record<string, unknown>>;
@@ -12,7 +14,10 @@ interface Fixture {
   values: QueryDeepPartialEntity<Entity>[];
 }
 
-const fixtures: Fixture[] = [{ entity: User, values: userFixtures }];
+const fixtures: Fixture[] = [
+  { entity: User, values: userFixtures },
+  { entity: Event, values: eventFixtures },
+];
 
 export async function seed(connection: Connection): Promise<void> {
   await connection.query(oneLine`

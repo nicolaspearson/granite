@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
 import { EventRepository } from '$/db/repositories/event.repository';
-import { ConsentEventItemResponse } from '$/dto';
+import { ConsentEventResponse } from '$/dto';
 import { EventService } from '$/event/event.service';
 
 import { consentEventItemRequestMock, eventMock, userMock } from '#/utils/fixtures';
@@ -35,7 +35,10 @@ describe('Event Service', () => {
       const { id, enabled } = consentEventItemRequestMock;
       const result = await service.create(id, enabled, userMock.uuid);
       expect(result).toMatchObject(
-        new ConsentEventItemResponse({ id: eventMock.type, enabled: eventMock.enabled }),
+        new ConsentEventResponse({
+          uuid: userMock.uuid,
+          events: [{ type: eventMock.type, enabled: eventMock.enabled }],
+        }),
       );
       expect(eventMockRepo.create).toHaveBeenCalledWith({
         enabled,

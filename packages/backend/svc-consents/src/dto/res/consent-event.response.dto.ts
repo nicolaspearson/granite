@@ -33,8 +33,9 @@ export class ConsentEventResponse {
   })
   readonly consents: ConsentEventItemResponse[];
 
-  constructor(data: { uuid: Uuid; events: { type: EventType; enabled: boolean }[] }) {
+  constructor(data: { uuid: Uuid; events?: { type: EventType; enabled: boolean }[] }) {
     this.user = new BaseUserResponse(data);
-    this.consents = data.events?.map((c) => new ConsentEventItemResponse(c)) || [];
+    this.consents =
+      /* istanbul ignore next */ data.events?.map((c) => new ConsentEventItemResponse(c)) ?? [];
   }
 }
