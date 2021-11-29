@@ -3,10 +3,7 @@ import { ApiProperty } from '@nestjs/swagger';
 
 import { ErrorName } from '$/enum/error-name.enum';
 
-import { BaseError } from './base.error';
-
-export const DEFAULT_MESSAGE =
-  "The server has encountered a situation it doesn't know how to handle.";
+import { BaseError, DEFAULT_INTERNAL_SERVER_ERROR_MESSAGE } from './base.error';
 
 export class InternalServerError extends BaseError {
   @ApiProperty({
@@ -24,7 +21,7 @@ export class InternalServerError extends BaseError {
 
   @ApiProperty({
     description: 'The error message.',
-    example: DEFAULT_MESSAGE,
+    example: DEFAULT_INTERNAL_SERVER_ERROR_MESSAGE,
   })
   declare readonly message: string;
 
@@ -38,7 +35,7 @@ export class InternalServerError extends BaseError {
     super({
       code: HttpStatus.INTERNAL_SERVER_ERROR,
       errors,
-      message: message || DEFAULT_MESSAGE,
+      message: message || DEFAULT_INTERNAL_SERVER_ERROR_MESSAGE,
       name: ErrorName.InternalServerError,
     });
   }

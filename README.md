@@ -2,16 +2,6 @@
 
 This is a monorepo for granite, an online consent management platform.
 
-## Tech Stack
-
-This repository uses:
-
-- [`docker`](https://www.docker.com)
-- [`expressjs`](https://expressjs.com)
-- [`nestjs`](https://nestjs.com)
-- [`typescript`](https://www.typescriptlang.org)
-- [`yarn2`](https://yarnpkg.com)
-
 ## Getting Started
 
 1. Clone the repo: `git clone git@github.com:nicolaspearson/granite.git`
@@ -97,3 +87,13 @@ Project configuration:
 - Each package has its own specific `scripts`, `dependencies` and `devDependencies`.
 - There is no `node_modules` directory, dependencies are committed to the repo via `.yarn/cache`.
   This greatly speeds up CI builds when the monorepo starts to grow.
+
+## Tech Stack
+
+This repository uses:
+
+- [`docker`](https://www.docker.com)
+- [`expressjs`](https://expressjs.com)
+- [`nestjs`](https://nestjs.com)
+- [`typescript`](https://www.typescriptlang.org)
+- [`yarn2`](https://yarnpkg.com)

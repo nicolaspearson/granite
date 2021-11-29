@@ -4,7 +4,7 @@ import { ArgumentsHost, Catch, ExceptionFilter, HttpException, Logger } from '@n
 
 import { ErrorName } from '$/enum/error-name.enum';
 import { BaseError } from '$/error/base.error';
-import { DEFAULT_MESSAGE } from '$/error/internal-server.error';
+import { DEFAULT_INTERNAL_SERVER_ERROR_MESSAGE } from '$/error/base.error';
 
 @Catch()
 export class ErrorFilter implements ExceptionFilter {
@@ -55,7 +55,7 @@ export class ErrorFilter implements ExceptionFilter {
 
     const error = new BaseError({
       code: status ? Number(status) : /* istanbul ignore next */ 500,
-      message: DEFAULT_MESSAGE,
+      message: DEFAULT_INTERNAL_SERVER_ERROR_MESSAGE,
       name: this.httpExceptionMapper[500],
     });
 
