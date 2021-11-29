@@ -124,7 +124,7 @@ There are 4 jobs in the continuous integration workflow for this package
 
 Swagger documentation is served on [localhost](http://localhost:3000/docs/consents/#/). Requests
 can be executed directly from the Swagger user interface. The example documentation contains valid
-fixtures that will are automatically persisted on application start.
+fixtures that are automatically populated on application start-up.
 
 ![Swagger](./assets/screenshots/swagger.png)
 
@@ -144,7 +144,7 @@ diverges from the requirements in the
 [code challenge](https://github.com/didomi/challenges/tree/master/backend).
 
 I implemented an authentication flow to ensure that only an authorized user is allowed to interact
-with their data. Their are pre-populated fixtures in the database which can be used for testing
+with their data. There are pre-populated fixtures in the database which can be used for testing
 purposes:
 
 ```json
@@ -160,7 +160,7 @@ A list of possible improvements:
 
 - Check password strength in the password validator.
 - Use `redis` to whitelist JWT's (described in the delete endpoint section below).
-- Create architecture diagrams.
+- Add architecture diagrams.
 - Document `authentication`, `event`, and `user` flows using `mermaid.js`.
 
 #### POST `/v1/consents/users/registration` (unauthenticated)
@@ -172,7 +172,8 @@ Registers a new user in the database. An email address and password must be prov
 > A user accepts only one required field (email) that must be a valid email address and unique. If
 > any of the requirements are not satisfied, the API must return a 422 response.
 
-I deviated from the requirement above, and instead return a 400 due to reasons documented below.
+I deviated from the requirement above, and instead return a `400` due to the reasons documented
+below.
 
 Exceptions:
 
