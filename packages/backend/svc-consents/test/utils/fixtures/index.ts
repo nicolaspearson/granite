@@ -18,12 +18,11 @@ import { EventType } from '$/enum/event-type.enum';
 const now = new Date();
 
 // Database entities
-export const userMock: User = {
+export const userMock: Omit<User, 'events'> = {
   uuid: '7a39a121-fdbf-45db-9353-a006bde4261a' as Uuid,
   email: 'test@example.com' as Email,
   password: 'secret',
   createdAt: now,
-  events: [],
 };
 
 export const eventMock: Event = {
@@ -31,7 +30,7 @@ export const eventMock: Event = {
   type: EventType.Email,
   enabled: true,
   createdAt: now,
-  user: userMock,
+  user: { ...userMock, events: [] },
 };
 
 export const userMockWithEvents: User = {
@@ -45,15 +44,15 @@ export const userMockWithEvents: User = {
 export const jwtTokenMock =
   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiMzQzYzZhYzUtMmI3Mi00YzQxLWE5ZWItMjhmNWFlNDlhZjgwIiwiaWF0IjoxNjM4MDkxNjEzLCJleHAiOjE2MzgwOTI1MTMsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJiZDZiMzMzZS04NWZkLTQ3YzgtOWMxMy03NDhhNDZjYTE5MmIifQ.jlMl8fFBUdItwkTiQsna74OqwhC6itNxc8IUyU4Imxs' as JwtToken;
 
-export const jwtPayloadMock: SvcConsents.JwtPayload = {
+export const jwtPayloadMock = {
   uuid: userMock.uuid,
-};
+} as SvcConsents.JwtPayload;
 
 // Auth
-export const loginRequestMock: LoginRequest = {
+export const loginRequestMock = {
   email: userMock.email,
   password: userMock.password,
-};
+} as LoginRequest;
 
 export const jwtResponseMock = new JwtResponse({ token: jwtTokenMock });
 
@@ -80,13 +79,19 @@ export const healthCheckResponseMock = new HealthCheckResponse({ status: 'OK' })
 export const userProfileResponseMock = new UserProfileResponse({
   uuid: userMock.uuid,
   email: userMock.email,
+  events: [],
+});
+
+export const userProfileResponseWithEventsMock = new UserProfileResponse({
+  uuid: userMock.uuid,
+  email: userMock.email,
   events: [eventMock],
 });
 
-export const userRegistrationRequestMock: UserRegistrationRequest = {
+export const userRegistrationRequestMock = {
   email: userMock.email,
   password: userMock.password,
-};
+} as UserRegistrationRequest;
 
 export const userRegistrationResponseMock = new UserRegistrationResponse({
   uuid: userMock.uuid,

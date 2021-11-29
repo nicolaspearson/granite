@@ -1,11 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
 import { UserRepository } from '$/db/repositories/user.repository';
-import { UserRegistrationResponse } from '$/dto';
+import { UserProfileResponse, UserRegistrationResponse } from '$/dto';
 import { BadRequestError } from '$/error';
 import { UserService } from '$/user/user.service';
 
-import { userMock, userRegistrationRequestMock } from '#/utils/fixtures';
+import { eventMock, userMock, userRegistrationRequestMock } from '#/utils/fixtures';
 import { userMockRepo } from '#/utils/mocks/repo.mock';
 
 describe('User Service', () => {
@@ -23,6 +23,30 @@ describe('User Service', () => {
 
   test('should be defined', () => {
     expect(service).toBeDefined();
+  });
+
+  describe('delete', () => {
+    test('should allow a user to delete their account', async () => {
+      await service.delete(userMock.uuid);
+      expect(userMockRepo.delete).toHaveBeenCalledWith(userMock.uuid);
+    });
+  });
+
+  describe('profile', () => {
+    test('should allow a user to retrieve their profile (with events)', async () => {
+      const result = await service.profile(userMock.uuid);
+      expect(result).toMatchObject(new UserProfileResponse({ ...userMock, events: [eventMock] }));
+      expect(userMockRepo.findByUuidOrFail).toHaveBeenCalledWith(userMock.uuid);
+    });
+
+    test('should allow a user to retrieve their profile (without events)', async () => {
+      userMockRepo.findByUuidOrFail?.mockResolvedValueOnce(userMock);
+      const result = await service.profile(userMock.uuid);
+      expect(result).toMatchObject(
+        new UserProfileResponse({ uuid: userMock.uuid, email: userMock.email }),
+      );
+      expect(userMockRepo.findByUuidOrFail).toHaveBeenCalledWith(userMock.uuid);
+    });
   });
 
   describe('register', () => {

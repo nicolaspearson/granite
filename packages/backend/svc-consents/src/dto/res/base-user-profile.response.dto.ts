@@ -33,7 +33,11 @@ export class BaseUserProfileResponse extends BaseUserResponse {
   })
   readonly consents: ConsentEventItemResponse[];
 
-  constructor(data: { uuid: Uuid; email: Email; events: { type: EventType; enabled: boolean }[] }) {
+  constructor(data: {
+    uuid: Uuid;
+    email: Email;
+    events?: { type: EventType; enabled: boolean }[];
+  }) {
     super(data);
     this.email = data.email;
     this.consents = data.events?.map((c) => new ConsentEventItemResponse(c)) || [];

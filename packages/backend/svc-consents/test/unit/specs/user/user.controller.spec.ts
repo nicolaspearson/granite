@@ -3,7 +3,13 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { UserController } from '$/user/user.controller';
 import { UserService } from '$/user/user.service';
 
-import { userRegistrationRequestMock, userRegistrationResponseMock } from '#/utils/fixtures';
+import {
+  authenticatedRequestMock,
+  userMock,
+  userProfileResponseWithEventsMock,
+  userRegistrationRequestMock,
+  userRegistrationResponseMock,
+} from '#/utils/fixtures';
 import { userMockService } from '#/utils/mocks/service.mock';
 
 describe('User Controller', () => {
@@ -22,6 +28,21 @@ describe('User Controller', () => {
 
   test('should be defined', () => {
     expect(controller).toBeDefined();
+  });
+
+  describe('delete', () => {
+    test('should allow a user to delete their account', async () => {
+      await controller.delete(authenticatedRequestMock);
+      expect(userMockService.delete).toHaveBeenCalledWith(userMock.uuid);
+    });
+  });
+
+  describe('profile', () => {
+    test('should allow a user to retrieve their profile', async () => {
+      const result = await controller.profile(authenticatedRequestMock);
+      expect(result).toMatchObject(userProfileResponseWithEventsMock);
+      expect(userMockService.profile).toHaveBeenCalledWith(userMock.uuid);
+    });
   });
 
   describe('register', () => {

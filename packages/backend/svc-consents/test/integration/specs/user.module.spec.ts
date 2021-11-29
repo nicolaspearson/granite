@@ -78,7 +78,7 @@ describe('User Module', () => {
         .set('Authorization', `Bearer ${jwt.token}`)
         .expect(HttpStatus.NO_CONTENT);
       expect(res.body).toMatchObject({});
-      // Should not be able to retrieve profile after deletion
+      // The user should no longer be able to retrieve their profile after deletion
       await request(app.getHttpServer())
         .get(`${baseUrl}/user`)
         .set('Authorization', `Bearer ${jwt.token}`)

@@ -7,6 +7,8 @@ module.exports = Object.assign({}, require('../../jest.config.js'), {
     '!src/config/env.config.ts',
     '!src/config/typeorm.config.ts',
     '!src/db/**/*.ts',
+    '!src/dto/req/login.request.dto.ts',
+    '!src/dto/req/user-registration.request.dto.ts',
     '!src/error/*.error.ts',
     '!src/main.ts',
   ],

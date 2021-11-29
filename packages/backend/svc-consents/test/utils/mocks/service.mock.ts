@@ -8,7 +8,7 @@ import {
   consentEventItemResponseMock,
   jwtResponseMock,
   jwtTokenMock,
-  userProfileResponseMock,
+  userProfileResponseWithEventsMock,
   userRegistrationResponseMock,
 } from '#/utils/fixtures';
 
@@ -26,6 +26,6 @@ export const tokenMockService: Mock<TokenService> = {
 
 export const userMockService: Mock<UserService> = {
   delete: jest.fn().mockResolvedValue(undefined),
-  profile: jest.fn().mockResolvedValue(userProfileResponseMock),
+  profile: jest.fn().mockResolvedValue(userProfileResponseWithEventsMock),
   register: jest.fn().mockResolvedValue(userRegistrationResponseMock),
 };
