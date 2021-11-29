@@ -8,8 +8,9 @@ This is a monorepo for granite, an online consent management platform.
 2. Install [Yarn2](https://yarnpkg.com/getting-started/install)
 3. Switch to the latest stable version: `yarn set version stable`
 4. Install dependencies: `yarn install`
+5. Ensure that you have docker installed and running.
 
-Optionally install [yamllint](https://yamllint.readthedocs.io/).
+Optionally install [yamllint](https://yamllint.readthedocs.io/) (Required if you are a contributor).
 
 ### Configure Visual Studio Code
 
@@ -18,7 +19,6 @@ Optionally install [yamllint](https://yamllint.readthedocs.io/).
 3. Install the extensions listed in `.vscode/extensions.json`
 4. Switch to the `granite` workspace by opening `.vscode/granite.code-workspace`, and clicking on
    the "Open Workspace" button.
-5. Ensure that you have docker installed and running.
 
 ## Project Overview
 

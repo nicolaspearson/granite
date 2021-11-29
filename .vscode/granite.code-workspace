@@ -15,6 +15,7 @@
     "[typescript]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "editor.rulers": [100],
     "eslint.format.enable": true,
     "eslint.alwaysShowStatus": true,
     "eslint.nodePath": ".yarn/sdks",
