@@ -89,7 +89,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "granite": "workspace:*",
-    "jest": "^27.3.1",
+    "jest": "^27.4.0",
     "prettier": "^2.5.0",
     "rimraf": "^3.0.2",
     "source-map-support": "^0.5.21",
