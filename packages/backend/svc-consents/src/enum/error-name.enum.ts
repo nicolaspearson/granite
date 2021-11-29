@@ -6,4 +6,5 @@ export enum ErrorName {
   NotImplemented = 'NotImplemented',
   RequestTimeout = 'RequestTimeout',
   Unauthorized = 'Unauthorized',
+  UnprocessableEntity = 'UnprocessableEntity',
 }

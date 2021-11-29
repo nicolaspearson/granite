@@ -74,6 +74,28 @@ describe('Event Module', () => {
         } as ConsentEventItemRequest);
       expect(res.status).toEqual(HttpStatus.UNAUTHORIZED);
     });
+
+    test('[422] => should throw an unprocessable entity error if the user does not exist', async () => {
+      const deletedUserJwt = await getJwt(app, {
+        email: userFixtures[2].email as Email,
+        password: 'secret',
+      });
+      expect(deletedUserJwt.token).toBeDefined();
+      const res = await request(app.getHttpServer())
+        .delete(`/v1/consents/user`)
+        .set('Authorization', `Bearer ${deletedUserJwt.token}`)
+        .expect(HttpStatus.NO_CONTENT);
+      expect(res.body).toMatchObject({});
+      // The user should no longer be able to create consent events after deletion
+      await request(app.getHttpServer())
+        .post(baseUrl)
+        .set('Authorization', `Bearer ${deletedUserJwt.token}`)
+        .send({
+          id: EventType.Email,
+          enabled: true,
+        } as ConsentEventItemRequest)
+        .expect(HttpStatus.UNPROCESSABLE_ENTITY);
+    });
   });
 
   afterAll(async () => {

@@ -3,7 +3,9 @@ import { AbstractRepository, EntityManager, EntityRepository, SelectQueryBuilder
 import { Injectable } from '@nestjs/common';
 
 import Event from '$/db/entities/event.entity';
+import User from '$/db/entities/user.entity';
 import { EventType } from '$/enum/event-type.enum';
+import { UnprocessableEntityError } from '$/error';
 
 @Injectable()
 @EntityRepository(Event)
@@ -16,9 +18,11 @@ export class EventRepository extends AbstractRepository<Event> {
     return this.manager.createQueryBuilder(Event, 'event').innerJoinAndSelect('event.user', 'user');
   }
 
-  create(data: { enabled: boolean; type: EventType; userUuid: Uuid }): Promise<Event> {
-    // TODO: Check if the user exists before attempting to save the event.
+  async create(data: { enabled: boolean; type: EventType; userUuid: Uuid }): Promise<Event> {
+    // Check if the user exists before attempting to save the event.
     // The user might have deleted their account but still has a valid JWT.
+    await this.verifyUser(data.userUuid);
+    // Save the event.
     return this.manager.save(Event, {
       enabled: data.enabled,
       type: data.type,
@@ -38,5 +42,24 @@ export class EventRepository extends AbstractRepository<Event> {
         'event.created_at': 'DESC',
       })
       .getMany();
+  }
+
+  /**
+   * This method checks if a user exists or not. If the user does not exist a 422 error is thrown.
+   * This check will be redundant if we add JWT whitelisting to the service.
+   *
+   * Ideally this repository should not be accessing the user table directly, but this exists
+   * temporarily as work around to avoid unhandled exceptions occurring.
+   *
+   * @param userUuid The uuid of the user.
+   */
+  private async verifyUser(userUuid: Uuid): Promise<void> {
+    const user = await this.manager
+      .createQueryBuilder(User, 'user')
+      .where('user.uuid = :userUuid', { userUuid })
+      .getOne();
+    if (!user) {
+      throw new UnprocessableEntityError();
+    }
   }
 }

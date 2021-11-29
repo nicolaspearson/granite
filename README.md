@@ -160,6 +160,8 @@ A list of possible improvements:
 
 - Check password strength in the password validator.
 - Use `redis` to whitelist JWT's (described in the delete endpoint section below).
+- Create architecture diagrams.
+- Document `authentication`, `event`, and `user` flows using `mermaid.js`.
 
 #### POST `/v1/consents/users/registration` (unauthenticated)
 
@@ -225,6 +227,7 @@ Exceptions:
 - A `400` is returned if the request payload does not pass the validation rules. The `id` must be
   either `email_notifications` or `sms_notifications`, and enabled must be a `boolean`.
 - A `401` is returned if the user does not provide a valid JWT in the authorization header.
+- A `422` is returned if the user does not exist.
 - A `500` is returned if an unexpected error occurs.
 
 Sample response:
@@ -272,6 +275,7 @@ event type should be included, e.g. if a user has 5 `email_notifications`, and 2
 Exceptions:
 
 - A `401` is returned if the user does not provide a valid JWT in the authorization header.
+- A `404` is returned if the user does not exist.
 - A `500` is returned if an unexpected error occurs.
 
 Sample response:
