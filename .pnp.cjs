@@ -4398,6 +4398,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["cross-fetch", [
+        ["npm:3.1.4", {
+          "packageLocation": "./.yarn/cache/cross-fetch-npm-3.1.4-45e4517cba-2107e5e633.zip/node_modules/cross-fetch/",
+          "packageDependencies": [
+            ["cross-fetch", "npm:3.1.4"],
+            ["node-fetch", "npm:2.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["cross-spawn", [
         ["npm:7.0.3", {
           "packageLocation": "./.yarn/cache/cross-spawn-npm-7.0.3-e4ff3e65b3-671cc7c728.zip/node_modules/cross-spawn/",
@@ -4764,6 +4774,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/dotenv-expand-npm-5.1.0-c3fff50eb5-8017675b7f.zip/node_modules/dotenv-expand/",
           "packageDependencies": [
             ["dotenv-expand", "npm:5.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["dtsgenerator", [
+        ["npm:3.13.2", {
+          "packageLocation": "./.yarn/cache/dtsgenerator-npm-3.13.2-2598300214-d63721e7e8.zip/node_modules/dtsgenerator/",
+          "packageDependencies": [
+            ["dtsgenerator", "npm:3.13.2"],
+            ["commander", "npm:8.3.0"],
+            ["cross-fetch", "npm:3.1.4"],
+            ["debug", "virtual:d2b8ff4ca946871ce9c51afc08080842081037f97234326c5de214ae28f53dca6ac6f476930dda3959c7e5dd3099dbfed23e86d5461423e43cc737463b435caa#npm:4.3.2"],
+            ["glob", "npm:7.2.0"],
+            ["https-proxy-agent", "npm:5.0.0"],
+            ["js-yaml", "npm:4.1.0"],
+            ["tslib", "npm:2.3.1"],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "HARD",
         }]
@@ -5314,7 +5341,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.0.0"],
             ["@types/eslint", null],
             ["@types/eslint-config-prettier", null],
-            ["@types/prettier", null],
+            ["@types/prettier", "npm:2.4.2"],
             ["eslint", "npm:8.3.0"],
             ["eslint-config-prettier", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:8.3.0"],
             ["prettier", "npm:2.5.0"],
@@ -8760,6 +8787,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["node-fetch", [
+        ["npm:2.6.1", {
+          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-91075bedd5.zip/node_modules/node-fetch/",
+          "packageDependencies": [
+            ["node-fetch", "npm:2.6.1"]
+          ],
+          "linkType": "HARD",
+        }],
         ["npm:2.6.6", {
           "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.6-056db6b778-ee8290626b.zip/node_modules/node-fetch/",
           "packageDependencies": [
@@ -10724,6 +10758,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jsonwebtoken", "npm:8.5.6"],
             ["@types/node", "npm:16.11.10"],
             ["@types/pg", "npm:8.6.1"],
+            ["@types/prettier", "npm:2.4.2"],
             ["@types/supertest", "npm:2.0.11"],
             ["@types/swagger-ui-express", "npm:4.1.3"],
             ["@types/uuid", "npm:8.3.3"],
@@ -10733,6 +10768,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer", "npm:0.5.1"],
             ["class-validator", "npm:0.13.2"],
             ["common-tags", "npm:1.8.2"],
+            ["dtsgenerator", "npm:3.13.2"],
             ["eslint", "npm:8.3.0"],
             ["eslint-config-prettier", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.0.0"],

@@ -1,0 +1,8 @@
+{
+  "collection": "@nestjs/schematics",
+  "entryFile": "swagger/dts-generator.utils",
+  "compilerOptions": {
+    "tsconfigPath": "tsconfig.build.json"
+  },
+  "sourceRoot": "src"
+}

@@ -10,6 +10,7 @@ module.exports = Object.assign({}, require('../../jest.config.js'), {
     '!src/dto/req/login.request.dto.ts',
     '!src/dto/req/user-registration.request.dto.ts',
     '!src/error/*.error.ts',
+    '!src/swagger/**/*.ts',
     '!src/main.ts',
   ],
   coverageThreshold: {
