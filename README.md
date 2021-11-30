@@ -100,6 +100,8 @@ yarn workspace svc-consents test:integration
 
 The project can also be built and started using docker:
 
+> Note: Using docker will start the services in production mode, which excludes database fixtures.
+
 ```bash
 # Build the package using docker
 yarn workspace svc-consents docker:build
