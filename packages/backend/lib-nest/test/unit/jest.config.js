@@ -3,15 +3,7 @@ module.exports = Object.assign({}, require('../../jest.config.js'), {
     'src/**/*.ts',
     '!src/**/index.ts',
     '!src/**/*.enum.ts',
-    '!src/**/*.module.ts',
-    '!src/config/env.config.ts',
-    '!src/config/typeorm-webpack.config.ts',
-    '!src/config/typeorm.config.ts',
-    '!src/db/**/*.ts',
-    '!src/dto/req/login.request.dto.ts',
-    '!src/dto/req/user-registration.request.dto.ts',
-    '!src/swagger/**/*.ts',
-    '!src/main.ts',
+    '!src/error/*.error.ts',
   ],
   coverageThreshold: {
     global: {

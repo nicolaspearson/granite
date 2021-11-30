@@ -14,9 +14,10 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
+import { BadRequestError, InternalServerError, UnauthorizedError } from 'lib-nest/src';
+
 import { UserProfileResponse, UserRegistrationRequest, UserRegistrationResponse } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
-import { BadRequestError, InternalServerError, UnauthorizedError } from '$/error';
 import { JwtAuthGuard } from '$/guards/jwt-auth.guard';
 import { UserService } from '$/user/user.service';
 

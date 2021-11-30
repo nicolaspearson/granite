@@ -1,9 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
+import { InternalServerError, NotFoundError } from 'lib-nest/src';
+
 import { UserRepository } from '$/db/repositories/user.repository';
 import { JwtResponse } from '$/dto';
-import { InternalServerError, NotFoundError } from '$/error';
 import { TokenService } from '$/token/token.service';
 
 @Injectable()

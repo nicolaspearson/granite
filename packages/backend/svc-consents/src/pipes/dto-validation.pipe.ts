@@ -2,7 +2,7 @@ import { ValidationError } from 'class-validator';
 
 import { Injectable, ValidationPipe, ValidationPipeOptions } from '@nestjs/common';
 
-import { BadRequestError } from '$/error';
+import { BadRequestError } from 'lib-nest/src';
 
 @Injectable()
 export class DtoValidationPipe extends ValidationPipe {

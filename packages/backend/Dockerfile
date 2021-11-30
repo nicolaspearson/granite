@@ -43,6 +43,9 @@ COPY --chown=node:node --from=builder /usr/src/app/.yarn/releases ./.yarn/releas
 COPY --chown=node:node --from=builder /usr/src/app/.yarnrc.yml ./.yarnrc.yml
 COPY --chown=node:node --from=builder /usr/src/app/package.json ./package.json
 COPY --chown=node:node --from=builder /usr/src/app/yarn.lock ./yarn.lock
+
+COPY --from=builder /usr/src/app/packages/backend/lib-nest ./packages/backend/lib-nest
+
 COPY --chown=node:node --from=builder /usr/src/app/packages/backend/${PACKAGE}/package.json ./packages/backend/${PACKAGE}/package.json
 COPY --chown=node:node --from=builder /usr/src/app/packages/backend/${PACKAGE}/dist ./packages/backend/${PACKAGE}/dist
 

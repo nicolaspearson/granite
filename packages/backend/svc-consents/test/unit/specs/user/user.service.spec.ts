@@ -1,8 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
+import { BadRequestError } from 'lib-nest/src';
+
 import { UserRepository } from '$/db/repositories/user.repository';
 import { UserProfileResponse, UserRegistrationResponse } from '$/dto';
-import { BadRequestError } from '$/error';
 import { UserService } from '$/user/user.service';
 
 import { eventMock, userMock, userRegistrationRequestMock } from '#/utils/fixtures';

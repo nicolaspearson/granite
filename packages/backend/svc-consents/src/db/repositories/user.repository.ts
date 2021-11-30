@@ -9,9 +9,10 @@ import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity
 
 import { Injectable } from '@nestjs/common';
 
+import { NotFoundError } from 'lib-nest/src';
+
 import User from '$/db/entities/user.entity';
 import { generateSalt } from '$/db/utils/user.util';
-import { NotFoundError } from '$/error';
 
 export interface UserQueryOptions {
   events?: boolean;

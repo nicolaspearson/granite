@@ -27,9 +27,9 @@ export class ErrorFilter implements ExceptionFilter {
    * @param exception The exception that has been thrown.
    * @param host The host that we use to set the response.
    *
-   * @returns The {@link SvcConsents.Error} that was created.
+   * @returns The {@link Api.Error} that was created.
    */
-  catch(exception: Record<string, unknown>, host: ArgumentsHost): SvcConsents.Error {
+  catch(exception: Record<string, unknown>, host: ArgumentsHost): Api.Error {
     const ctx = host.switchToHttp();
     const response: Response = ctx.getResponse();
 
@@ -46,9 +46,9 @@ export class ErrorFilter implements ExceptionFilter {
    * metadata is available a generic internal server is generated.
    *
    * @param exception The exception that has been thrown.
-   * @returns A well-formed {@link SvcConsents.Error} response object.
+   * @returns A well-formed {@link Api.Error} response object.
    */
-  parseException(exception: Record<string, unknown>): SvcConsents.Error {
+  parseException(exception: Record<string, unknown>): Api.Error {
     if (exception instanceof BaseError) {
       return exception;
     }
