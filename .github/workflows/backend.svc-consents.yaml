@@ -30,8 +30,8 @@ env:
   DOCKERFILE: packages/backend/Dockerfile
   PACKAGE: svc-consents
 jobs:
-  build:
-    name: Build
+  test_unit:
+    name: Build, Lint, and Unit Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -49,23 +49,6 @@ jobs:
         run: yarn workspace $PACKAGE build
       - name: Lint package
         run: yarn workspace $PACKAGE lint
-  test_unit:
-    name: Test Unit
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14, 15, 16, 17]
-    needs:
-      - build
-    steps:
-      - name: Checkout git repository
-        uses: actions/checkout@master
-      - name: Using node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@master
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install yarn
-        run: yarn install --immutable
       - name: Run package unit tests
         run: yarn workspace $PACKAGE test:unit
   test_integration:
@@ -74,8 +57,6 @@ jobs:
     strategy:
       matrix:
         node-version: [14, 15, 16, 17]
-    needs:
-      - build
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
@@ -113,7 +94,6 @@ jobs:
     name: docker build and publish
     runs-on: ubuntu-latest
     needs:
-      - build
       - test_unit
       - test_integration
     steps:
