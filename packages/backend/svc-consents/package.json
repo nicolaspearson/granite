@@ -2,7 +2,7 @@
   "name": "svc-consents",
   "private": true,
   "version": "0.0.0",
-  "description": "The consent management service",
+  "description": "The consent management service.",
   "keywords": [
     "backend"
   ],
