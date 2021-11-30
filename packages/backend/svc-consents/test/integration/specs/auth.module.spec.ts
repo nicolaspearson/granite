@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as request from 'supertest';
 
 import { HttpStatus, INestApplication } from '@nestjs/common';
@@ -29,7 +30,6 @@ describe('Auth Module', () => {
         } as LoginRequest)
         .expect(HttpStatus.OK);
       expect(res.body).toMatchObject({
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         token: expect.any(String),
       } as JwtResponse);
     });

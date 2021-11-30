@@ -4,6 +4,10 @@ module.exports = {
     node: true,
   },
   extends: ['plugin:eslint-comments/recommended', 'prettier'],
+  parserOptions: {
+    project: ['./tsconfig.eslint.json', './packages/*/*/tsconfig.json'],
+    tsconfigRootDir: __dirname,
+  },
   rules: {
     /**
      * Global rules
@@ -128,9 +132,10 @@ module.exports = {
             format: ['camelCase', 'UPPER_CASE'],
           },
         ],
-        '@typescript-eslint/restrict-template-expressions': ['error', { allowAny: true }],
+        '@typescript-eslint/no-unsafe-assignment': 'warn',
         '@typescript-eslint/no-unsafe-call': 'off',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_+$' }],
+        '@typescript-eslint/restrict-template-expressions': ['error', { allowAny: true }],
       },
     },
     {

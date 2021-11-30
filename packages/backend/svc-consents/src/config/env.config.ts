@@ -53,7 +53,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .default(false),
     TYPEORM_ENTITIES: Joi.string()
       .description('The path to the entities to be used by TypeORM')
-      .default('dist/db/entities/*.js'),
+      .default('src/db/entities/*.ts'),
     TYPEORM_HOST: Joi.string()
       .hostname()
       .description('The database host to be used by TypeORM')
@@ -66,7 +66,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .default(true),
     TYPEORM_MIGRATIONS: Joi.string()
       .description('The path to the migrations to be used by TypeORM')
-      .default('dist/db/migrations/*.js'),
+      .default('src/db/migrations/*.ts'),
     TYPEORM_PASSWORD: Joi.string()
       .description('The database password to be used by TypeORM')
       .example('secret')

@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000/v1/consents
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNWMyNzY3ZjktN2QzYy00NmEzLWIwZTMtNmI1NzNhYWY5MDNjIiwiaWF0IjoxNjM4MjUxMDMxLCJleHAiOjE2MzgyNTE5MzEsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJjNDBjOGVkNC1lMDY1LTRlNGEtOGVmMi03Njg5Nzc3ODUxYjgifQ.Ci4uXe_-k0ez1Q0zqlPx3LdAR8Rza2_VEJxel2qECWw
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiOWU5ZDNlY2EtYjIyNC00OGIwLTkwMTgtMDZkOTZjODhkZmQwIiwiaWF0IjoxNjM4Mjc2MTY1LCJleHAiOjE2MzgyNzcwNjUsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiIwOTcwNTQ5YS05NmYwLTQ4OTQtYTc4Mi1kMjY1Y2JlYTA0MzMifQ.YNfQr5Ijt-HjXUJa9LjefK0BCyY9DzV5FUCVFGY3G9k
 
 ########################################################################
 ###########                       AUTH                       ###########

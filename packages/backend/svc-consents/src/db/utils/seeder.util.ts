@@ -20,16 +20,23 @@ const fixtures: Fixture[] = [
 ];
 
 export async function seed(connection: Connection): Promise<void> {
-  await connection.query(oneLine`
+  // Avoid multiple seeds with webpack HMR
+  const user = await connection.manager
+    .createQueryBuilder(User, 'user')
+    .where({ uuid: userFixtures[0].uuid })
+    .getOne();
+  if (!user) {
+    await connection.query(oneLine`
     CREATE EXTENSION IF NOT EXISTS pgcrypto;
     CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
   `);
-  for (const fixture of fixtures) {
-    await connection
-      .createQueryBuilder()
-      .insert()
-      .into(fixture.entity)
-      .values(fixture.values)
-      .execute();
+    for (const fixture of fixtures) {
+      await connection
+        .createQueryBuilder()
+        .insert()
+        .into(fixture.entity)
+        .values(fixture.values)
+        .execute();
+    }
   }
 }

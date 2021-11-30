@@ -1,5 +1,5 @@
 import * as helmet from 'helmet';
-import { Connection } from 'typeorm';
+import { getConnection } from 'typeorm';
 
 import { LogLevel } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
@@ -14,6 +14,13 @@ import { ErrorFilter } from '$/filters/error.filter';
 import { HttpTimeoutInterceptor } from '$/interceptors/http-timeout.interceptor';
 import { MainModule } from '$/main.module';
 import { DtoValidationPipe } from '$/pipes/dto-validation.pipe';
+
+declare const module: {
+  hot: {
+    accept: () => void;
+    dispose: (callback: () => Promise<void>) => void;
+  };
+};
 
 async function bootstrap() {
   const logLevel = [process.env.LOG_LEVEL || 'log'] as LogLevel[];
@@ -56,12 +63,18 @@ async function bootstrap() {
 
   if (process.env.NODE_ENV === Environment.Development) {
     // Seed the database with fixtures in the development environment
-    await seed(app.get<Connection>(Connection));
+    await seed(getConnection());
   }
 
   // Serve the application
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   await app.listen(configService.get<number>('API_PORT')!, configService.get<string>('API_HOST')!);
+
+  // Hot module replacement with Webpack
+  if (module.hot) {
+    module.hot.accept();
+    module.hot.dispose(() => app.close());
+  }
 }
 
 void bootstrap();
