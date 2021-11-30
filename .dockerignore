@@ -7,16 +7,17 @@
 !.pnp.js
 !.pnp.loader.mjs
 !.yarnrc.yml
+!webpack.util.js
 !yarn.lock
 !packages/**
 !types/**
 !**/.eslintrc.js
 !**/.prettierrc
-!**/nest-cli.json
 !**/package.json
 !**/tsconfig.json
 !**/tsconfig.backend.json
 !**/tsconfig.build.json
+!**/webpack.config.js
 !**/types/**
 
 # Ignore inside allowed directories (you will most probably never want this in a docker image)

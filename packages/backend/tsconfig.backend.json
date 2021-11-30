@@ -1,20 +1,9 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "alwaysStrict": true,
-    "declarationMap": true,
-    "lib": ["es2017"],
-    "module": "commonjs",
-    "noEmitOnError": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "esModuleInterop": false,
     "preserveConstEnums": true,
-    "removeComments": false,
-    "skipLibCheck": true,
     "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-    "target": "es2017"
+    "strictPropertyInitialization": true
   }
 }
