@@ -3,10 +3,11 @@ import { oneLineTrim } from 'common-tags';
 import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
+import { BadRequestError, InternalServerError } from 'lib-nest/src';
+
 import { AuthService } from '$/auth/auth.service';
 import { JwtResponse, LoginRequest } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
-import { BadRequestError, InternalServerError } from '$/error';
 
 const TAG = ApiGroup.Auth;
 

@@ -3,9 +3,10 @@ import { Request } from 'express';
 import { Body, Controller, HttpCode, HttpStatus, Post, Req, UseGuards } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 
+import { BadRequestError, InternalServerError, UnauthorizedError } from 'lib-nest/src';
+
 import { ConsentEventItemRequest, ConsentEventResponse } from '$/dto';
 import { ApiGroup } from '$/enum/api-group.enum';
-import { BadRequestError, InternalServerError, UnauthorizedError } from '$/error';
 import { EventService } from '$/event/event.service';
 import { JwtAuthGuard } from '$/guards/jwt-auth.guard';
 

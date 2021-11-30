@@ -2,10 +2,11 @@ import { AbstractRepository, EntityManager, EntityRepository, SelectQueryBuilder
 
 import { Injectable } from '@nestjs/common';
 
+import { UnprocessableEntityError } from 'lib-nest/src';
+
 import Event from '$/db/entities/event.entity';
 import User from '$/db/entities/user.entity';
 import { EventType } from '$/enum/event-type.enum';
-import { UnprocessableEntityError } from '$/error';
 
 @Injectable()
 @EntityRepository(Event)

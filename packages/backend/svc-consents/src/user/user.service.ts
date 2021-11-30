@@ -1,10 +1,11 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
+import { BadRequestError } from 'lib-nest/src';
+
 import User from '$/db/entities/user.entity';
 import { UserRepository } from '$/db/repositories/user.repository';
 import { UserProfileResponse, UserRegistrationResponse } from '$/dto';
-import { BadRequestError } from '$/error';
 
 @Injectable()
 export class UserService {

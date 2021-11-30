@@ -2,9 +2,10 @@ import { INestApplication } from '@nestjs/common';
 import { ModuleMetadata } from '@nestjs/common/interfaces';
 import { TestingModule } from '@nestjs/testing';
 
+import { ErrorFilter } from 'lib-nest/src';
+
 import { AppModule } from '$/app/app.module';
 import { seed } from '$/db/utils/seeder.util';
-import { ErrorFilter } from '$/filters/error.filter';
 import { DtoValidationPipe } from '$/pipes/dto-validation.pipe';
 
 import { setupIntegrationTestModule } from '#/integration/setup-integration-test';

@@ -44,22 +44,22 @@ module.exports = {
           {
             name: 'other monorepo libraries',
             match: '^(lib|svc|ui|util)-.*/src',
-            order: 20,
+            order: 30,
           },
           {
             name: 'server source code',
             match: '^[$]\\/.*$',
-            order: 30,
+            order: 40,
           },
           {
             name: 'test source code',
             match: '^#\\/.*$',
-            order: 40,
+            order: 50,
           },
           {
             name: 'relative imports',
             match: '^\\.*/.*$',
-            order: 50,
+            order: 60,
           },
           { name: 'third party', match: '.*', order: 10 },
         ],

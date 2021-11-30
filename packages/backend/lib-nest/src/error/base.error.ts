@@ -32,7 +32,7 @@ export class BaseError extends Error {
   })
   name: string;
 
-  constructor(error?: SvcConsents.Error) {
+  constructor(error?: Api.Error) {
     super();
     this.code = error?.code || HttpStatus.INTERNAL_SERVER_ERROR;
     this.errors = error?.errors || [];

@@ -27,6 +27,7 @@
     "exec:jest": "jest --coverage --color --forceExit --runInBand",
     "exec:prettier": "prettier",
     "exec:script:generate-migration": "./shell/generate-migration.sh",
+    "exec:tsc": "tsc",
     "lint:markdown": "markdownlint -c markdownlint.yaml $(find . -name '*.md' -not -path './.yarn/*')",
     "lint:yaml": "yamllint -d yamllint.yaml .",
     "lint": "yarn lint:markdown && yarn lint:yaml",

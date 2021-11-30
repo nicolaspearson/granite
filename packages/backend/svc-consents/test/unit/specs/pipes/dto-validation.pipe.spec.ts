@@ -2,8 +2,9 @@ import { ValidationError } from 'class-validator';
 
 import { ValidationPipe } from '@nestjs/common';
 
-import { ErrorName } from '$/enum/error-name.enum';
-import { BadRequestError } from '$/error';
+import { BadRequestError } from 'lib-nest/src';
+import { ErrorName } from 'lib-nest/src';
+
 import { DtoValidationPipe, exceptionFactory } from '$/pipes/dto-validation.pipe';
 
 describe('Dto Validation Pipe', () => {

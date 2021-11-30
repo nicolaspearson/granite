@@ -1,0 +1,11 @@
+{
+  "extends": "../tsconfig.backend.json",
+  "compilerOptions": {
+    "composite": false,
+    "paths": {
+      "$/*": ["./src/*"]
+    },
+    "rootDir": "."
+  },
+  "include": ["src", "test", "types", "../../../types"]
+}

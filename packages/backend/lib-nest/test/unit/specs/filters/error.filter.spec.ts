@@ -37,7 +37,7 @@ const contextMock = {
   switchToWs: jest.fn().mockReturnThis(),
 } as ExecutionContext;
 
-const badRequestErrorMock: SvcConsents.Error = {
+const badRequestErrorMock: Api.Error = {
   code: 400,
   message: 'Invalid arguments provided.',
   name: ErrorName.BadRequest,
