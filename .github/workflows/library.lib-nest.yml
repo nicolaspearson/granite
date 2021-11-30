@@ -1,0 +1,76 @@
+name: library.lib-nest
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/library.lib-nest.yml
+      - packages/backend/lib-nest/**
+      - packages/backend/tsconfig-backend.json
+      - package.json
+      - tsconfig.json
+      - types/**/*.ts
+      - '!**.md'
+      - '!**/.gitignore'
+  pull_request:
+    paths:
+      - .github/workflows/library.lib-nest.yml
+      - packages/backend/lib-nest/**
+      - packages/backend/tsconfig-backend.json
+      - package.json
+      - tsconfig.json
+      - types/**/*.ts
+      - '!**.md'
+      - '!**/.gitignore'
+  workflow_dispatch: null
+
+env:
+  PACKAGE: lib-nest
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15, 16, 17]
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@master
+      - name: Using node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install yarn
+        run: yarn install --immutable
+      - name: Build package
+        run: yarn workspace $PACKAGE build
+      - name: Lint package
+        run: yarn workspace $PACKAGE lint
+  test_unit:
+    name: Test Unit
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15, 16, 17]
+    needs:
+      - build
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@master
+      - name: Using node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install yarn
+        run: yarn install --immutable
+      - name: Run package unit tests
+        run: yarn workspace $PACKAGE test:unit
+  test_integration:
+    name: Test Integration
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: Do nothing
+        run: exit 0

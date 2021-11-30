@@ -7,7 +7,6 @@ on:
     paths:
       - .github/workflows/backend.svc-consents.yaml
       - packages/backend/svc-consents/**
-      - packages/backend/Dockerfile
       - packages/backend/tsconfig-backend.json
       - package.json
       - tsconfig.json
@@ -18,7 +17,6 @@ on:
     paths:
       - .github/workflows/backend.svc-consents.yaml
       - packages/backend/svc-consents/**
-      - packages/backend/Dockerfile
       - packages/backend/tsconfig-backend.json
       - package.json
       - tsconfig.json
