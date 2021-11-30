@@ -6574,7 +6574,7 @@ __metadata:
     reflect-metadata: ^0.1.13
     rimraf: ^3.0.2
     rxjs: ^7.4.0
-    ts-loader: ^9.2.5
+    ts-loader: ^9.2.6
     webpack: ^5.58.2
     webpack-cli: ^4.9.1
     webpack-pnp-externals: ^1.1.0
@@ -9458,7 +9458,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:^9.2.5, ts-loader@npm:^9.2.6":
+"ts-loader@npm:^9.2.6":
   version: 9.2.6
   resolution: "ts-loader@npm:9.2.6"
   dependencies:
