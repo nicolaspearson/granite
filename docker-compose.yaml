@@ -71,4 +71,6 @@ services:
       - 5433:5432
     networks:
       - development
+    volumes:
+      - ./db/scripts:/docker-entrypoint-initdb.d
     container_name: granite-db-integration

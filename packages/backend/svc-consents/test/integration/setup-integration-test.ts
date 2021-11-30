@@ -60,7 +60,7 @@ export async function setupIntegrationTestModule(options: SetupOptions): Promise
     });
   }
 
-  if (options?.disableLogging) {
+  if (options.disableLogging) {
     builder.setLogger(new NoOutputLogger());
   } else {
     builder.setLogger(console);

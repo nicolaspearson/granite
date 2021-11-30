@@ -52,6 +52,7 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
       migrations: [process.env.TYPEORM_MIGRATIONS as string],
     };
 
+    // This option should always be set to false in the integration tests.
     if (options?.useWebpack) {
       Object.assign(connectionOptions, {
         entities: webpackConfig.entityFunctions(),

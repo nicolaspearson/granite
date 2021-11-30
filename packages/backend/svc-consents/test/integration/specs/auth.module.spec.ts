@@ -37,7 +37,7 @@ describe('Auth Module', () => {
     test('[400] => should throw a bad request error if validation fails', async () => {
       const res = await request(app.getHttpServer())
         .post(`${baseUrl}/login`)
-        .send({ email: 'invalid' } as LoginRequest);
+        .send({ email: 'invalid-email' } as LoginRequest);
       expect(res.status).toEqual(HttpStatus.BAD_REQUEST);
     });
 
