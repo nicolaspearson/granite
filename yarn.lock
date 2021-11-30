@@ -6575,7 +6575,7 @@ __metadata:
     rimraf: ^3.0.2
     rxjs: ^7.4.0
     ts-loader: ^9.2.5
-    webpack: ^5.58.2
+    webpack: ^5.64.4
     webpack-cli: ^4.9.1
     webpack-pnp-externals: ^1.1.0
   languageName: unknown
@@ -10096,7 +10096,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.58.2, webpack@npm:^5.64.4":
+"webpack@npm:^5.64.4":
   version: 5.64.4
   resolution: "webpack@npm:5.64.4"
   dependencies:
