@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import * as request from 'supertest';
 
 import { HttpStatus, INestApplication } from '@nestjs/common';
@@ -104,7 +105,6 @@ describe('User Module', () => {
         .send(newUserRegistrationRequest)
         .expect(HttpStatus.CREATED);
       expect(res.body).toMatchObject({
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         id: expect.any(String),
         email: newUserRegistrationRequest.email,
         consents: [],

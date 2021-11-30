@@ -5,6 +5,7 @@ module.exports = Object.assign({}, require('../../jest.config.js'), {
     '!src/**/*.enum.ts',
     '!src/**/*.module.ts',
     '!src/config/env.config.ts',
+    '!src/config/typeorm-webpack.config.ts',
     '!src/config/typeorm.config.ts',
     '!src/db/**/*.ts',
     '!src/dto/req/login.request.dto.ts',
