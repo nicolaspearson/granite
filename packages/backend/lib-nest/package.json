@@ -34,7 +34,7 @@
     "@nestjs/core": "^8.0.10",
     "@nestjs/platform-express": "^8.2.3",
     "@nestjs/swagger": "^5.1.5",
-    "common-tags": "^1.8.0",
+    "common-tags": "^1.8.2",
     "express": "^4.17.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0"
