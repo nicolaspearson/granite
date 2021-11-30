@@ -3,7 +3,8 @@ import { sign } from 'jsonwebtoken';
 
 import { ExecutionContext } from '@nestjs/common';
 
-import { UnauthorizedError } from '$/error';
+import { UnauthorizedError } from 'lib-nest/src';
+
 import { JwtAuthGuard } from '$/guards/jwt-auth.guard';
 
 import { jwtResponseMock, userMock } from '#/utils/fixtures';

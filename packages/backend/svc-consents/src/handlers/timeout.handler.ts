@@ -3,7 +3,7 @@ import { catchError, timeout } from 'rxjs/operators';
 
 import { CallHandler } from '@nestjs/common';
 
-import { RequestTimeoutError } from '$/error';
+import { RequestTimeoutError } from 'lib-nest/src';
 
 export function timeoutHandler(
   handler: CallHandler,

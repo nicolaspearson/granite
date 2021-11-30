@@ -1,9 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
+import { InternalServerError, NotFoundError } from 'lib-nest/src';
+
 import { AuthService } from '$/auth/auth.service';
 import { UserRepository } from '$/db/repositories/user.repository';
 import { JwtResponse } from '$/dto';
-import { InternalServerError, NotFoundError } from '$/error';
 import { TokenService } from '$/token/token.service';
 
 import { jwtPayloadMock, jwtTokenMock, loginRequestMock } from '#/utils/fixtures';
