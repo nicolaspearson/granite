@@ -321,7 +321,7 @@ This package uses TypeORM and PostgreSQL.
 
 #### Migrations
 
-To generate the missing migrations TypeORM applies existing migrations, and use the diff between
+To generate the missing migrations TypeORM applies existing migrations, and uses the diff between
 the database schema and the TypeORM entities to create a migration file.
 
 ```sh

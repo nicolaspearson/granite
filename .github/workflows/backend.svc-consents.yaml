@@ -35,13 +35,16 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15, 16, 17]
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Setup node.js
+      - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: 16
+          node-version: ${{ matrix.node-version }}
       - name: Install yarn
         run: yarn install --immutable
       - name: Build package
@@ -51,15 +54,18 @@ jobs:
   test_unit:
     name: Test Unit
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15, 16, 17]
     needs:
       - build
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Setup node.js
+      - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: 16
+          node-version: ${{ matrix.node-version }}
       - name: Install yarn
         run: yarn install --immutable
       - name: Run package unit tests
@@ -67,15 +73,18 @@ jobs:
   test_integration:
     name: Test Integration
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15, 16, 17]
     needs:
       - build
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Setup node.js
+      - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
-          node-version: 16
+          node-version: ${{ matrix.node-version }}
       - name: Install yarn
         run: yarn install --immutable
       - name: Run package integration tests
