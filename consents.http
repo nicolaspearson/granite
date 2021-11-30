@@ -1,5 +1,5 @@
 @baseUrl = http://localhost:3000/v1/consents
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNjA2MjU4MjUtNGJjNS00YjUzLWJlNmYtNzNkMDkwZjNmMzRiIiwiaWF0IjoxNjM4MTk3MTkzLCJleHAiOjE2MzgxOTgwOTMsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiI5ZTRmZWU0OC01MDMyLTRkNjktODI0Ni1kODRkY2E2MTdlN2IifQ.PSquNTiSPPpR0n84KgBlB04gU_kfkoyjAm5N1AakQ8I
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1dWlkIjoiNWMyNzY3ZjktN2QzYy00NmEzLWIwZTMtNmI1NzNhYWY5MDNjIiwiaWF0IjoxNjM4MjUxMDMxLCJleHAiOjE2MzgyNTE5MzEsImlzcyI6InN1cHBvcnRAZ3Jhbml0ZS5jb20iLCJqdGkiOiJjNDBjOGVkNC1lMDY1LTRlNGEtOGVmMi03Njg5Nzc3ODUxYjgifQ.Ci4uXe_-k0ez1Q0zqlPx3LdAR8Rza2_VEJxel2qECWw
 
 ########################################################################
 ###########                       AUTH                       ###########
@@ -27,7 +27,7 @@ Authorization: Bearer {{token}}
 
 {
   "id": "email_notifications",
-  "enabled": false
+  "enabled": true
 }
 
 ########################################################################
@@ -61,6 +61,6 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "email": "alex.doe@example.com",
+  "email": "john.doe@example.com",
   "password": "secret"
 }

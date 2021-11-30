@@ -10,6 +10,7 @@ services:
   #########################
 
   svc-consents:
+    image: granite-svc-consents:latest
     build:
       args:
         PACKAGE: svc-consents
@@ -20,6 +21,8 @@ services:
     environment:
       - API_HOST=0.0.0.0
       - API_PORT=3000
+      - ENVIRONMENT=production
+      - NODE_ENV=production
       - TYPEORM_DATABASE=granite
       - TYPEORM_HOST=db
       - TYPEORM_PASSWORD=secret
