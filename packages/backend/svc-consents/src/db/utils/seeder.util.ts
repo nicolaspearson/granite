@@ -1,3 +1,4 @@
+import { oneLine } from 'common-tags';
 import { Connection, ObjectType } from 'typeorm';
 import { QueryDeepPartialEntity } from 'typeorm/query-builder/QueryPartialEntity';
 
@@ -26,6 +27,10 @@ export async function seed(connection: Connection): Promise<void> {
     .getOne();
   // If the user already exists we skip the seeding process
   if (!user) {
+    await connection.query(oneLine`
+      CREATE EXTENSION IF NOT EXISTS pgcrypto;
+      CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+    `);
     for (const fixture of fixtures) {
       await connection
         .createQueryBuilder()
