@@ -4,7 +4,7 @@ import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 import { MainModule } from '$/main.module';
-import { convertSwaggerToDts } from '$/swagger/swagger-dts-exporter.util';
+import { convertSwaggerToDts } from '$/swagger/dts-exporter.swagger';
 
 export async function bootstrap(): Promise<void> {
   console.log('Generating declaration files for svc-consents...');

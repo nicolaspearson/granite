@@ -4,9 +4,9 @@ const { RunScriptWebpackPlugin } = require('run-script-webpack-plugin');
 
 const webpackConfig = require('granite/webpack.util');
 
-module.exports = (env) => {
+module.exports = (env, entry) => {
   const bundleFilename = env.production ? 'server.js' : 'dev-server.js';
-  const entryList = ['./src/main.ts'];
+  const entryList = [entry ? entry : './src/main.ts'];
   const plugins = [];
   let webpackPnpExternalsConfig = {};
 
