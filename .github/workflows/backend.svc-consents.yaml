@@ -58,6 +58,9 @@ jobs:
       matrix:
         node-version: [14, 15, 16, 17]
     steps:
+      - name: Set permissions
+        run: |
+          sudo chown -R $USER:$USER ${{ github.workspace }}
       - name: Checkout git repository
         uses: actions/checkout@master
       - name: Using node.js ${{ matrix.node-version }}
@@ -79,7 +82,7 @@ jobs:
         ports:
           - 5432:5432
         volumes:
-          - ${{ GITHUB_WORKSPACE }}/db/scripts:/docker-entrypoint-initdb.d
+          - ${{ github.workspace }}/db/scripts:/docker-entrypoint-initdb.d
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
