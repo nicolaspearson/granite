@@ -43,6 +43,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
     TYPEORM_CONNECTION: Joi.string()
       .valid('postgres')
       .description('The database connection type to be used by TypeORM')
+      .valid('postgres')
       .default('postgres'),
     TYPEORM_DATABASE: Joi.string()
       .description('The database name to be used by TypeORM')
@@ -80,12 +81,15 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .description('The database schema to be used by TypeORM')
       .default('consents'),
     TYPEORM_SYNCHRONIZE: Joi.boolean()
-      .description('whether or not TypeORM should synchronize the schema')
+      .description('Whether or not TypeORM should synchronize the schema')
       .default(false),
     TYPEORM_USERNAME: Joi.string()
       .description('The database username to be used by TypeORM')
       .example('granite')
       .required(),
+    TYPEORM_USE_WEBPACK: Joi.boolean()
+      .description('whether or not TypeORM should user webpack')
+      .default(true),
   });
 }
 /* eslint-enable @typescript-eslint/naming-convention */

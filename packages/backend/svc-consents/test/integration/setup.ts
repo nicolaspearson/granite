@@ -19,3 +19,4 @@ process.env.TYPEORM_PASSWORD = 'masterkey';
 process.env.TYPEORM_PORT = process.env.TYPEORM_PORT || '5433';
 process.env.TYPEORM_SYNCHRONIZE = 'true';
 process.env.TYPEORM_USERNAME = 'granite';
+process.env.TYPEORM_USE_WEBPACK = 'false';
