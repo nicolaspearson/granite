@@ -3,7 +3,7 @@ import * as request from 'supertest';
 
 import { HttpStatus, INestApplication } from '@nestjs/common';
 
-import { userFixtures } from '$/db/fixtures/user.fixture';
+import { DEFAULT_PASSWORD, userFixtures } from '$/db/fixtures/user.fixture';
 import {
   ConsentEventItemResponse,
   UserProfileResponse,
@@ -30,7 +30,10 @@ describe('User Module', () => {
 
   describe(`GET ${baseUrl}/user`, () => {
     test('[200] => should allow a user to retrieve their profile (without consent events)', async () => {
-      const jwt = await getJwt(app, { email: userFixtures[0].email as Email, password: 'secret' });
+      const jwt = await getJwt(app, {
+        email: userFixtures[0].email as Email,
+        password: DEFAULT_PASSWORD,
+      });
       expect(jwt.token).toBeDefined();
       const res = await request(app.getHttpServer())
         .get(`${baseUrl}/user`)
@@ -44,7 +47,10 @@ describe('User Module', () => {
     });
 
     test('[200] => should allow a user to retrieve their profile (with consent events)', async () => {
-      const jwt = await getJwt(app, { email: userFixtures[1].email as Email, password: 'secret' });
+      const jwt = await getJwt(app, {
+        email: userFixtures[1].email as Email,
+        password: DEFAULT_PASSWORD,
+      });
       expect(jwt.token).toBeDefined();
       const res = await request(app.getHttpServer())
         .get(`${baseUrl}/user`)
@@ -72,7 +78,10 @@ describe('User Module', () => {
 
   describe(`DELETE ${baseUrl}/user`, () => {
     test('[204] => should allow a user to delete their account', async () => {
-      const jwt = await getJwt(app, { email: userFixtures[2].email as Email, password: 'secret' });
+      const jwt = await getJwt(app, {
+        email: userFixtures[2].email as Email,
+        password: DEFAULT_PASSWORD,
+      });
       expect(jwt.token).toBeDefined();
       const res = await request(app.getHttpServer())
         .delete(`${baseUrl}/user`)
@@ -98,7 +107,7 @@ describe('User Module', () => {
     test('[201] => should allow a user to register', async () => {
       const newUserRegistrationRequest: UserRegistrationRequest = {
         email: 'new-user@example.com' as Email,
-        password: 'secret',
+        password: DEFAULT_PASSWORD,
       };
       const res = await request(app.getHttpServer())
         .post(`${baseUrl}/users/registration`)
@@ -121,7 +130,7 @@ describe('User Module', () => {
     test('[400] => should throw a bad request error if the user already exists', async () => {
       const existingUserRegistrationRequest: UserRegistrationRequest = {
         email: userFixtures[0].email as Email,
-        password: 'secret',
+        password: DEFAULT_PASSWORD,
       };
       const res = await request(app.getHttpServer())
         .post(`${baseUrl}/users/registration`)

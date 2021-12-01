@@ -16,7 +16,7 @@ describe('Token Service', () => {
     module = await Test.createTestingModule({
       imports: [
         ConfigModule,
-        JwtModule.register({ secret: 'secret', signOptions: { expiresIn: '15m' } }),
+        JwtModule.register({ secret: 'secretKey', signOptions: { expiresIn: '15m' } }),
       ],
       providers: [TokenService],
     }).compile();

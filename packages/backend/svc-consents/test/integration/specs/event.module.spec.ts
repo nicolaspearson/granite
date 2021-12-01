@@ -3,7 +3,7 @@ import * as request from 'supertest';
 
 import { HttpStatus, INestApplication } from '@nestjs/common';
 
-import { userFixtures } from '$/db/fixtures/user.fixture';
+import { DEFAULT_PASSWORD, userFixtures } from '$/db/fixtures/user.fixture';
 import {
   ConsentEventItemRequest,
   ConsentEventItemResponse,
@@ -79,7 +79,7 @@ describe('Event Module', () => {
     test('[422] => should throw an unprocessable entity error if the user does not exist', async () => {
       const deletedUserJwt = await getJwt(app, {
         email: userFixtures[2].email as Email,
-        password: 'secret',
+        password: DEFAULT_PASSWORD,
       });
       expect(deletedUserJwt.token).toBeDefined();
       const res = await request(app.getHttpServer())

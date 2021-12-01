@@ -3,7 +3,7 @@ import * as request from 'supertest';
 
 import { INestApplication } from '@nestjs/common';
 
-import { userFixtures } from '$/db/fixtures/user.fixture';
+import { DEFAULT_PASSWORD, userFixtures } from '$/db/fixtures/user.fixture';
 import { JwtResponse, LoginRequest } from '$/dto';
 
 export async function getJwt(app: INestApplication, data?: LoginRequest): Promise<JwtResponse> {
@@ -11,7 +11,7 @@ export async function getJwt(app: INestApplication, data?: LoginRequest): Promis
     .post('/v1/consents/auth/login')
     .send({
       email: data?.email ?? userFixtures[0].email,
-      password: data?.password ?? 'secret',
+      password: data?.password ?? DEFAULT_PASSWORD,
     } as LoginRequest);
   return res.body as JwtResponse;
 }

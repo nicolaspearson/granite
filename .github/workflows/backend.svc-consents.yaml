@@ -60,6 +60,11 @@ jobs:
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
+      - name: Copy db init scripts
+        run: |
+          sudo mkdir -p /home/db/scripts
+          sudo cp -r ${{ github.workspace }}/db/scripts/* /home/db/scripts/
+          sudo chmod 777 /home/db/scripts
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
@@ -74,11 +79,12 @@ jobs:
         env:
           POSTGRES_DB: granite
           POSTGRES_PORT: 5432
-          POSTGRES_PASSWORD: secret
+          POSTGRES_PASSWORD: masterkey
           POSTGRES_USER: granite
         ports:
           - 5432:5432
         options: >-
+          -v /home/db/scripts:/docker-entrypoint-initdb.d
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
@@ -89,6 +95,7 @@ jobs:
       TYPEORM_DATABASE: granite
       TYPEORM_SCHEMA: public
       TYPEORM_USERNAME: granite
+      TYPEORM_PASSWORD: masterkey
   docker:
     if: github.ref == 'refs/heads/main'
     name: docker build and publish

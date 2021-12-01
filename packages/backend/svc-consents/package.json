@@ -21,7 +21,7 @@
     "src/**/*"
   ],
   "scripts": {
-    "build": "rimraf dist && webpack --config webpack.config.js --env production",
+    "build": "rimraf dist && webpack --config webpack.config.js --env production --entry $(pwd)/src/main.ts",
     "build:tsc": "rimraf dist && yarn nest build --path tsconfig.tsc.json --tsc",
     "db:migration:create": "typeorm migration:create -n",
     "db:migration:generate:missing": "yarn build && yarn exec:script:generate-migration svc-consents consents",
@@ -31,12 +31,12 @@
     "docker:build": "yarn exec:docker-compose build --no-cache svc-consents",
     "docker:logs": "yarn exec:docker-compose logs -f svc-consents",
     "docker:start": "yarn exec:docker-compose up -d --build svc-consents",
-    "dts:generate": "yarn run db:start && nest start --config nest-cli.dts.json",
+    "dts:generate": "yarn run db:start && webpack --config webpack.config.js --env run --entry $(pwd)/src/swagger/dts-generator.swagger.ts",
     "lint:ts": "yarn exec:eslint --cache-file $(pwd)/.eslintcache $(pwd)",
     "lint": "yarn lint:ts && yarn exec:prettier -c $(pwd)",
     "lint:fix": "yarn lint:ts --fix && yarn exec:prettier -w $(pwd)",
     "start:debug": "yarn start:dev --debug",
-    "start:dev": "yarn run db:start && webpack --config webpack.config.js --watch --env run",
+    "start:dev": "yarn run db:start && webpack --config webpack.config.js --watch --env run --entry $(pwd)/src/main.ts",
     "start": "node dist/server.js",
     "test": "yarn test:unit && yarn test:integration",
     "test:integration:ci": "yarn exec:jest --config $(pwd)/test/integration/jest.config.js",

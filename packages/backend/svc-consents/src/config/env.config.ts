@@ -27,7 +27,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .description('The algorithm used to encode the JWT')
       .default('HS256'),
     JWT_ISSUER: Joi.string().description('The JWT issuer').default('support@granite.com'),
-    JWT_SECRET: Joi.string().description('The JWT signing secret').example('secret').required(),
+    JWT_SECRET: Joi.string().description('The JWT signing secret').example('secretKey').required(),
     JWT_TOKEN_EXPIRATION: Joi.string()
       .regex(/^\d+[smhd]$/)
       .description('The validity period of the JWT token')
@@ -43,6 +43,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
     TYPEORM_CONNECTION: Joi.string()
       .valid('postgres')
       .description('The database connection type to be used by TypeORM')
+      .valid('postgres')
       .default('postgres'),
     TYPEORM_DATABASE: Joi.string()
       .description('The database name to be used by TypeORM')
@@ -69,7 +70,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .default('src/db/migrations/*.ts'),
     TYPEORM_PASSWORD: Joi.string()
       .description('The database password to be used by TypeORM')
-      .example('secret')
+      .example('masterkey')
       .required(),
     TYPEORM_PORT: Joi.number()
       .port()
@@ -80,12 +81,15 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .description('The database schema to be used by TypeORM')
       .default('consents'),
     TYPEORM_SYNCHRONIZE: Joi.boolean()
-      .description('whether or not TypeORM should synchronize the schema')
+      .description('Whether or not TypeORM should synchronize the schema')
       .default(false),
     TYPEORM_USERNAME: Joi.string()
       .description('The database username to be used by TypeORM')
       .example('granite')
       .required(),
+    TYPEORM_USE_WEBPACK: Joi.boolean()
+      .description('whether or not TypeORM should user webpack')
+      .default(true),
   });
 }
 /* eslint-enable @typescript-eslint/naming-convention */

@@ -2,6 +2,7 @@ import { Request } from 'express';
 
 import Event from '$/db/entities/event.entity';
 import User from '$/db/entities/user.entity';
+import { DEFAULT_PASSWORD } from '$/db/fixtures/user.fixture';
 import {
   ConsentEventItemRequest,
   ConsentEventItemResponse,
@@ -21,7 +22,7 @@ const now = new Date();
 export const userMock: Omit<User, 'events'> = {
   uuid: '7a39a121-fdbf-45db-9353-a006bde4261a' as Uuid,
   email: 'test@example.com' as Email,
-  password: 'secret',
+  password: DEFAULT_PASSWORD,
   createdAt: now,
 };
 

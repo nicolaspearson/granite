@@ -12,18 +12,12 @@ type MergedConnectionOptions = TypeOrmModuleOptions &
   ConnectionOptions &
   Partial<PostgresConnectionCredentialsOptions>;
 
-type CreateConnectionOptions = {
-  useWebpack?: boolean;
-};
-
 @Injectable()
 export class TypeOrmConfigService implements TypeOrmOptionsFactory {
   private readonly logger: Logger = new Logger(TypeOrmConfigService.name);
 
   createTypeOrmOptions(): TypeOrmModuleOptions {
-    const connectionOptions = TypeOrmConfigService.creatConnectionOptions({
-      useWebpack: true,
-    });
+    const connectionOptions = TypeOrmConfigService.creatConnectionOptions();
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { password, ...optionsWithoutPassword } = connectionOptions;
     this.logger.debug(oneLineTrim`
@@ -37,23 +31,24 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
    *
    * @returns The {@link MergedConnectionOptions} connection options which TypeORM will use.
    */
-  static creatConnectionOptions(options?: CreateConnectionOptions): MergedConnectionOptions {
+  static creatConnectionOptions(): MergedConnectionOptions {
     const connectionOptions: MergedConnectionOptions = {
-      type: 'postgres',
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      type: process.env.TYPEORM_CONNECTION as any,
       host: process.env.TYPEORM_HOST,
       port: Number(process.env.TYPEORM_PORT),
       username: process.env.TYPEORM_USERNAME,
       password: process.env.TYPEORM_PASSWORD,
       database: process.env.TYPEORM_DATABASE,
       schema: process.env.TYPEORM_SCHEMA,
-      synchronize: false,
-      dropSchema: false,
+      synchronize: process.env.TYPEORM_SYNCHRONIZE === 'true',
+      dropSchema: process.env.TYPEORM_DROP_SCHEMA === 'true',
       entities: [process.env.TYPEORM_ENTITIES as string],
       migrations: [process.env.TYPEORM_MIGRATIONS as string],
     };
 
     // This option should always be set to false in the integration tests.
-    if (options?.useWebpack) {
+    if (process.env.TYPEORM_USE_WEBPACK === 'true') {
       Object.assign(connectionOptions, {
         entities: webpackConfig.entityFunctions(),
         migrations: webpackConfig.migrationFunctions(),

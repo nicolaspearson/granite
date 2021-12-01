@@ -25,7 +25,7 @@ services:
       - NODE_ENV=production
       - TYPEORM_DATABASE=granite
       - TYPEORM_HOST=db
-      - TYPEORM_PASSWORD=secret
+      - TYPEORM_PASSWORD=masterkey
       - TYPEORM_PORT=5432
       - TYPEORM_SCHEMA=consents
       - TYPEORM_USERNAME=granite
@@ -46,7 +46,7 @@ services:
     image: postgres:14-alpine
     environment:
       - POSTGRES_DB=granite
-      - POSTGRES_PASSWORD=secret
+      - POSTGRES_PASSWORD=masterkey
       - POSTGRES_USER=granite
     ports:
       - 5432:5432
@@ -65,7 +65,7 @@ services:
     image: postgres:14-alpine
     environment:
       - POSTGRES_DB=granite
-      - POSTGRES_PASSWORD=secret
+      - POSTGRES_PASSWORD=masterkey
       - POSTGRES_USER=granite
     ports:
       - 5433:5432
