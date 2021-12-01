@@ -74,10 +74,12 @@ jobs:
         env:
           POSTGRES_DB: granite
           POSTGRES_PORT: 5432
-          POSTGRES_PASSWORD: secret
+          POSTGRES_PASSWORD: masterkey
           POSTGRES_USER: granite
         ports:
           - 5432:5432
+        volumes:
+          - db/scripts:/docker-entrypoint-initdb.d
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -89,6 +91,7 @@ jobs:
       TYPEORM_DATABASE: granite
       TYPEORM_SCHEMA: public
       TYPEORM_USERNAME: granite
+      TYPEORM_PASSWORD: masterkey
   docker:
     if: github.ref == 'refs/heads/main'
     name: docker build and publish

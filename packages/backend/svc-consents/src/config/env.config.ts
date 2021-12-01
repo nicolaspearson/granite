@@ -69,7 +69,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .default('src/db/migrations/*.ts'),
     TYPEORM_PASSWORD: Joi.string()
       .description('The database password to be used by TypeORM')
-      .example('secret')
+      .example('masterkey')
       .required(),
     TYPEORM_PORT: Joi.number()
       .port()
