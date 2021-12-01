@@ -60,9 +60,9 @@ jobs:
     steps:
       - name: Checkout git repository
         uses: actions/checkout@master
-      - name: Copy
+      - name: Copy db init scripts
         run: |
-          cp ${{ github.workspace }}/db/scripts /db/scripts
+          cp -r ${{ github.workspace }}/db/scripts /db/scripts
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
@@ -81,8 +81,9 @@ jobs:
           POSTGRES_USER: granite
         ports:
           - 5432:5432
+        volumes:
+          - /db/scripts:/docker-entrypoint-initdb.d
         options: >-
-          -v /db/scripts:/docker-entrypoint-initdb.d
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
