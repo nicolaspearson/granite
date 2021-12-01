@@ -63,7 +63,7 @@ jobs:
       - name: Copy db init scripts
         run: |
           mkdir -p /home/db/scripts
-          cp -r ${{ github.workspace }}/db/scripts/. /home/db/scripts/
+          cp -r ${{ github.workspace }}/db/scripts/* /home/db/scripts/
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
