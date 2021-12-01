@@ -62,7 +62,8 @@ jobs:
         uses: actions/checkout@master
       - name: Copy db init scripts
         run: |
-          cp -r ${{ github.workspace }}/db/scripts /db/scripts
+          mkdir -p /home/db/scripts
+          cp -r ${{ github.workspace }}/db/scripts/ /home/db/scripts
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
@@ -82,7 +83,7 @@ jobs:
         ports:
           - 5432:5432
         volumes:
-          - /db/scripts:/docker-entrypoint-initdb.d
+          - /home/db/scripts:/docker-entrypoint-initdb.d
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
