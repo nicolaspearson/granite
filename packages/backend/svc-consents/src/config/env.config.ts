@@ -27,7 +27,7 @@ export function getValidationSchema(): Joi.ObjectSchema {
       .description('The algorithm used to encode the JWT')
       .default('HS256'),
     JWT_ISSUER: Joi.string().description('The JWT issuer').default('support@granite.com'),
-    JWT_SECRET: Joi.string().description('The JWT signing secret').example('SecretKey').required(),
+    JWT_SECRET: Joi.string().description('The JWT signing secret').example('secretKey').required(),
     JWT_TOKEN_EXPIRATION: Joi.string()
       .regex(/^\d+[smhd]$/)
       .description('The validity period of the JWT token')

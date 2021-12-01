@@ -63,10 +63,8 @@ jobs:
       - name: Copy db init scripts
         run: |
           sudo mkdir -p /home/db/scripts
-          sudo chmod 777 /home/db/scripts
           sudo cp -r ${{ github.workspace }}/db/scripts/* /home/db/scripts/
           sudo chmod 777 /home/db/scripts
-          cat /home/db/scripts/docker-bootstrap.sql
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
         with:
@@ -85,9 +83,8 @@ jobs:
           POSTGRES_USER: granite
         ports:
           - 5432:5432
-        volumes:
-          - /home/db/scripts:/docker-entrypoint-initdb.d
         options: >-
+          -v /home/db/scripts:/docker-entrypoint-initdb.d
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
