@@ -62,8 +62,10 @@ jobs:
         uses: actions/checkout@master
       - name: Copy db init scripts
         run: |
-          sudo mkdir –m777 -p /home/db/scripts
-          cp -r ${{ github.workspace }}/db/scripts/* /home/db/scripts/
+          sudo mkdir -p /home/db/scripts
+          sudo chmod 777 /home/db/scripts
+          sudo cp -r ${{ github.workspace }}/db/scripts/* /home/db/scripts/
+          sudo chmod 777 /home/db/scripts
           cat /home/db/scripts/docker-bootstrap.sql
       - name: Using node.js ${{ matrix.node-version }}
         uses: actions/setup-node@master
