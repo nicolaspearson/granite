@@ -54,6 +54,22 @@ jobs:
   test_integration:
     name: Test Integration
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:14-alpine
+        env:
+          POSTGRES_DB: granite
+          POSTGRES_PORT: 5432
+          POSTGRES_PASSWORD: masterkey
+          POSTGRES_USER: granite
+        ports:
+          - 5432:5432
+        options: >-
+          -v ${{ github.workspace }}/db/scripts:/docker-entrypoint-initdb.d
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
     strategy:
       matrix:
         node-version: [14, 15, 16, 17]
@@ -68,22 +84,6 @@ jobs:
         run: yarn install --immutable
       - name: Run package integration tests
         run: yarn workspace $PACKAGE test:integration:ci
-    services:
-      postgres:
-        image: postgres:14-alpine
-        env:
-          POSTGRES_DB: granite
-          POSTGRES_PORT: 5432
-          POSTGRES_PASSWORD: masterkey
-          POSTGRES_USER: granite
-        ports:
-          - 5432:5432
-        options: >-
-          -v ./db/scripts:/docker-entrypoint-initdb.d
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
     env:
       TYPEORM_HOST: 0.0.0.0
       TYPEORM_PORT: 5432
