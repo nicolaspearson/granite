@@ -2,6 +2,7 @@ import { IsEmail, IsNotEmpty } from 'class-validator';
 
 import { ApiProperty } from '@nestjs/swagger';
 
+import { DEFAULT_PASSWORD } from '$/db/fixtures/user.fixture';
 import { IsValidPassword } from '$/validators/is-valid-password.validator';
 
 export class BaseAuthRequest {
@@ -17,7 +18,7 @@ export class BaseAuthRequest {
 
   @ApiProperty({
     description: "The user's password.",
-    example: 'myS3cretP@55w0rd!',
+    example: DEFAULT_PASSWORD,
     required: true,
     type: String,
   })

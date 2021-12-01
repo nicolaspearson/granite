@@ -3,7 +3,7 @@ import * as request from 'supertest';
 
 import { HttpStatus, INestApplication } from '@nestjs/common';
 
-import { userFixtures } from '$/db/fixtures/user.fixture';
+import { DEFAULT_PASSWORD, userFixtures } from '$/db/fixtures/user.fixture';
 import { JwtResponse, LoginRequest } from '$/dto';
 
 import { setupApplication } from '#/integration/setup-application';
@@ -26,7 +26,7 @@ describe('Auth Module', () => {
         .post(`${baseUrl}/login`)
         .send({
           email: userFixtures[0].email,
-          password: 'myS3cretP@55w0rd!',
+          password: DEFAULT_PASSWORD,
         } as LoginRequest)
         .expect(HttpStatus.OK);
       expect(res.body).toMatchObject({
@@ -56,7 +56,7 @@ describe('Auth Module', () => {
         .post(`${baseUrl}/login`)
         .send({
           email: 'brand-new-user@example.com',
-          password: 'myS3cretP@55w0rd!',
+          password: DEFAULT_PASSWORD,
         } as LoginRequest);
       expect(res.status).toEqual(HttpStatus.NOT_FOUND);
     });
