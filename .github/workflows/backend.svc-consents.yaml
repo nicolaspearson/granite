@@ -54,6 +54,23 @@ jobs:
   test_integration:
     name: Test Integration
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14, 15, 16, 17]
+    steps:
+      - name: Checkout git repository
+        uses: actions/checkout@master
+      - name: Copy
+        run: |
+          cp ${{ github.workspace }}/db/scripts /db/scripts
+      - name: Using node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@master
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install yarn
+        run: yarn install --immutable
+      - name: Run package integration tests
+        run: yarn workspace $PACKAGE test:integration:ci
     services:
       postgres:
         image: postgres:14-alpine
@@ -65,25 +82,11 @@ jobs:
         ports:
           - 5432:5432
         options: >-
-          -v ${{ github.workspace }}/db/scripts:/docker-entrypoint-initdb.d
+          -v /db/scripts:/docker-entrypoint-initdb.d
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-    strategy:
-      matrix:
-        node-version: [14, 15, 16, 17]
-    steps:
-      - name: Checkout git repository
-        uses: actions/checkout@master
-      - name: Using node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@master
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install yarn
-        run: yarn install --immutable
-      - name: Run package integration tests
-        run: yarn workspace $PACKAGE test:integration:ci
     env:
       TYPEORM_HOST: 0.0.0.0
       TYPEORM_PORT: 5432
