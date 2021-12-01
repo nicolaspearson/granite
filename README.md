@@ -153,7 +153,7 @@ purposes:
 ```json
 {
   "email": "john.doe@example.com",
-  "password": "secret"
+  "password": "myS3cretP@55w0rd!"
 }
 ```
 

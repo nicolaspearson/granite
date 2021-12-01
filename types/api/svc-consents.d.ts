@@ -152,7 +152,7 @@ declare namespace SvcConsentsApi {
     /**
      * The user's password.
      * example:
-     * secret
+     * myS3cretP@55w0rd!
      */
     password: string;
   }
@@ -221,7 +221,7 @@ declare namespace SvcConsentsApi {
     /**
      * The user's password.
      * example:
-     * secret
+     * myS3cretP@55w0rd!
      */
     password: string;
   }

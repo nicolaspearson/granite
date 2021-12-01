@@ -79,7 +79,7 @@ describe('Event Module', () => {
     test('[422] => should throw an unprocessable entity error if the user does not exist', async () => {
       const deletedUserJwt = await getJwt(app, {
         email: userFixtures[2].email as Email,
-        password: 'secret',
+        password: 'myS3cretP@55w0rd!',
       });
       expect(deletedUserJwt.token).toBeDefined();
       const res = await request(app.getHttpServer())

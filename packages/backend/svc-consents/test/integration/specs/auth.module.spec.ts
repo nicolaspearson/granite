@@ -26,7 +26,7 @@ describe('Auth Module', () => {
         .post(`${baseUrl}/login`)
         .send({
           email: userFixtures[0].email,
-          password: 'secret',
+          password: 'myS3cretP@55w0rd!',
         } as LoginRequest)
         .expect(HttpStatus.OK);
       expect(res.body).toMatchObject({
@@ -56,7 +56,7 @@ describe('Auth Module', () => {
         .post(`${baseUrl}/login`)
         .send({
           email: 'brand-new-user@example.com',
-          password: 'secret',
+          password: 'myS3cretP@55w0rd!',
         } as LoginRequest);
       expect(res.status).toEqual(HttpStatus.NOT_FOUND);
     });

@@ -21,7 +21,7 @@ const now = new Date();
 export const userMock: Omit<User, 'events'> = {
   uuid: '7a39a121-fdbf-45db-9353-a006bde4261a' as Uuid,
   email: 'test@example.com' as Email,
-  password: 'secret',
+  password: 'myS3cretP@55w0rd!',
   createdAt: now,
 };
 

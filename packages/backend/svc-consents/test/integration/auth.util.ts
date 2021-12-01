@@ -11,7 +11,7 @@ export async function getJwt(app: INestApplication, data?: LoginRequest): Promis
     .post('/v1/consents/auth/login')
     .send({
       email: data?.email ?? userFixtures[0].email,
-      password: data?.password ?? 'secret',
+      password: data?.password ?? 'myS3cretP@55w0rd!',
     } as LoginRequest);
   return res.body as JwtResponse;
 }
