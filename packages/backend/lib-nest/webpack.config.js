@@ -6,7 +6,6 @@ module.exports = () => {
   return webpackConfig({
     bundleFilename: 'server.js',
     cwd: __dirname,
-    env: 'production',
     externals: [WebpackPnpExternals()],
     plugins: [],
     production: true,
