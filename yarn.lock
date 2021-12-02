@@ -7233,6 +7233,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nocache@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "nocache@npm:3.0.1"
+  checksum: 1e08ab8a267f015f598ab1f9ba67f911deaea48cf9fe51fdc8aabad370d2c3f0d71948530dac5763445ba104ae2f2af0d1ac86f5c0ace5ac415cb04d8becd4b2
+  languageName: node
+  linkType: hard
+
 "node-emoji@npm:1.11.0":
   version: 1.11.0
   resolution: "node-emoji@npm:1.11.0"
@@ -9051,6 +9058,7 @@ __metadata:
     joi: ^17.5.0
     jsonwebtoken: ^8.5.1
     lib-nest: "workspace:*"
+    nocache: ^3.0.1
     pg: ^8.7.1
     prettier: ^2.5.0
     reflect-metadata: ^0.1.13
