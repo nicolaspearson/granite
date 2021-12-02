@@ -1,17 +1,14 @@
-const webpack = require('webpack');
 const { WebpackPnpExternals } = require('webpack-pnp-externals');
 
 const webpackConfig = require('granite/webpack.util');
 
-module.exports = (env) => {
-  const plugins = [];
-  if (!env.production) {
-    plugins.push(new webpack.HotModuleReplacementPlugin());
-  }
+module.exports = () => {
   return webpackConfig({
-    env,
-    plugins,
+    bundleFilename: 'server.js',
     cwd: __dirname,
+    env: 'production',
     externals: [WebpackPnpExternals()],
+    plugins: [],
+    production: true,
   });
 };
