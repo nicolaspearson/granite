@@ -63,6 +63,7 @@
     "joi": "^17.5.0",
     "jsonwebtoken": "^8.5.1",
     "lib-nest": "workspace:*",
+    "nocache": "^3.0.1",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.4.0",

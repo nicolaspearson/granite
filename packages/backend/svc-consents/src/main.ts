@@ -1,9 +1,11 @@
 import * as helmet from 'helmet';
+import * as nocache from 'nocache';
 import { getConnection } from 'typeorm';
 
 import { LogLevel } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
+import { ExpressAdapter } from '@nestjs/platform-express';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 import { ErrorFilter } from 'lib-nest/src';
@@ -44,6 +46,12 @@ async function bootstrap() {
       contentSecurityPolicy: getContentResourcePolicy(),
     }),
   );
+
+  // Disable for performance
+  const httpAdapter = app.getHttpAdapter() as ExpressAdapter;
+  httpAdapter.set('etag', false);
+  httpAdapter.set('x-powered-by', false);
+  app.use(nocache());
 
   // Register global filters, pipes, and interceptors
   app.useGlobalFilters(new ErrorFilter());
