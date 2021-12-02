@@ -19,8 +19,11 @@
   "files": [
     "src/**/*"
   ],
+  "engines": {
+    "node": ">=16.13.1"
+  },
   "scripts": {
-    "build": "rimraf dist && webpack --config webpack.config.js --env production",
+    "build": "rimraf dist && webpack --config webpack.config.js",
     "lint:ts": "yarn exec:eslint --cache-file $(pwd)/.eslintcache $(pwd)",
     "lint": "yarn lint:ts && yarn exec:prettier -c $(pwd)",
     "lint:fix": "yarn lint:ts --fix && yarn exec:prettier -w $(pwd)",

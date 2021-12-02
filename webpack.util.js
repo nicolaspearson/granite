@@ -1,10 +1,9 @@
 const path = require('path');
 
-module.exports = ({ cwd, env, externals, plugins, entry, bundleFilename }) => ({
+module.exports = ({ bundleFilename, cwd, entry, externals, plugins, production }) => ({
   externals,
-  plugins,
   entry: entry ? entry : ['./src/index.ts'],
-  mode: env.production ? 'production' : 'development',
+  mode: production ? 'production' : 'development', // Sets NODE_ENV
   module: {
     rules: [
       {
@@ -16,15 +15,16 @@ module.exports = ({ cwd, env, externals, plugins, entry, bundleFilename }) => ({
       },
     ],
   },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
   optimization: {
     minimize: false,
   },
   output: {
     path: path.join(cwd, 'dist'),
     filename: bundleFilename ? bundleFilename : 'index.js',
+  },
+  plugins,
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   target: 'node',
 });
