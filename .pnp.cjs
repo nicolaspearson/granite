@@ -2109,7 +2109,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash", "npm:4.17.21"],
             ["path-to-regexp", "npm:3.2.0"],
             ["reflect-metadata", "npm:0.1.13"],
-            ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.1.6"]
+            ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.2.0"]
           ],
           "packagePeers": [
             "@nestjs/common",
@@ -11446,7 +11446,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["rxjs", "npm:7.4.0"],
             ["source-map-support", "npm:0.5.21"],
             ["supertest", "npm:6.1.6"],
-            ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.1.6"],
+            ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.2.0"],
             ["ts-jest", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:27.0.7"],
             ["ts-loader", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:9.2.6"],
             ["ts-node", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:10.4.0"],
@@ -11463,29 +11463,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["swagger-ui-dist", [
-        ["npm:3.52.5", {
-          "packageLocation": "./.yarn/cache/swagger-ui-dist-npm-3.52.5-c21f4b4952-a8bd28bf47.zip/node_modules/swagger-ui-dist/",
+        ["npm:4.1.2", {
+          "packageLocation": "./.yarn/cache/swagger-ui-dist-npm-4.1.2-626e71aa5c-477dbc0660.zip/node_modules/swagger-ui-dist/",
           "packageDependencies": [
-            ["swagger-ui-dist", "npm:3.52.5"]
+            ["swagger-ui-dist", "npm:4.1.2"]
           ],
           "linkType": "HARD",
         }]
       ]],
       ["swagger-ui-express", [
-        ["npm:4.1.6", {
-          "packageLocation": "./.yarn/cache/swagger-ui-express-npm-4.1.6-1400f0d081-aff7981294.zip/node_modules/swagger-ui-express/",
+        ["npm:4.2.0", {
+          "packageLocation": "./.yarn/cache/swagger-ui-express-npm-4.2.0-898764c350-e87255305e.zip/node_modules/swagger-ui-express/",
           "packageDependencies": [
-            ["swagger-ui-express", "npm:4.1.6"]
+            ["swagger-ui-express", "npm:4.2.0"]
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.1.6", {
-          "packageLocation": "./.yarn/__virtual__/swagger-ui-express-virtual-c0d844c309/0/cache/swagger-ui-express-npm-4.1.6-1400f0d081-aff7981294.zip/node_modules/swagger-ui-express/",
+        ["virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.2.0", {
+          "packageLocation": "./.yarn/__virtual__/swagger-ui-express-virtual-f355552390/0/cache/swagger-ui-express-npm-4.2.0-898764c350-e87255305e.zip/node_modules/swagger-ui-express/",
           "packageDependencies": [
-            ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.1.6"],
+            ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.2.0"],
             ["@types/express", "npm:4.17.13"],
             ["express", "npm:4.17.1"],
-            ["swagger-ui-dist", "npm:3.52.5"]
+            ["swagger-ui-dist", "npm:4.1.2"]
           ],
           "packagePeers": [
             "@types/express",
