@@ -2294,10 +2294,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@sideway/address", [
-        ["npm:4.1.2", {
-          "packageLocation": "./.yarn/cache/@sideway-address-npm-4.1.2-5e0aba9016-1e4910f7b3.zip/node_modules/@sideway/address/",
+        ["npm:4.1.3", {
+          "packageLocation": "./.yarn/cache/@sideway-address-npm-4.1.3-cfd7949080-3c1faf6ef3.zip/node_modules/@sideway/address/",
           "packageDependencies": [
-            ["@sideway/address", "npm:4.1.2"],
+            ["@sideway/address", "npm:4.1.3"],
             ["@hapi/hoek", "npm:9.2.1"]
           ],
           "linkType": "HARD",
@@ -8250,13 +8250,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["joi", [
-        ["npm:17.4.2", {
-          "packageLocation": "./.yarn/cache/joi-npm-17.4.2-93548ecd23-977ada1f9d.zip/node_modules/joi/",
+        ["npm:17.4.3", {
+          "packageLocation": "./.yarn/cache/joi-npm-17.4.3-b4f8e24321-bde4bded6c.zip/node_modules/joi/",
           "packageDependencies": [
-            ["joi", "npm:17.4.2"],
+            ["joi", "npm:17.4.3"],
             ["@hapi/hoek", "npm:9.2.1"],
             ["@hapi/topo", "npm:5.1.0"],
-            ["@sideway/address", "npm:4.1.2"],
+            ["@sideway/address", "npm:4.1.3"],
             ["@sideway/formula", "npm:3.0.0"],
             ["@sideway/pinpoint", "npm:2.0.0"]
           ],
@@ -11435,7 +11435,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["granite", "workspace:."],
             ["helmet", "npm:4.6.0"],
             ["jest", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:27.4.3"],
-            ["joi", "npm:17.4.2"],
+            ["joi", "npm:17.4.3"],
             ["jsonwebtoken", "npm:8.5.1"],
             ["lib-nest", "workspace:packages/backend/lib-nest"],
             ["pg", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.7.1"],

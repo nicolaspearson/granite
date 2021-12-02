@@ -57,7 +57,7 @@
     "common-tags": "^1.8.2",
     "express": "^4.17.1",
     "helmet": "^4.6.0",
-    "joi": "^17.4.2",
+    "joi": "^17.4.3",
     "jsonwebtoken": "^8.5.1",
     "lib-nest": "workspace:*",
     "pg": "^8.7.1",
