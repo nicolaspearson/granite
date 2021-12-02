@@ -10,7 +10,7 @@
 # ------------------------------------------------------
 
 # BUILDER - Artifacts build for production
-FROM node:17.1-alpine3.12 AS builder
+FROM node:17.2-alpine3.12 AS builder
 
 ARG PACKAGE=unknown
 ENV PACKAGE=$PACKAGE
@@ -25,7 +25,7 @@ RUN yarn workspaces focus ${PACKAGE}
 RUN yarn workspace ${PACKAGE} build
 
 # RUNNER - Production image
-FROM node:17.1-alpine3.12
+FROM node:17.2-alpine3.12
 
 ARG PACKAGE=unknown
 ENV PACKAGE=$PACKAGE
