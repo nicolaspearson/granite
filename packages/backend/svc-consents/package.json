@@ -97,7 +97,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "granite": "workspace:*",
-    "jest": "^27.4.4",
+    "jest": "^27.4.5",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "run-script-webpack-plugin": "^0.0.11",
