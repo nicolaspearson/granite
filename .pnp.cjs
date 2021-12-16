@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
-            ["@types/node", "npm:16.11.13"],
+            ["@types/node", "npm:16.11.14"],
             ["@typescript-eslint/eslint-plugin", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.7.0"],
             ["@typescript-eslint/parser", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.7.0"],
             ["eslint", "npm:8.4.1"],
@@ -2667,10 +2667,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["npm:16.11.13", {
-          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.13-c2e2cce406-7c9d62c024.zip/node_modules/@types/node/",
+        ["npm:16.11.14", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-16.11.14-6c86c6e905-0bd4333fb4.zip/node_modules/@types/node/",
           "packageDependencies": [
-            ["@types/node", "npm:16.11.13"]
+            ["@types/node", "npm:16.11.14"]
           ],
           "linkType": "HARD",
         }]
@@ -6803,7 +6803,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["granite", "workspace:."],
             ["@commitlint/cli", "npm:15.0.0"],
             ["@commitlint/config-conventional", "npm:15.0.0"],
-            ["@types/node", "npm:16.11.13"],
+            ["@types/node", "npm:16.11.14"],
             ["@typescript-eslint/eslint-plugin", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.7.0"],
             ["@typescript-eslint/parser", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.7.0"],
             ["eslint", "npm:8.4.1"],
@@ -8570,7 +8570,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/common-tags", "npm:1.8.1"],
             ["@types/express", "npm:4.17.13"],
             ["@types/jest", "npm:27.0.3"],
-            ["@types/node", "npm:16.11.13"],
+            ["@types/node", "npm:16.11.14"],
             ["common-tags", "npm:1.8.2"],
             ["express", "npm:4.17.1"],
             ["granite", "workspace:."],
@@ -11440,7 +11440,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/helmet", "npm:4.0.0"],
             ["@types/jest", "npm:27.0.3"],
             ["@types/jsonwebtoken", "npm:8.5.6"],
-            ["@types/node", "npm:16.11.13"],
+            ["@types/node", "npm:16.11.14"],
             ["@types/pg", "npm:8.6.1"],
             ["@types/prettier", "npm:2.4.2"],
             ["@types/supertest", "npm:2.0.11"],
@@ -12077,7 +12077,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@tsconfig/node12", "npm:1.0.9"],
             ["@tsconfig/node14", "npm:1.0.1"],
             ["@tsconfig/node16", "npm:1.0.2"],
-            ["@types/node", "npm:16.11.13"],
+            ["@types/node", "npm:16.11.14"],
             ["@types/swc__core", null],
             ["@types/swc__wasm", null],
             ["@types/typescript", null],
