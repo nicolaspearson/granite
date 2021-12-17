@@ -2694,10 +2694,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/pg", [
-        ["npm:8.6.1", {
-          "packageLocation": "./.yarn/cache/@types-pg-npm-8.6.1-6de7239b4b-a44710ff06.zip/node_modules/@types/pg/",
+        ["npm:8.6.2", {
+          "packageLocation": "./.yarn/cache/@types-pg-npm-8.6.2-0c156f0843-3a57824edf.zip/node_modules/@types/pg/",
           "packageDependencies": [
-            ["@types/pg", "npm:8.6.1"],
+            ["@types/pg", "npm:8.6.2"],
             ["@types/node", "npm:16.11.10"],
             ["pg-protocol", "npm:1.5.0"],
             ["pg-types", "npm:2.2.0"]
@@ -11441,7 +11441,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:27.0.3"],
             ["@types/jsonwebtoken", "npm:8.5.6"],
             ["@types/node", "npm:16.11.14"],
-            ["@types/pg", "npm:8.6.1"],
+            ["@types/pg", "npm:8.6.2"],
             ["@types/prettier", "npm:2.4.2"],
             ["@types/supertest", "npm:2.0.11"],
             ["@types/swagger-ui-express", "npm:4.1.3"],
@@ -12302,7 +12302,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/mssql", null],
             ["@types/mysql2", null],
             ["@types/oracledb", null],
-            ["@types/pg", "npm:8.6.1"],
+            ["@types/pg", "npm:8.6.2"],
             ["@types/pg-native", null],
             ["@types/pg-query-stream", null],
             ["@types/redis", null],
