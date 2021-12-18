@@ -36,7 +36,7 @@ export class UserService {
    * @throws {@link InternalServerError} If the database transaction fails.
    */
   async profile(userUuid: Uuid): Promise<UserProfileResponse> {
-    this.logger.log(`Retrieving for user with uuid: ${userUuid}`);
+    this.logger.log(`Retrieving profile for user with uuid: ${userUuid}`);
     const user = await this.userRepository.findByUuidOrFail(userUuid);
     return new UserProfileResponse(user);
   }
