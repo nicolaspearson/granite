@@ -1649,14 +1649,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/pg@npm:^8.6.2":
-  version: 8.6.2
-  resolution: "@types/pg@npm:8.6.2"
+"@types/pg@npm:^8.6.3":
+  version: 8.6.3
+  resolution: "@types/pg@npm:8.6.3"
   dependencies:
     "@types/node": "*"
     pg-protocol: "*"
     pg-types: ^2.2.0
-  checksum: 3a57824edfb31cb61cb67abc131b34834c3ce309efba8d95c383a8932c6bf228f2b8fd3dbce7d744fbb869304ddc6f9b5bb9ab5fcf9a04648c3999e9a14c2920
+  checksum: aefe75d61148f301a1a0948399a9d89d4e1d85a70660ba4e4d5abc1663a2b25e68c3b66dd8e3afa42db7fe2bd8ce4474aad59b4275a8dc76700da496b049295b
   languageName: node
   linkType: hard
 
@@ -9194,7 +9194,7 @@ __metadata:
     "@types/jest": 27.0.3
     "@types/jsonwebtoken": ^8.5.6
     "@types/node": ^16.11.15
-    "@types/pg": ^8.6.2
+    "@types/pg": ^8.6.3
     "@types/prettier": ^2.4.2
     "@types/supertest": ^2.0.11
     "@types/swagger-ui-express": ^4.1.3
