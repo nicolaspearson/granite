@@ -6607,7 +6607,7 @@ __metadata:
     granite: "workspace:*"
     reflect-metadata: ^0.1.13
     rimraf: ^3.0.2
-    rxjs: ^7.4.0
+    rxjs: ^7.5.1
     ts-loader: ^9.2.6
     webpack: ^5.65.0
     webpack-cli: ^4.9.1
@@ -8518,6 +8518,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rxjs@npm:^7.5.1":
+  version: 7.5.1
+  resolution: "rxjs@npm:7.5.1"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: 78e3eecb1644dd83adabc8d956f879dca62eb19c8afcd6acac71cf6d94534c33ea201e65387494fdeb1332395cba081e194f5a9699d58a5d48e416b8b52372aa
+  languageName: node
+  linkType: hard
+
 "safe-buffer@npm:5.1.2, safe-buffer@npm:~5.1.0, safe-buffer@npm:~5.1.1":
   version: 5.1.2
   resolution: "safe-buffer@npm:5.1.2"
@@ -9236,7 +9245,7 @@ __metadata:
     reflect-metadata: ^0.1.13
     rimraf: ^3.0.2
     run-script-webpack-plugin: ^0.0.11
-    rxjs: ^7.4.0
+    rxjs: ^7.5.1
     source-map-support: ^0.5.21
     supertest: ^6.1.6
     swagger-ui-express: ^4.3.0
