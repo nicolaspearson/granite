@@ -2574,10 +2574,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/jest", [
-        ["npm:27.0.3", {
-          "packageLocation": "./.yarn/cache/@types-jest-npm-27.0.3-c4c49cbce2-3683a99458.zip/node_modules/@types/jest/",
+        ["npm:27.4.0", {
+          "packageLocation": "./.yarn/cache/@types-jest-npm-27.4.0-33755263ec-d2350267f9.zip/node_modules/@types/jest/",
           "packageDependencies": [
-            ["@types/jest", "npm:27.0.3"],
+            ["@types/jest", "npm:27.4.0"],
             ["jest-diff", "npm:27.3.1"],
             ["pretty-format", "npm:27.3.1"]
           ],
@@ -8681,7 +8681,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/testing", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:8.2.4"],
             ["@types/common-tags", "npm:1.8.1"],
             ["@types/express", "npm:4.17.13"],
-            ["@types/jest", "npm:27.0.3"],
+            ["@types/jest", "npm:27.4.0"],
             ["@types/node", "npm:16.11.17"],
             ["common-tags", "npm:1.8.2"],
             ["express", "npm:4.17.2"],
@@ -11620,7 +11620,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/common-tags", "npm:1.8.1"],
             ["@types/express", "npm:4.17.13"],
             ["@types/helmet", "npm:4.0.0"],
-            ["@types/jest", "npm:27.0.3"],
+            ["@types/jest", "npm:27.4.0"],
             ["@types/jsonwebtoken", "npm:8.5.6"],
             ["@types/node", "npm:16.11.17"],
             ["@types/pg", "npm:8.6.3"],
@@ -12082,7 +12082,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-jest", null],
             ["@types/babel__core", null],
             ["@types/esbuild", null],
-            ["@types/jest", "npm:27.0.3"],
+            ["@types/jest", "npm:27.4.0"],
             ["@types/typescript", null],
             ["babel-jest", null],
             ["bs-logger", "npm:0.2.6"],
