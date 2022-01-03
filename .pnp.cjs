@@ -6985,6 +6985,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["helmet", "npm:4.6.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:5.0.1", {
+          "packageLocation": "./.yarn/cache/helmet-npm-5.0.1-11e93f7fab-6e693ce32a.zip/node_modules/helmet/",
+          "packageDependencies": [
+            ["helmet", "npm:5.0.1"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["highlight.js", [
@@ -11596,7 +11603,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.0.0"],
             ["express", "npm:4.17.2"],
             ["granite", "workspace:."],
-            ["helmet", "npm:4.6.0"],
+            ["helmet", "npm:5.0.1"],
             ["jest", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:27.4.5"],
             ["joi", "npm:17.5.0"],
             ["jsonwebtoken", "npm:8.5.1"],
