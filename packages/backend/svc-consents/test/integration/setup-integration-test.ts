@@ -1,5 +1,5 @@
 import { oneLine } from 'common-tags';
-import * as helmet from 'helmet';
+import helmet from 'helmet';
 import { Client } from 'pg';
 import { Connection, createConnection } from 'typeorm';
 
