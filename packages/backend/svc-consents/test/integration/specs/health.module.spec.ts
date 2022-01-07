@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
-import * as request from 'supertest';
+import { default as request } from 'supertest';
 
 import { HttpStatus, INestApplication } from '@nestjs/common';
 
@@ -31,7 +31,7 @@ describe('Health Module', () => {
         connection: 'close',
         'content-length': expect.any(String),
         'content-security-policy':
-          "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
+          "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests",
         'content-type': 'application/json; charset=utf-8',
         date: expect.any(String),
         etag: expect.any(String),
