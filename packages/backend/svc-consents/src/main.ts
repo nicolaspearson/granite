@@ -1,5 +1,5 @@
 import helmet from 'helmet';
-import * as nocache from 'nocache';
+import { default as nocache } from 'nocache';
 import { getConnection } from 'typeorm';
 
 import { LogLevel } from '@nestjs/common';

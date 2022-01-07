@@ -1,7 +1,6 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "esModuleInterop": false,
     "preserveConstEnums": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true
