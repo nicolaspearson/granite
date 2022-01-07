@@ -1,4 +1,4 @@
-import * as helmet from 'helmet';
+import helmet from 'helmet';
 import * as nocache from 'nocache';
 import { getConnection } from 'typeorm';
 
