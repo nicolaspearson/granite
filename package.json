@@ -10,7 +10,7 @@
   "author": "Nicolas Pearson <nic.s.pearson@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": ">=16.13.1"
+    "node": ">=v16.13.2"
   },
   "scripts": {
     "clean:jest": "jest --clearCache",
