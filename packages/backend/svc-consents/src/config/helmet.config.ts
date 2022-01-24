@@ -1,4 +1,4 @@
-import { ContentSecurityPolicyOptions } from 'helmet/dist/middlewares/content-security-policy';
+import { ContentSecurityPolicyOptions } from 'helmet/dist/types/middlewares/content-security-policy';
 
 import { Environment } from '$/enum/environment.enum';
 
