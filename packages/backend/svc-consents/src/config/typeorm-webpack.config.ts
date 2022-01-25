@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-/* eslint-disable @typescript-eslint/no-unsafe-return */
 import { ConnectionOptions } from 'typeorm';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type ClassReference = new (...args: any[]) => any;
+type RequiredReference = { [key: string]: ClassReference };
 export type WebpackConnectionOptions = Pick<ConnectionOptions, 'entities' | 'migrations'>;
 
 /**
@@ -20,23 +21,22 @@ export type WebpackConnectionOptions = Pick<ConnectionOptions, 'entities' | 'mig
  * https://spin.atomicobject.com/2020/12/21/typeorm-webpack/
  * https://webpack.js.org/guides/dependency-management/#requirecontext
  */
-function importFunctions(requireContext: __WebpackModuleApi.RequireContext) {
+function importFunctions(requireContext: __WebpackModuleApi.RequireContext): ClassReference[] {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
   return requireContext
     .keys()
     .sort()
-    .map((filename) => {
-      const required = requireContext(filename);
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
-      return Object.keys(required).reduce((result, exportedKey) => {
+    .flatMap((filename) => {
+      const required: RequiredReference = requireContext(filename);
+      const result: ClassReference[] = [];
+      for (const exportedKey of Object.keys(required)) {
         const exported = required[exportedKey];
         if (typeof exported === 'function') {
-          return result.concat(exported);
+          result.push(exported);
         }
-        return result;
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      }, [] as any);
-    })
-    .flat();
+      }
+      return result;
+    });
 }
 
 export function entityFunctions(): NonNullable<WebpackConnectionOptions['entities']> {
