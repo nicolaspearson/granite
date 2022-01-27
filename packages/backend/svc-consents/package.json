@@ -60,7 +60,7 @@
     "common-tags": "^1.8.2",
     "express": "^4.17.2",
     "helmet": "^5.0.2",
-    "joi": "^17.5.0",
+    "joi": "^17.6.0",
     "jsonwebtoken": "^8.5.1",
     "lib-nest": "workspace:*",
     "nocache": "^3.0.1",
