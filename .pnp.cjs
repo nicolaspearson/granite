@@ -4936,6 +4936,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["commander", "npm:8.3.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:9.0.0", {
+          "packageLocation": "./.yarn/cache/commander-npm-9.0.0-b4ddcedf46-15066e433d.zip/node_modules/commander/",
+          "packageDependencies": [
+            ["commander", "npm:9.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["common-tags", [
@@ -5311,10 +5318,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "HARD",
         }],
-        ["virtual:ac3356c2bd77f2e7fd1d2db6f3fe5fbdda4a264a5004b26750ec526646276dfa29bb2d71311c62411ee30db237f202ef36070200c847bd87044addba3bbbb3b8#npm:4.3.3", {
-          "packageLocation": "./.yarn/__virtual__/debug-virtual-90b9be308d/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",
+        ["virtual:9673a1c16b891c0a36ddcd356d0856f95d11917d7d414a9d0a77c56bd27726f6558aa887c46b314f810807f3b41deed3d64c07e6831a07a7cc0808e758ccb7c5#npm:4.3.3", {
+          "packageLocation": "./.yarn/__virtual__/debug-virtual-c0c1b1c4d5/0/cache/debug-npm-4.3.3-710fd4cc7f-14472d56fe.zip/node_modules/debug/",
           "packageDependencies": [
-            ["debug", "virtual:ac3356c2bd77f2e7fd1d2db6f3fe5fbdda4a264a5004b26750ec526646276dfa29bb2d71311c62411ee30db237f202ef36070200c847bd87044addba3bbbb3b8#npm:4.3.3"],
+            ["debug", "virtual:9673a1c16b891c0a36ddcd356d0856f95d11917d7d414a9d0a77c56bd27726f6558aa887c46b314f810807f3b41deed3d64c07e6831a07a7cc0808e758ccb7c5#npm:4.3.3"],
             ["@types/supports-color", null],
             ["ms", "npm:2.1.2"],
             ["supports-color", null]
@@ -5605,13 +5612,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["dtsgenerator", [
-        ["npm:3.14.0", {
-          "packageLocation": "./.yarn/cache/dtsgenerator-npm-3.14.0-ac3356c2bd-85e0254141.zip/node_modules/dtsgenerator/",
+        ["npm:3.15.0", {
+          "packageLocation": "./.yarn/cache/dtsgenerator-npm-3.15.0-9673a1c16b-df1f12ef23.zip/node_modules/dtsgenerator/",
           "packageDependencies": [
-            ["dtsgenerator", "npm:3.14.0"],
-            ["commander", "npm:8.3.0"],
+            ["dtsgenerator", "npm:3.15.0"],
+            ["commander", "npm:9.0.0"],
             ["cross-fetch", "npm:3.1.5"],
-            ["debug", "virtual:ac3356c2bd77f2e7fd1d2db6f3fe5fbdda4a264a5004b26750ec526646276dfa29bb2d71311c62411ee30db237f202ef36070200c847bd87044addba3bbbb3b8#npm:4.3.3"],
+            ["debug", "virtual:9673a1c16b891c0a36ddcd356d0856f95d11917d7d414a9d0a77c56bd27726f6558aa887c46b314f810807f3b41deed3d64c07e6831a07a7cc0808e758ccb7c5#npm:4.3.3"],
             ["glob", "npm:7.2.0"],
             ["https-proxy-agent", "npm:5.0.0"],
             ["js-yaml", "npm:4.1.0"],
@@ -11592,7 +11599,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["superagent", "npm:7.1.0"],
             ["component-emitter", "npm:1.3.0"],
             ["cookiejar", "npm:2.1.3"],
-            ["debug", "virtual:ac3356c2bd77f2e7fd1d2db6f3fe5fbdda4a264a5004b26750ec526646276dfa29bb2d71311c62411ee30db237f202ef36070200c847bd87044addba3bbbb3b8#npm:4.3.3"],
+            ["debug", "virtual:9673a1c16b891c0a36ddcd356d0856f95d11917d7d414a9d0a77c56bd27726f6558aa887c46b314f810807f3b41deed3d64c07e6831a07a7cc0808e758ccb7c5#npm:4.3.3"],
             ["fast-safe-stringify", "npm:2.1.1"],
             ["form-data", "npm:4.0.0"],
             ["formidable", "npm:2.0.1"],
@@ -11695,7 +11702,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer", "npm:0.5.1"],
             ["class-validator", "npm:0.13.2"],
             ["common-tags", "npm:1.8.2"],
-            ["dtsgenerator", "npm:3.14.0"],
+            ["dtsgenerator", "npm:3.15.0"],
             ["eslint", "npm:8.8.0"],
             ["eslint-config-prettier", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:8.3.0"],
             ["eslint-plugin-prettier", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.0.0"],
