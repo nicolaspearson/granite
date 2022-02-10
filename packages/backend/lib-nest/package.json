@@ -40,7 +40,7 @@
     "common-tags": "^1.8.2",
     "express": "^4.17.2",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.5.3"
+    "rxjs": "^7.5.4"
   },
   "devDependencies": {
     "#": "link:./test",
@@ -48,7 +48,7 @@
     "@types/common-tags": "^1.8.1",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.22",
+    "@types/node": "^16.11.23",
     "granite": "workspace:*",
     "rimraf": "^3.0.2",
     "ts-loader": "^9.2.6",
