@@ -7,7 +7,6 @@
     "type": "git",
     "url": "ssh://git@github.com/nicolaspearson/granite.git"
   },
-  "author": "Nicolas Pearson <nic.s.pearson@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": ">=v16.14.0"
