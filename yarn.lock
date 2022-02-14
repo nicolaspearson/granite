@@ -2036,7 +2036,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.12.0":
+"@typescript-eslint/eslint-plugin@npm:^5.11.1-alpha":
   version: 5.12.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.12.0"
   dependencies:
@@ -5282,7 +5282,7 @@ __metadata:
     "@commitlint/cli": ^16.2.1
     "@commitlint/config-conventional": ^16.2.1
     "@types/node": ^16.11.24
-    "@typescript-eslint/eslint-plugin": ^5.12.0
+    "@typescript-eslint/eslint-plugin": ^5.11.1-alpha
     "@typescript-eslint/parser": ^5.12.0
     eslint: ^8.9.0
     eslint-config-prettier: ^8.3.0
@@ -9360,7 +9360,7 @@ __metadata:
     "@types/uuid": ^8.3.4
     "@types/validator": ^13.7.1
     "@types/webpack-env": ^1.16.3
-    "@typescript-eslint/eslint-plugin": ^5.12.0
+    "@typescript-eslint/eslint-plugin": ^5.11.1-alpha
     "@typescript-eslint/parser": ^5.12.0
     class-transformer: ^0.5.1
     class-validator: ^0.13.2
