@@ -52,7 +52,7 @@
     "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-ordered-imports": "^0.6.0",
-    "eslint-plugin-unicorn": "^40.1.0",
+    "eslint-plugin-unicorn": "^41.0.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "jest-environment-node": "^27.5.1",
