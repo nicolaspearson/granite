@@ -35,14 +35,15 @@
     "lint": "yarn lint:markdown && yarn lint:yaml",
     "postinstall": "husky install",
     "prettier:fix": "prettier --config .prettierrc --no-editorconfig --write packages/**/*.ts",
-    "prettier": "prettier --config .prettierrc --no-editorconfig --check packages/**/*.ts"
+    "prettier": "prettier --config .prettierrc --no-editorconfig --check packages/**/*.ts",
+    "sdk": "yarn dlx @yarnpkg/sdks vscode"
   },
   "dependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
     "@types/node": "^16.11.25",
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.4.0",
     "eslint-import-resolver-node": "^0.3.6",
@@ -80,5 +81,5 @@
     "packages/backend/*",
     "packages/frontend/*"
   ],
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.2.0"
 }
