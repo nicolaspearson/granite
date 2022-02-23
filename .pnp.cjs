@@ -2809,11 +2809,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jest", [\
-        ["npm:27.4.0", {\
-          "packageLocation": "./.yarn/cache/@types-jest-npm-27.4.0-33755263ec-d2350267f9.zip/node_modules/@types/jest/",\
+        ["npm:27.4.1", {\
+          "packageLocation": "./.yarn/cache/@types-jest-npm-27.4.1-31d07cd0d8-5184f3eef4.zip/node_modules/@types/jest/",\
           "packageDependencies": [\
-            ["@types/jest", "npm:27.4.0"],\
-            ["jest-diff", "npm:27.3.1"],\
+            ["@types/jest", "npm:27.4.1"],\
+            ["jest-matcher-utils", "npm:27.5.1"],\
             ["pretty-format", "npm:27.3.1"]\
           ],\
           "linkType": "HARD"\
@@ -5623,13 +5623,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["diff-sequences", [\
-        ["npm:27.0.6", {\
-          "packageLocation": "./.yarn/cache/diff-sequences-npm-27.0.6-1eed05107b-f35ad024d4.zip/node_modules/diff-sequences/",\
-          "packageDependencies": [\
-            ["diff-sequences", "npm:27.0.6"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:27.5.1", {\
           "packageLocation": "./.yarn/cache/diff-sequences-npm-27.5.1-29338362fa-a00db5554c.zip/node_modules/diff-sequences/",\
           "packageDependencies": [\
@@ -8276,17 +8269,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jest-diff", [\
-        ["npm:27.3.1", {\
-          "packageLocation": "./.yarn/cache/jest-diff-npm-27.3.1-c347dd1e5a-49231a4ac4.zip/node_modules/jest-diff/",\
-          "packageDependencies": [\
-            ["jest-diff", "npm:27.3.1"],\
-            ["chalk", "npm:4.1.2"],\
-            ["diff-sequences", "npm:27.0.6"],\
-            ["jest-get-type", "npm:27.3.1"],\
-            ["pretty-format", "npm:27.3.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:27.5.1", {\
           "packageLocation": "./.yarn/cache/jest-diff-npm-27.5.1-818e549196-8be27c1e1e.zip/node_modules/jest-diff/",\
           "packageDependencies": [\
@@ -8355,13 +8337,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jest-get-type", [\
-        ["npm:27.3.1", {\
-          "packageLocation": "./.yarn/cache/jest-get-type-npm-27.3.1-fdb27a0157-b0b8db1d77.zip/node_modules/jest-get-type/",\
-          "packageDependencies": [\
-            ["jest-get-type", "npm:27.3.1"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:27.5.1", {\
           "packageLocation": "./.yarn/cache/jest-get-type-npm-27.5.1-980fbf7a43-63064ab701.zip/node_modules/jest-get-type/",\
           "packageDependencies": [\
@@ -9011,7 +8986,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/testing", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:8.3.1"],\
             ["@types/common-tags", "npm:1.8.1"],\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/jest", "npm:27.4.0"],\
+            ["@types/jest", "npm:27.4.1"],\
             ["@types/node", "npm:16.11.25"],\
             ["common-tags", "npm:1.8.2"],\
             ["express", "npm:4.17.3"],\
@@ -11863,7 +11838,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/common-tags", "npm:1.8.1"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/helmet", "npm:4.0.0"],\
-            ["@types/jest", "npm:27.4.0"],\
+            ["@types/jest", "npm:27.4.1"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
             ["@types/node", "npm:16.11.25"],\
             ["@types/pg", "npm:8.6.4"],\
@@ -12317,7 +12292,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-jest", null],\
             ["@types/babel__core", null],\
             ["@types/esbuild", null],\
-            ["@types/jest", "npm:27.4.0"],\
+            ["@types/jest", "npm:27.4.1"],\
             ["@types/typescript", null],\
             ["babel-jest", null],\
             ["bs-logger", "npm:0.2.6"],\
