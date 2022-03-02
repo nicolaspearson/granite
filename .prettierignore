@@ -5,6 +5,7 @@
 .env*
 .eslintignore
 .gitignore
+.nvmrc
 .pnp.cjs
 .pnp.loader.mjs
 .prettierignore
