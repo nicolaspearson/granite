@@ -69,7 +69,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:27.1.3"],\
             ["ts-loader", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:9.2.7"],\
             ["ts-node", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:10.6.0"],\
-            ["tsconfig-paths", "npm:3.12.0"],\
+            ["tsconfig-paths", "npm:3.13.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
             ["webpack", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.69.1"]\
           ],\
@@ -7208,7 +7208,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:27.1.3"],\
             ["ts-loader", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:9.2.7"],\
             ["ts-node", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:10.6.0"],\
-            ["tsconfig-paths", "npm:3.12.0"],\
+            ["tsconfig-paths", "npm:3.13.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
             ["webpack", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.69.1"]\
           ],\
@@ -11792,7 +11792,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-jest", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:27.1.3"],\
             ["ts-loader", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:9.2.7"],\
             ["ts-node", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:10.6.0"],\
-            ["tsconfig-paths", "npm:3.12.0"],\
+            ["tsconfig-paths", "npm:3.13.0"],\
             ["typeorm", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:0.2.44"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"],\
             ["uuid", "npm:8.3.2"],\
@@ -12438,6 +12438,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/tsconfig-paths-npm-3.12.0-b78aadfb3f-4999ec6cd1.zip/node_modules/tsconfig-paths/",\
           "packageDependencies": [\
             ["tsconfig-paths", "npm:3.12.0"],\
+            ["@types/json5", "npm:0.0.29"],\
+            ["json5", "npm:1.0.1"],\
+            ["minimist", "npm:1.2.5"],\
+            ["strip-bom", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:3.13.0", {\
+          "packageLocation": "./.yarn/cache/tsconfig-paths-npm-3.13.0-bd5167829d-64f0de3c88.zip/node_modules/tsconfig-paths/",\
+          "packageDependencies": [\
+            ["tsconfig-paths", "npm:3.13.0"],\
             ["@types/json5", "npm:0.0.29"],\
             ["json5", "npm:1.0.1"],\
             ["minimist", "npm:1.2.5"],\
