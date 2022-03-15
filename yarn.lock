@@ -4051,9 +4051,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dtsgenerator@npm:^3.15.0":
-  version: 3.15.0
-  resolution: "dtsgenerator@npm:3.15.0"
+"dtsgenerator@npm:^3.15.1":
+  version: 3.15.1
+  resolution: "dtsgenerator@npm:3.15.1"
   dependencies:
     commander: ^9.0.0
     cross-fetch: ^3.1.5
@@ -4062,10 +4062,10 @@ __metadata:
     https-proxy-agent: ^5.0.0
     js-yaml: ^4.1.0
     tslib: ^2.3.1
-    typescript: ^4.5.5
+    typescript: ^4.6.2
   bin:
     dtsgen: bin/dtsgen
-  checksum: df1f12ef23bd4aba8c66055d28321e82b8e1b32d10b1dfb7e4570bf034a17a9d31c685c35582a8db0611dfd54e9357ec5d1ad211cf3a7b0c40fe6c584e1125ed
+  checksum: 58e696adf9cba5eb051711524e9825af3e068b892c1fd61138ee72b2933d094f651fff49d9caa850c125b698ed8da612cc599d2cbb9f67e90000b74a4fd92349
   languageName: node
   linkType: hard
 
@@ -9352,7 +9352,7 @@ __metadata:
     class-transformer: ^0.5.1
     class-validator: ^0.13.2
     common-tags: ^1.8.2
-    dtsgenerator: ^3.15.0
+    dtsgenerator: ^3.15.1
     eslint: ^8.10.0
     eslint-config-prettier: ^8.5.0
     eslint-plugin-prettier: ^4.0.0
@@ -10007,16 +10007,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.5.5":
-  version: 4.5.5
-  resolution: "typescript@npm:4.5.5"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 506f4c919dc8aeaafa92068c997f1d213b9df4d9756d0fae1a1e7ab66b585ab3498050e236113a1c9e57ee08c21ec6814ca7a7f61378c058d79af50a4b1f5a5e
-  languageName: node
-  linkType: hard
-
 "typescript@patch:typescript@4.6.2#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.2#~builtin<compat/typescript>":
   version: 4.6.2
   resolution: "typescript@patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"
@@ -10034,16 +10024,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: e25e689eba64f7da7cfc43f8ea76cac7176b56caba42655f0a4cb29c0b7c36e67ca54f33df95902859f56108464245d8b45bcdfe21e3d66d9560feb8db780246
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@^4.5.5#~builtin<compat/typescript>":
-  version: 4.5.5
-  resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=bda367"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 858c61fa63f7274ca4aaaffeced854d550bf416cff6e558c4884041b3311fb662f476f167cf5c9f8680c607239797e26a2ee0bcc6467fbc05bfcb218e1c6c671
   languageName: node
   linkType: hard
 
