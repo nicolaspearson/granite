@@ -26,6 +26,7 @@ describe('Health Module', () => {
 
     test('[200] => should set headers correctly', async () => {
       const res = await request(app.getHttpServer()).get(baseUrl).expect(HttpStatus.OK);
+      /* eslint-disable @typescript-eslint/naming-convention */
       expect(res.header).toMatchObject({
         'access-control-allow-credentials': 'true',
         connection: 'close',
@@ -46,6 +47,7 @@ describe('Health Module', () => {
         'x-permitted-cross-domain-policies': 'none',
         'x-xss-protection': '0',
       });
+      /* eslint-enable @typescript-eslint/naming-convention */
     });
   });
 

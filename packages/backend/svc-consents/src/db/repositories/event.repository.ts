@@ -38,6 +38,7 @@ export class EventRepository extends AbstractRepository<Event> {
       .where('user.uuid = :userUuid', { userUuid })
       .distinctOn(['event.type'])
       .orderBy({
+        // eslint-disable-next-line @typescript-eslint/naming-convention
         'event.type': 'DESC',
         // eslint-disable-next-line @typescript-eslint/naming-convention
         'event.created_at': 'DESC',

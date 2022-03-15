@@ -32,6 +32,7 @@ export class UserRepository extends AbstractRepository<User> {
       // We use DISTINCT ON to only return the latest entry in the
       // event table grouped by `type` and ordered by `created_at`
       query.leftJoinAndSelect('user.events', 'events').distinctOn(['events.type']).orderBy({
+        // eslint-disable-next-line @typescript-eslint/naming-convention
         'events.type': 'DESC',
         // eslint-disable-next-line @typescript-eslint/naming-convention
         'events.created_at': 'DESC',

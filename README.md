@@ -10,7 +10,13 @@ This is a monorepo for granite, an online consent management platform.
 4. Install dependencies: `yarn install`
 5. Ensure that you have docker installed and running.
 
-Optionally install [yamllint](https://yamllint.readthedocs.io/) (Required if you are a contributor).
+Optionally install [yamllint](https://yamllint.readthedocs.io/):
+
+```sh
+brew install yamllint
+```
+
+**Note: Required if you are a contributor.**
 
 ### Configure Visual Studio Code
 
