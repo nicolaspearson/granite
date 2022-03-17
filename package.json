@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=v16.14.0"
+    "node": ">=v16.14.1"
   },
   "scripts": {
     "clean:jest": "jest --clearCache",
