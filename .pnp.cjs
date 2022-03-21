@@ -3001,10 +3001,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/supertest", [\
-        ["npm:2.0.11", {\
-          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.11-a547f689c9-291abc0d37.zip/node_modules/@types/supertest/",\
+        ["npm:2.0.12", {\
+          "packageLocation": "./.yarn/cache/@types-supertest-npm-2.0.12-deccb2551b-f0e2b44f86.zip/node_modules/@types/supertest/",\
           "packageDependencies": [\
-            ["@types/supertest", "npm:2.0.11"],\
+            ["@types/supertest", "npm:2.0.12"],\
             ["@types/superagent", "npm:4.1.13"]\
           ],\
           "linkType": "HARD"\
@@ -11764,7 +11764,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.26"],\
             ["@types/pg", "npm:8.6.5"],\
             ["@types/prettier", "npm:2.4.4"],\
-            ["@types/supertest", "npm:2.0.11"],\
+            ["@types/supertest", "npm:2.0.12"],\
             ["@types/swagger-ui-express", "npm:4.1.3"],\
             ["@types/uuid", "npm:8.3.4"],\
             ["@types/validator", "npm:13.7.1"],\
