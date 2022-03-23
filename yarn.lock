@@ -7525,10 +7525,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nocache@npm:^3.0.1":
-  version: 3.0.1
-  resolution: "nocache@npm:3.0.1"
-  checksum: 1e08ab8a267f015f598ab1f9ba67f911deaea48cf9fe51fdc8aabad370d2c3f0d71948530dac5763445ba104ae2f2af0d1ac86f5c0ace5ac415cb04d8becd4b2
+"nocache@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "nocache@npm:3.0.2"
+  checksum: 21037afb86ecd81d89e280689be601a3269fe5bfc1ae52d1b9dee4510c475db23d0bd0a2c1802825833bc77a0782dd486b9e39eb47f4b5dce12097d8a5af381e
   languageName: node
   linkType: hard
 
@@ -9363,7 +9363,7 @@ __metadata:
     joi: ^17.6.0
     jsonwebtoken: ^8.5.1
     lib-nest: "workspace:*"
-    nocache: ^3.0.1
+    nocache: ^3.0.2
     pg: ^8.7.3
     prettier: ^2.6.0
     reflect-metadata: ^0.1.13
