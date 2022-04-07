@@ -48,25 +48,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular-devkit/core@npm:13.2.5":
-  version: 13.2.5
-  resolution: "@angular-devkit/core@npm:13.2.5"
-  dependencies:
-    ajv: 8.9.0
-    ajv-formats: 2.1.1
-    fast-json-stable-stringify: 2.1.0
-    magic-string: 0.25.7
-    rxjs: 6.6.7
-    source-map: 0.7.3
-  peerDependencies:
-    chokidar: ^3.5.2
-  peerDependenciesMeta:
-    chokidar:
-      optional: true
-  checksum: 9d618fce195408fa6a35db58889135ea997ac0cd1397f4af654a92c30aaaf891736366c7b057e3bf90a4969e0466eedc258c3cd18c7b581524fa2408fd842560
-  languageName: node
-  linkType: hard
-
 "@angular-devkit/core@npm:13.3.2":
   version: 13.3.2
   resolution: "@angular-devkit/core@npm:13.3.2"
@@ -112,19 +93,6 @@ __metadata:
     ora: 5.4.1
     rxjs: 6.6.7
   checksum: 8eef5b7237c184291bc80284571017e8d68d5cce83c4c7cd6d9cc950cca97f8280fcc78d5e61c2cadc6da9be8c02211440cf3c30ac687e30f53dcf9d6bbba079
-  languageName: node
-  linkType: hard
-
-"@angular-devkit/schematics@npm:13.2.5":
-  version: 13.2.5
-  resolution: "@angular-devkit/schematics@npm:13.2.5"
-  dependencies:
-    "@angular-devkit/core": 13.2.5
-    jsonc-parser: 3.0.0
-    magic-string: 0.25.7
-    ora: 5.4.1
-    rxjs: 6.6.7
-  checksum: e256f326b5a93db93df97cfafcd7c148abf8f9a323d98bef48e7ae6825586815d81a1b3f7b9e0a0a3ebb5f8e130095a6dc0dec135f6c53edbfb3e4092dc9e456
   languageName: node
   linkType: hard
 
@@ -1419,6 +1387,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@nestjs/schematics@npm:^8.0.10":
+  version: 8.0.10
+  resolution: "@nestjs/schematics@npm:8.0.10"
+  dependencies:
+    "@angular-devkit/core": 13.3.2
+    "@angular-devkit/schematics": 13.3.2
+    fs-extra: 10.0.1
+    jsonc-parser: 3.0.0
+    pluralize: 8.0.0
+  peerDependencies:
+    typescript: ^3.4.5 || ^4.3.5
+  checksum: 811fd64bc2dbef0d5d1d28f532dce94e1b6c2014b69d1a11f9b405c84fdf5b880a4b090cc017244d1e158d9d49f60deac9ff3cd04d91af1898d54465086df586
+  languageName: node
+  linkType: hard
+
 "@nestjs/schematics@npm:^8.0.3":
   version: 8.0.5
   resolution: "@nestjs/schematics@npm:8.0.5"
@@ -1431,21 +1414,6 @@ __metadata:
   peerDependencies:
     typescript: ^3.4.5 || ^4.3.5
   checksum: dc3b51f7d1e8b9c27192e6802e0f31e90b0ae709137b9e63ab2d52d1cc362a4297b90e3c2905c38f106c3e8f4789d348fcf71f3ba72fa9ebefcb16448cffaf3d
-  languageName: node
-  linkType: hard
-
-"@nestjs/schematics@npm:^8.0.8":
-  version: 8.0.8
-  resolution: "@nestjs/schematics@npm:8.0.8"
-  dependencies:
-    "@angular-devkit/core": 13.2.5
-    "@angular-devkit/schematics": 13.2.5
-    fs-extra: 10.0.1
-    jsonc-parser: 3.0.0
-    pluralize: 8.0.0
-  peerDependencies:
-    typescript: ^3.4.5 || ^4.3.5
-  checksum: ee8f11c184e7cbd9918741be2b192524183f35b52fb9afdda6e6eb0fe52c7f5e06177e7561aba5569270a8dc3136fa6c56df8614c75ad971a410285745ed0e14
   languageName: node
   linkType: hard
 
@@ -9349,7 +9317,7 @@ __metadata:
     "@nestjs/core": ^8.4.3
     "@nestjs/jwt": ^8.0.0
     "@nestjs/platform-express": ^8.4.3
-    "@nestjs/schematics": ^8.0.8
+    "@nestjs/schematics": ^8.0.10
     "@nestjs/swagger": ^5.2.0
     "@nestjs/testing": ^8.4.3
     "@nestjs/typeorm": ^8.0.3
