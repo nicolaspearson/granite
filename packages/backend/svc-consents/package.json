@@ -82,7 +82,7 @@
     "@types/helmet": "^4.0.0",
     "@types/jest": "27.4.1",
     "@types/jsonwebtoken": "^8.5.8",
-    "@types/node": "^16.11.28",
+    "@types/node": "^16.11.29",
     "@types/pg": "^8.6.5",
     "@types/prettier": "^2.6.0",
     "@types/supertest": "^2.0.12",
