@@ -10662,14 +10662,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["qs", [\
-        ["npm:6.10.2", {\
-          "packageLocation": "./.yarn/cache/qs-npm-6.10.2-1393809d0a-46fcc8f75a.zip/node_modules/qs/",\
-          "packageDependencies": [\
-            ["qs", "npm:6.10.2"],\
-            ["side-channel", "npm:1.0.4"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:6.10.3", {\
           "packageLocation": "./.yarn/cache/qs-npm-6.10.3-172e1a3fb7-0fac5e6c71.zip/node_modules/qs/",\
           "packageDependencies": [\
@@ -11183,6 +11175,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/semver-npm-7.3.5-618cf5db6a-5eafe6102b.zip/node_modules/semver/",\
           "packageDependencies": [\
             ["semver", "npm:7.3.5"],\
+            ["lru-cache", "npm:6.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:7.3.7", {\
+          "packageLocation": "./.yarn/cache/semver-npm-7.3.7-3bfe704194-2fa3e87756.zip/node_modules/semver/",\
+          "packageDependencies": [\
+            ["semver", "npm:7.3.7"],\
             ["lru-cache", "npm:6.0.0"]\
           ],\
           "linkType": "HARD"\
@@ -11704,32 +11704,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["superagent", [\
-        ["npm:7.1.0", {\
-          "packageLocation": "./.yarn/cache/superagent-npm-7.1.0-08c8cc9881-ed19442037.zip/node_modules/superagent/",\
+        ["npm:7.1.3", {\
+          "packageLocation": "./.yarn/cache/superagent-npm-7.1.3-4752f38843-436045d555.zip/node_modules/superagent/",\
           "packageDependencies": [\
-            ["superagent", "npm:7.1.0"],\
+            ["superagent", "npm:7.1.3"],\
             ["component-emitter", "npm:1.3.0"],\
             ["cookiejar", "npm:2.1.3"],\
-            ["debug", "virtual:cb7747b27fdbfb5eea8264a271a3526df890bfdf4c26b3eac3b224a225a7ccb688726b6f5a9d79f885dc6fcb07387d9c9281e9b98d1f5458bea4d35350477380#npm:4.3.3"],\
+            ["debug", "virtual:e8ea52cfb88d97282797dda9c388f0d1635bb9bd15c49336221c29dea82def456eba41fd0d37325f6ee9b00c760471a96b554858f2227bef26dd7958f28c7cbe#npm:4.3.4"],\
             ["fast-safe-stringify", "npm:2.1.1"],\
             ["form-data", "npm:4.0.0"],\
             ["formidable", "npm:2.0.1"],\
             ["methods", "npm:1.1.2"],\
             ["mime", "npm:2.6.0"],\
-            ["qs", "npm:6.10.2"],\
+            ["qs", "npm:6.10.3"],\
             ["readable-stream", "npm:3.6.0"],\
-            ["semver", "npm:7.3.5"]\
+            ["semver", "npm:7.3.7"]\
           ],\
           "linkType": "HARD"\
         }]\
       ]],\
       ["supertest", [\
-        ["npm:6.2.2", {\
-          "packageLocation": "./.yarn/cache/supertest-npm-6.2.2-d999ec4e20-3c1956d57e.zip/node_modules/supertest/",\
+        ["npm:6.2.3", {\
+          "packageLocation": "./.yarn/cache/supertest-npm-6.2.3-280f27cd97-c1bed86c31.zip/node_modules/supertest/",\
           "packageDependencies": [\
-            ["supertest", "npm:6.2.2"],\
+            ["supertest", "npm:6.2.3"],\
             ["methods", "npm:1.1.2"],\
-            ["superagent", "npm:7.1.0"]\
+            ["superagent", "npm:7.1.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11841,7 +11841,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["run-script-webpack-plugin", "npm:0.0.11"],\
             ["rxjs", "npm:7.5.5"],\
             ["source-map-support", "npm:0.5.21"],\
-            ["supertest", "npm:6.2.2"],\
+            ["supertest", "npm:6.2.3"],\
             ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.3.0"],\
             ["ts-jest", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:27.1.4"],\
             ["ts-loader", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:9.2.9"],\
