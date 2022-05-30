@@ -67,7 +67,7 @@
     "ts-node": "^10.7.0",
     "tsconfig-paths": "^3.14.1",
     "typescript": "^4.6.4",
-    "webpack": "^5.72.0"
+    "webpack": "^5.72.1"
   },
   "lint-staged": {
     "**/*.md": [
