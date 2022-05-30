@@ -2178,19 +2178,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@nestjs/jwt", [\
-        ["npm:8.0.0", {\
-          "packageLocation": "./.yarn/cache/@nestjs-jwt-npm-8.0.0-0413b16279-0e344419a8.zip/node_modules/@nestjs/jwt/",\
+        ["npm:8.0.1", {\
+          "packageLocation": "./.yarn/cache/@nestjs-jwt-npm-8.0.1-f2a73182b0-0af21c609e.zip/node_modules/@nestjs/jwt/",\
           "packageDependencies": [\
-            ["@nestjs/jwt", "npm:8.0.0"]\
+            ["@nestjs/jwt", "npm:8.0.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.0", {\
-          "packageLocation": "./.yarn/__virtual__/@nestjs-jwt-virtual-fa93941db2/0/cache/@nestjs-jwt-npm-8.0.0-0413b16279-0e344419a8.zip/node_modules/@nestjs/jwt/",\
+        ["virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-jwt-virtual-072ceb0c6c/0/cache/@nestjs-jwt-npm-8.0.1-f2a73182b0-0af21c609e.zip/node_modules/@nestjs/jwt/",\
           "packageDependencies": [\
-            ["@nestjs/jwt", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.0"],\
+            ["@nestjs/jwt", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.1"],\
             ["@nestjs/common", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.4.5"],\
-            ["@types/jsonwebtoken", "npm:8.5.4"],\
+            ["@types/jsonwebtoken", "npm:8.5.8"],\
             ["@types/nestjs__common", null],\
             ["jsonwebtoken", "npm:8.5.1"]\
           ],\
@@ -2942,14 +2942,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jsonwebtoken", [\
-        ["npm:8.5.4", {\
-          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.4-b90b23f33f-541d41eb81.zip/node_modules/@types/jsonwebtoken/",\
-          "packageDependencies": [\
-            ["@types/jsonwebtoken", "npm:8.5.4"],\
-            ["@types/node", "npm:16.11.10"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:8.5.8", {\
           "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.8-798e14708c-56738a918c.zip/node_modules/@types/jsonwebtoken/",\
           "packageDependencies": [\
@@ -11700,7 +11692,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/common", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.4.5"],\
             ["@nestjs/config", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:2.0.0"],\
             ["@nestjs/core", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.4.5"],\
-            ["@nestjs/jwt", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.0"],\
+            ["@nestjs/jwt", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.1"],\
             ["@nestjs/platform-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.4.5"],\
             ["@nestjs/schematics", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.11"],\
             ["@nestjs/swagger", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:5.2.1"],\
