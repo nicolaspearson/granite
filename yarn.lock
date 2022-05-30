@@ -1809,7 +1809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.27.0":
+"@typescript-eslint/parser@npm:^5.26.1-alpha":
   version: 5.27.0
   resolution: "@typescript-eslint/parser@npm:5.27.0"
   dependencies:
@@ -4814,7 +4814,7 @@ __metadata:
     "@commitlint/config-conventional": ^17.0.0
     "@types/node": ^16.11.36
     "@typescript-eslint/eslint-plugin": ^5.27.0
-    "@typescript-eslint/parser": ^5.27.0
+    "@typescript-eslint/parser": ^5.26.1-alpha
     eslint: ^8.16.0
     eslint-config-prettier: ^8.5.0
     eslint-import-resolver-node: ^0.3.6
@@ -8720,7 +8720,7 @@ __metadata:
     "@types/validator": ^13.7.2
     "@types/webpack-env": ^1.17.0
     "@typescript-eslint/eslint-plugin": ^5.27.0
-    "@typescript-eslint/parser": ^5.27.0
+    "@typescript-eslint/parser": ^5.26.1-alpha
     class-transformer: ^0.5.1
     class-validator: ^0.13.2
     common-tags: ^1.8.2
