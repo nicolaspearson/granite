@@ -2588,10 +2588,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/jest", [\
-        ["npm:27.5.2", {\
-          "packageLocation": "./.yarn/cache/@types-jest-npm-27.5.2-f8ba570ba6-7e11c6826a.zip/node_modules/@types/jest/",\
+        ["npm:28.1.0", {\
+          "packageLocation": "./.yarn/cache/@types-jest-npm-28.1.0-6a60b75918-be4d887b24.zip/node_modules/@types/jest/",\
           "packageDependencies": [\
-            ["@types/jest", "npm:27.5.2"],\
+            ["@types/jest", "npm:28.1.0"],\
             ["jest-matcher-utils", "npm:27.5.1"],\
             ["pretty-format", "npm:27.5.1"]\
           ],\
@@ -8327,7 +8327,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/testing", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:8.4.5"],\
             ["@types/common-tags", "npm:1.8.1"],\
             ["@types/express", "npm:4.17.13"],\
-            ["@types/jest", "npm:27.5.2"],\
+            ["@types/jest", "npm:28.1.0"],\
             ["@types/node", "npm:16.11.38"],\
             ["common-tags", "npm:1.8.2"],\
             ["express", "npm:4.18.1"],\
@@ -11153,7 +11153,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/common-tags", "npm:1.8.1"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/helmet", "npm:4.0.0"],\
-            ["@types/jest", "npm:27.5.2"],\
+            ["@types/jest", "npm:28.1.0"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
             ["@types/node", "npm:16.11.38"],\
             ["@types/pg", "npm:8.6.5"],\
@@ -11560,7 +11560,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/babel-jest", null],\
             ["@types/babel__core", null],\
             ["@types/esbuild", null],\
-            ["@types/jest", "npm:27.5.2"],\
+            ["@types/jest", "npm:28.1.0"],\
             ["@types/typescript", null],\
             ["babel-jest", null],\
             ["bs-logger", "npm:0.2.6"],\
