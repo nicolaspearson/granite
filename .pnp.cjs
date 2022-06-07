@@ -60,7 +60,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:42.0.0"],\
             ["husky", "npm:8.0.1"],\
             ["jest", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:28.1.1"],\
-            ["jest-environment-node", "npm:28.1.0"],\
+            ["jest-environment-node", "npm:28.1.1"],\
             ["lint-staged", "npm:13.0.0"],\
             ["markdownlint-cli", "npm:0.31.1"],\
             ["prettier", "npm:2.6.2"],\
@@ -1328,17 +1328,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jest/environment", [\
-        ["npm:28.1.0", {\
-          "packageLocation": "./.yarn/cache/@jest-environment-npm-28.1.0-270850375d-376904d662.zip/node_modules/@jest/environment/",\
-          "packageDependencies": [\
-            ["@jest/environment", "npm:28.1.0"],\
-            ["@jest/fake-timers", "npm:28.1.0"],\
-            ["@jest/types", "npm:28.1.0"],\
-            ["@types/node", "npm:17.0.36"],\
-            ["jest-mock", "npm:28.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:28.1.1", {\
           "packageLocation": "./.yarn/cache/@jest-environment-npm-28.1.1-8ecef8e463-a872adbbca.zip/node_modules/@jest/environment/",\
           "packageDependencies": [\
@@ -1373,19 +1362,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@jest/fake-timers", [\
-        ["npm:28.1.0", {\
-          "packageLocation": "./.yarn/cache/@jest-fake-timers-npm-28.1.0-99fa6230ca-d24375bcd5.zip/node_modules/@jest/fake-timers/",\
-          "packageDependencies": [\
-            ["@jest/fake-timers", "npm:28.1.0"],\
-            ["@jest/types", "npm:28.1.0"],\
-            ["@sinonjs/fake-timers", "npm:9.1.2"],\
-            ["@types/node", "npm:17.0.36"],\
-            ["jest-message-util", "npm:28.1.0"],\
-            ["jest-mock", "npm:28.1.0"],\
-            ["jest-util", "npm:28.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:28.1.1", {\
           "packageLocation": "./.yarn/cache/@jest-fake-timers-npm-28.1.1-1361412548-bbb28fd244.zip/node_modules/@jest/fake-timers/",\
           "packageDependencies": [\
@@ -6815,7 +6791,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-unicorn", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:42.0.0"],\
             ["husky", "npm:8.0.1"],\
             ["jest", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:28.1.1"],\
-            ["jest-environment-node", "npm:28.1.0"],\
+            ["jest-environment-node", "npm:28.1.1"],\
             ["lint-staged", "npm:13.0.0"],\
             ["markdownlint-cli", "npm:0.31.1"],\
             ["prettier", "npm:2.6.2"],\
@@ -7879,19 +7855,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jest-environment-node", [\
-        ["npm:28.1.0", {\
-          "packageLocation": "./.yarn/cache/jest-environment-node-npm-28.1.0-0d42cf325a-e65e83962b.zip/node_modules/jest-environment-node/",\
-          "packageDependencies": [\
-            ["jest-environment-node", "npm:28.1.0"],\
-            ["@jest/environment", "npm:28.1.0"],\
-            ["@jest/fake-timers", "npm:28.1.0"],\
-            ["@jest/types", "npm:28.1.0"],\
-            ["@types/node", "npm:17.0.36"],\
-            ["jest-mock", "npm:28.1.0"],\
-            ["jest-util", "npm:28.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:28.1.1", {\
           "packageLocation": "./.yarn/cache/jest-environment-node-npm-28.1.1-18250bc357-fe6fec178a.zip/node_modules/jest-environment-node/",\
           "packageDependencies": [\
@@ -7979,22 +7942,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jest-message-util", [\
-        ["npm:28.1.0", {\
-          "packageLocation": "./.yarn/cache/jest-message-util-npm-28.1.0-e935670ba1-a224f9dbb5.zip/node_modules/jest-message-util/",\
-          "packageDependencies": [\
-            ["jest-message-util", "npm:28.1.0"],\
-            ["@babel/code-frame", "npm:7.16.7"],\
-            ["@jest/types", "npm:28.1.0"],\
-            ["@types/stack-utils", "npm:2.0.1"],\
-            ["chalk", "npm:4.1.2"],\
-            ["graceful-fs", "npm:4.2.10"],\
-            ["micromatch", "npm:4.0.5"],\
-            ["pretty-format", "npm:28.1.0"],\
-            ["slash", "npm:3.0.0"],\
-            ["stack-utils", "npm:2.0.5"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:28.1.1", {\
           "packageLocation": "./.yarn/cache/jest-message-util-npm-28.1.1-c09153ceb7-cca23b9a01.zip/node_modules/jest-message-util/",\
           "packageDependencies": [\
@@ -8013,15 +7960,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["jest-mock", [\
-        ["npm:28.1.0", {\
-          "packageLocation": "./.yarn/cache/jest-mock-npm-28.1.0-c88527067b-013428db82.zip/node_modules/jest-mock/",\
-          "packageDependencies": [\
-            ["jest-mock", "npm:28.1.0"],\
-            ["@jest/types", "npm:28.1.0"],\
-            ["@types/node", "npm:17.0.36"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:28.1.1", {\
           "packageLocation": "./.yarn/cache/jest-mock-npm-28.1.1-66f9031b26-285716d062.zip/node_modules/jest-mock/",\
           "packageDependencies": [\
@@ -10066,17 +10004,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ansi-regex", "npm:5.0.1"],\
             ["ansi-styles", "npm:5.2.0"],\
             ["react-is", "npm:17.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:28.1.0", {\
-          "packageLocation": "./.yarn/cache/pretty-format-npm-28.1.0-d36b244e24-c1018099f8.zip/node_modules/pretty-format/",\
-          "packageDependencies": [\
-            ["pretty-format", "npm:28.1.0"],\
-            ["@jest/schemas", "npm:28.0.2"],\
-            ["ansi-regex", "npm:5.0.1"],\
-            ["ansi-styles", "npm:5.2.0"],\
-            ["react-is", "npm:18.1.0"]\
           ],\
           "linkType": "HARD"\
         }],\
