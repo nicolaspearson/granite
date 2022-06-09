@@ -5256,18 +5256,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["dtsgenerator", [\
-        ["npm:3.15.1", {\
-          "packageLocation": "./.yarn/cache/dtsgenerator-npm-3.15.1-cb7747b27f-58e696adf9.zip/node_modules/dtsgenerator/",\
+        ["npm:3.16.0", {\
+          "packageLocation": "./.yarn/cache/dtsgenerator-npm-3.16.0-c5b815b652-e894b17d7a.zip/node_modules/dtsgenerator/",\
           "packageDependencies": [\
-            ["dtsgenerator", "npm:3.15.1"],\
+            ["dtsgenerator", "npm:3.16.0"],\
             ["commander", "npm:9.3.0"],\
             ["cross-fetch", "npm:3.1.5"],\
             ["debug", "virtual:1f3c51be25fef20e854261431be23d317093b3b463e81e911f4f45a636ff582620db066c9d2a5922a428e07e10fe4788eee8196c796ce2c9bd49d22743fec207#npm:4.3.4"],\
-            ["glob", "npm:7.2.3"],\
+            ["glob", "npm:8.0.3"],\
             ["https-proxy-agent", "npm:5.0.1"],\
             ["js-yaml", "npm:4.1.0"],\
             ["tslib", "npm:2.4.0"],\
-            ["typescript", "patch:typescript@npm%3A4.7.2#~builtin<compat/typescript>::version=4.7.2&hash=7ad353"]\
+            ["typescript", "patch:typescript@npm%3A4.7.3#~builtin<compat/typescript>::version=4.7.3&hash=7ad353"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -11270,7 +11270,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["class-transformer", "npm:0.5.1"],\
             ["class-validator", "npm:0.13.2"],\
             ["common-tags", "npm:1.8.2"],\
-            ["dtsgenerator", "npm:3.15.1"],\
+            ["dtsgenerator", "npm:3.16.0"],\
             ["eslint", "npm:8.17.0"],\
             ["eslint-config-prettier", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:8.5.0"],\
             ["eslint-plugin-prettier", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.0.0"],\
