@@ -98,7 +98,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "granite": "workspace:*",
     "jest": "^28.1.1",
-    "prettier": "^2.7.0",
+    "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "run-script-webpack-plugin": "^0.0.14",
     "source-map-support": "^0.5.21",
