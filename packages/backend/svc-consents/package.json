@@ -95,7 +95,7 @@
     "dtsgenerator": "^3.16.0",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier": "^4.1.0",
     "granite": "workspace:*",
     "jest": "^28.1.1",
     "prettier": "^2.7.1",
