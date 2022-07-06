@@ -4005,9 +4005,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "eslint-import-resolver-typescript@npm:3.2.2"
+"eslint-import-resolver-typescript@npm:^3.2.4":
+  version: 3.2.4
+  resolution: "eslint-import-resolver-typescript@npm:3.2.4"
   dependencies:
     debug: ^4.3.4
     enhanced-resolve: ^5.10.0
@@ -4046,7 +4046,7 @@ __metadata:
       unplugged: true
     "@changesets/cli@2.23.0":
       unplugged: true
-  checksum: 7b3969bdc666021b44acab534ebcd2a03421d2b5ccf55f99e24eae8ff627a9ebcfccbc13b260cacc2c7fb1d2b6a20c10aca0a82b356eac2e200d6080ed1219d9
+  checksum: 3417dabb0e0db5faba38a509780422281dd7feddb4f8a88258b229a4135ea6aa53ab9cafec90b1e845d6a5efd78cbfb182961ab62e1df6bd27bf0c0ad1268f68
   languageName: node
   linkType: hard
 
@@ -5049,7 +5049,7 @@ __metadata:
     eslint: ^8.19.0
     eslint-config-prettier: ^8.5.0
     eslint-import-resolver-node: ^0.3.6
-    eslint-import-resolver-typescript: ^3.2.2
+    eslint-import-resolver-typescript: ^3.2.4
     eslint-plugin-eslint-comments: ^3.2.0
     eslint-plugin-import: ^2.26.0
     eslint-plugin-jest: ^26.5.3
