@@ -1708,10 +1708,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.11.43":
-  version: 16.11.43
-  resolution: "@types/node@npm:16.11.43"
-  checksum: 96d09e68347c49ebf84fe1443360edc3f98336f0794256abc8e4f29ef3070546357cae17083d6fd9767b631239367c4f245fe64accff4af057d17bd6694f0b2b
+"@types/node@npm:^16.11.44":
+  version: 16.11.44
+  resolution: "@types/node@npm:16.11.44"
+  checksum: 6fc2214bab40bbab1d76e02bd2fbcc1b5ed0ae383b4c892bcde6c231734582fca8a45185eb1b0283bae434600d3e44bdacbbdc05725661910e6372778e1881c1
   languageName: node
   linkType: hard
 
@@ -4965,7 +4965,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": ^17.0.3
     "@commitlint/config-conventional": ^17.0.3
-    "@types/node": ^16.11.43
+    "@types/node": ^16.11.44
     "@typescript-eslint/eslint-plugin": ^5.30.6
     "@typescript-eslint/parser": ^5.30.6
     eslint: ^8.19.0
@@ -6417,7 +6417,7 @@ __metadata:
     "@types/common-tags": ^1.8.1
     "@types/express": ^4.17.13
     "@types/jest": ^28.1.5
-    "@types/node": ^16.11.43
+    "@types/node": ^16.11.44
     common-tags: ^1.8.2
     express: ^4.18.1
     granite: "workspace:*"
@@ -8923,7 +8923,7 @@ __metadata:
     "@types/helmet": ^4.0.0
     "@types/jest": 28.1.5
     "@types/jsonwebtoken": ^8.5.8
-    "@types/node": ^16.11.43
+    "@types/node": ^16.11.44
     "@types/pg": ^8.6.5
     "@types/prettier": ^2.6.3
     "@types/supertest": ^2.0.12
