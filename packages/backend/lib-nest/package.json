@@ -47,7 +47,7 @@
     "@nestjs/testing": "^9.0.3",
     "@types/common-tags": "^1.8.1",
     "@types/express": "^4.17.13",
-    "@types/jest": "^28.1.5",
+    "@types/jest": "^28.1.6",
     "@types/node": "^16.11.44",
     "granite": "workspace:*",
     "rimraf": "^3.0.2",
