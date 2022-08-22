@@ -1125,9 +1125,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/common@npm:^9.0.3":
-  version: 9.0.3
-  resolution: "@nestjs/common@npm:9.0.3"
+"@nestjs/common@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "@nestjs/common@npm:9.0.11"
   dependencies:
     iterare: 1.2.1
     tslib: 2.4.0
@@ -1145,7 +1145,7 @@ __metadata:
       optional: true
     class-validator:
       optional: true
-  checksum: 533c05ece2238013ad7f1205195090703287141d78aa2e33dc61e836452e665f0ddfd658b2743757d9e8e34d230703d1a9fcaded0fc2aa14f08d41d8e6d6daaa
+  checksum: 57c6618f13e3c9d16665ba0f10318bd1fea9d46eb5b609c8d79ccf4f41ed2dd97668fa51142aeaed4da5a4cd9388aee9cad5730916f4831b6ea23ded6f0265ce
   languageName: node
   linkType: hard
 
@@ -1165,9 +1165,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/core@npm:^9.0.3":
-  version: 9.0.3
-  resolution: "@nestjs/core@npm:9.0.3"
+"@nestjs/core@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "@nestjs/core@npm:9.0.11"
   dependencies:
     "@nuxtjs/opencollective": 0.3.2
     fast-safe-stringify: 2.1.1
@@ -1190,7 +1190,7 @@ __metadata:
       optional: true
     "@nestjs/websockets":
       optional: true
-  checksum: 8c6a3752f39d809a511e3dc1c30fd0f9adc4d96af874c346a86ae7514178c8aea4338fc0d5bea33c0e0ebcd125bd3f8d029764c8b7b8189c0d1bbab31ec67855
+  checksum: 645081107b3cacbbb6318ca64ccc388bea4b3e3e407183af568d57c05d2f15b4284736efd634b205088ddbedaf55e891096dc7af6b1e07858eb470559f3378d1
   languageName: node
   linkType: hard
 
@@ -1223,9 +1223,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/platform-express@npm:^9.0.3":
-  version: 9.0.3
-  resolution: "@nestjs/platform-express@npm:9.0.3"
+"@nestjs/platform-express@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "@nestjs/platform-express@npm:9.0.11"
   dependencies:
     body-parser: 1.20.0
     cors: 2.8.5
@@ -1235,7 +1235,7 @@ __metadata:
   peerDependencies:
     "@nestjs/common": ^9.0.0
     "@nestjs/core": ^9.0.0
-  checksum: 48c8c99d1209b910c6cb2e6c3a96ec6577d3a94cb23df95370df6855347a3c7b480e3063784f80461cfa8e8a4ae2bc9468cfebd866172547237fe2b4f4a99338
+  checksum: 64c7da4c754dac92f753274740fc23618c2efee40b6195429f4e6633c73826de1fe03fcf386bb7612fdd2fa720077ad117b79a7d289336dc062bc0a94d1cf9b3
   languageName: node
   linkType: hard
 
@@ -1275,9 +1275,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/testing@npm:^9.0.3":
-  version: 9.0.3
-  resolution: "@nestjs/testing@npm:9.0.3"
+"@nestjs/testing@npm:^9.0.11":
+  version: 9.0.11
+  resolution: "@nestjs/testing@npm:9.0.11"
   dependencies:
     tslib: 2.4.0
   peerDependencies:
@@ -1290,7 +1290,7 @@ __metadata:
       optional: true
     "@nestjs/platform-express":
       optional: true
-  checksum: 540dcf38bc635d9034b04e0ff3daffbd7ff4e1932f12ea3ce87ff75662081cad80ca415d137303dd18b36d48aa399576af0a8450e067d7bc45afce2007d5902b
+  checksum: 8343529a878869d2b5cbc51a63c4517cce6f38e88a39fd4a527f566878638669faf3c10ca1e89b8b1a137c2f21437718d2004d22b02e1df57318995c733ed0bb
   languageName: node
   linkType: hard
 
@@ -6424,12 +6424,12 @@ __metadata:
   dependencies:
     "#": "link:./test"
     $: "link:./src"
-    "@nestjs/common": ^9.0.3
+    "@nestjs/common": ^9.0.11
     "@nestjs/config": ^2.2.0
-    "@nestjs/core": ^9.0.3
-    "@nestjs/platform-express": ^9.0.3
+    "@nestjs/core": ^9.0.11
+    "@nestjs/platform-express": ^9.0.11
     "@nestjs/swagger": ^6.0.5
-    "@nestjs/testing": ^9.0.3
+    "@nestjs/testing": ^9.0.11
     "@types/common-tags": ^1.8.1
     "@types/express": ^4.17.13
     "@types/jest": ^28.1.6
@@ -8925,14 +8925,14 @@ __metadata:
     "#": "link:./test"
     $: "link:./src"
     "@nestjs/cli": ^9.0.0
-    "@nestjs/common": ^9.0.3
+    "@nestjs/common": ^9.0.11
     "@nestjs/config": ^2.2.0
-    "@nestjs/core": ^9.0.3
+    "@nestjs/core": ^9.0.11
     "@nestjs/jwt": ^9.0.0
-    "@nestjs/platform-express": ^9.0.3
+    "@nestjs/platform-express": ^9.0.11
     "@nestjs/schematics": ^9.0.1
     "@nestjs/swagger": ^6.0.5
-    "@nestjs/testing": ^9.0.3
+    "@nestjs/testing": ^9.0.11
     "@nestjs/typeorm": ^8.0.4
     "@types/common-tags": ^1.8.1
     "@types/express": ^4.17.13
