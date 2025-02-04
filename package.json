@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=v16.16.0"
+    "node": ">=16.20.2"
   },
   "scripts": {
     "clean:jest": "jest --clearCache",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@types/node": "^16.11.48",
+    "@types/node": "^16.18.126",
     "@typescript-eslint/eslint-plugin": "^5.30.6",
     "@typescript-eslint/parser": "^5.30.6",
     "eslint": "^8.19.0",

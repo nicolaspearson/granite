@@ -20,7 +20,7 @@
     "src/**/*"
   ],
   "engines": {
-    "node": ">=v16.16.0"
+    "node": ">=16.20.2"
   },
   "scripts": {
     "build": "rimraf dist && webpack --config webpack.config.js",
@@ -48,7 +48,7 @@
     "@types/common-tags": "^1.8.1",
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.8",
-    "@types/node": "^16.11.48",
+    "@types/node": "^16.18.126",
     "granite": "workspace:*",
     "rimraf": "^3.0.2",
     "ts-loader": "^9.3.1",

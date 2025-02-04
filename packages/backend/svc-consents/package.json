@@ -21,7 +21,7 @@
     "src/**/*"
   ],
   "engines": {
-    "node": ">=v16.16.0"
+    "node": ">=16.20.2"
   },
   "scripts": {
     "build": "rimraf dist && webpack --config webpack.config.js",
@@ -82,7 +82,7 @@
     "@types/helmet": "^4.0.0",
     "@types/jest": "28.1.8",
     "@types/jsonwebtoken": "^8.5.8",
-    "@types/node": "^16.11.48",
+    "@types/node": "^16.18.126",
     "@types/pg": "^8.6.5",
     "@types/prettier": "^2.6.3",
     "@types/supertest": "^2.0.12",
