@@ -2487,10 +2487,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/common-tags", [\
-        ["npm:1.8.1", {\
-          "packageLocation": "./.yarn/cache/@types-common-tags-npm-1.8.1-cb81ee674b-bec6f68c8c.zip/node_modules/@types/common-tags/",\
+        ["npm:1.8.4", {\
+          "packageLocation": "./.yarn/cache/@types-common-tags-npm-1.8.4-7d31f1aeb6-9fad055269.zip/node_modules/@types/common-tags/",\
           "packageDependencies": [\
-            ["@types/common-tags", "npm:1.8.1"]\
+            ["@types/common-tags", "npm:1.8.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9179,7 +9179,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/platform-express", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:9.0.11"],\
             ["@nestjs/swagger", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:6.0.5"],\
             ["@nestjs/testing", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:9.0.11"],\
-            ["@types/common-tags", "npm:1.8.1"],\
+            ["@types/common-tags", "npm:1.8.4"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/jest", "npm:28.1.8"],\
             ["@types/node", "npm:16.18.126"],\
@@ -12292,7 +12292,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/swagger", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:6.0.5"],\
             ["@nestjs/testing", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:9.0.11"],\
             ["@nestjs/typeorm", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.4"],\
-            ["@types/common-tags", "npm:1.8.1"],\
+            ["@types/common-tags", "npm:1.8.4"],\
             ["@types/express", "npm:4.17.13"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:28.1.8"],\
