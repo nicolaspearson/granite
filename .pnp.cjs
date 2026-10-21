@@ -2687,6 +2687,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.36"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:8.5.9", {\
+          "packageLocation": "./.yarn/cache/@types-jsonwebtoken-npm-8.5.9-79c2843a81-33815ab02d.zip/node_modules/@types/jsonwebtoken/",\
+          "packageDependencies": [\
+            ["@types/jsonwebtoken", "npm:8.5.9"],\
+            ["@types/node", "npm:17.0.36"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@types/mime", [\
@@ -12356,7 +12364,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/express", "npm:4.17.25"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:28.1.8"],\
-            ["@types/jsonwebtoken", "npm:8.5.8"],\
+            ["@types/jsonwebtoken", "npm:8.5.9"],\
             ["@types/node", "npm:16.18.126"],\
             ["@types/pg", "npm:8.6.5"],\
             ["@types/prettier", "npm:2.6.3"],\
