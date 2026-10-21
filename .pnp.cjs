@@ -2556,6 +2556,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/serve-static", "npm:1.13.10"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:4.17.25", {\
+          "packageLocation": "./.yarn/cache/@types-express-npm-4.17.25-3e4c367cc7-285d160084.zip/node_modules/@types/express/",\
+          "packageDependencies": [\
+            ["@types/express", "npm:4.17.25"],\
+            ["@types/body-parser", "npm:1.19.2"],\
+            ["@types/express-serve-static-core", "npm:4.19.9"],\
+            ["@types/qs", "npm:6.9.7"],\
+            ["@types/serve-static", "npm:1.15.10"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["@types/express-serve-static-core", [\
@@ -2566,6 +2577,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:17.0.36"],\
             ["@types/qs", "npm:6.9.7"],\
             ["@types/range-parser", "npm:1.2.4"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:4.19.9", {\
+          "packageLocation": "./.yarn/cache/@types-express-serve-static-core-npm-4.19.9-ed37b46b73-5872f2bfc1.zip/node_modules/@types/express-serve-static-core/",\
+          "packageDependencies": [\
+            ["@types/express-serve-static-core", "npm:4.19.9"],\
+            ["@types/node", "npm:17.0.36"],\
+            ["@types/qs", "npm:6.9.7"],\
+            ["@types/range-parser", "npm:1.2.4"],\
+            ["@types/send", "npm:1.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2586,6 +2608,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@types/helmet", "npm:4.0.0"],\
             ["helmet", "npm:5.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/http-errors", [\
+        ["npm:2.0.5", {\
+          "packageLocation": "./.yarn/cache/@types-http-errors-npm-2.0.5-fc57abf6db-a88da66936.zip/node_modules/@types/http-errors/",\
+          "packageDependencies": [\
+            ["@types/http-errors", "npm:2.0.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2758,6 +2789,25 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/send", [\
+        ["npm:0.17.6", {\
+          "packageLocation": "./.yarn/cache/@types-send-npm-0.17.6-fe650e1f5c-5bd287f135.zip/node_modules/@types/send/",\
+          "packageDependencies": [\
+            ["@types/send", "npm:0.17.6"],\
+            ["@types/mime", "npm:1.3.2"],\
+            ["@types/node", "npm:17.0.36"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@types-send-npm-1.2.1-64553bf549-3b8388edee.zip/node_modules/@types/send/",\
+          "packageDependencies": [\
+            ["@types/send", "npm:1.2.1"],\
+            ["@types/node", "npm:17.0.36"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/serve-static", [\
         ["npm:1.13.10", {\
           "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.13.10-5434e2c519-eaca858739.zip/node_modules/@types/serve-static/",\
@@ -2765,6 +2815,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/serve-static", "npm:1.13.10"],\
             ["@types/mime", "npm:1.3.2"],\
             ["@types/node", "npm:17.0.36"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.15.10", {\
+          "packageLocation": "./.yarn/cache/@types-serve-static-npm-1.15.10-7bd7926ff3-f216eef2aa.zip/node_modules/@types/serve-static/",\
+          "packageDependencies": [\
+            ["@types/serve-static", "npm:1.15.10"],\
+            ["@types/http-errors", "npm:2.0.5"],\
+            ["@types/node", "npm:17.0.36"],\
+            ["@types/send", "npm:0.17.6"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -9180,7 +9240,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/swagger", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:6.0.5"],\
             ["@nestjs/testing", "virtual:525fefa4fe0c90209738350fac1a93dc46cbfee80eeb4c8072db65277ec2fa7bca82d51b33679d7656f2f19484fbe006fef0dddfe0fd8c13fe128b429cd7ee1f#npm:9.0.11"],\
             ["@types/common-tags", "npm:1.8.4"],\
-            ["@types/express", "npm:4.17.13"],\
+            ["@types/express", "npm:4.17.25"],\
             ["@types/jest", "npm:28.1.8"],\
             ["@types/node", "npm:16.18.126"],\
             ["common-tags", "npm:1.8.2"],\
@@ -12293,7 +12353,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/testing", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:9.0.11"],\
             ["@nestjs/typeorm", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:8.0.4"],\
             ["@types/common-tags", "npm:1.8.4"],\
-            ["@types/express", "npm:4.17.13"],\
+            ["@types/express", "npm:4.17.25"],\
             ["@types/helmet", "npm:4.0.0"],\
             ["@types/jest", "npm:28.1.8"],\
             ["@types/jsonwebtoken", "npm:8.5.8"],\
@@ -12374,7 +12434,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/__virtual__/swagger-ui-express-virtual-322997d062/0/cache/swagger-ui-express-npm-4.5.0-bb65f0369a-67f1725bce.zip/node_modules/swagger-ui-express/",\
           "packageDependencies": [\
             ["swagger-ui-express", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.5.0"],\
-            ["@types/express", "npm:4.17.13"],\
+            ["@types/express", "npm:4.17.25"],\
             ["express", "npm:4.18.1"],\
             ["swagger-ui-dist", "npm:4.11.1"]\
           ],\
