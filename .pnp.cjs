@@ -3002,10 +3002,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/validator", [\
-        ["npm:13.7.5", {\
-          "packageLocation": "./.yarn/cache/@types-validator-npm-13.7.5-12756303a3-cc143351a2.zip/node_modules/@types/validator/",\
+        ["npm:13.15.10", {\
+          "packageLocation": "./.yarn/cache/@types-validator-npm-13.15.10-eacbd3fa04-6a1964a617.zip/node_modules/@types/validator/",\
           "packageDependencies": [\
-            ["@types/validator", "npm:13.7.5"]\
+            ["@types/validator", "npm:13.15.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13190,7 +13190,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/supertest", "npm:2.0.16"],\
             ["@types/swagger-ui-express", "npm:4.1.3"],\
             ["@types/uuid", "npm:8.3.4"],\
-            ["@types/validator", "npm:13.7.5"],\
+            ["@types/validator", "npm:13.15.10"],\
             ["@types/webpack-env", "npm:1.17.0"],\
             ["@typescript-eslint/eslint-plugin", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.30.6"],\
             ["@typescript-eslint/parser", "virtual:e1ea348b8e58466bbc3cda754f9b354b6eec840fe9a9977298ba5307c775cb493a6bc6bc15d0bf2f4bbd2a9733986b6a0d50282bbf77bc9aa9ec6942537f2d54#npm:5.30.6"],\
