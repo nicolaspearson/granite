@@ -63,7 +63,7 @@
     "pretty-quick": "^3.3.1",
     "run-script-webpack-plugin": "^0.2.3",
     "ts-jest": "^28.0.8",
-    "ts-loader": "^9.3.1",
+    "ts-loader": "^9.6.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4",
