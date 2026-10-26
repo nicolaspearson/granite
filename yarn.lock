@@ -2047,7 +2047,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/validator@npm:^13.15.10":
+"@types/validator@npm:^13.15.10, @types/validator@npm:^13.15.3":
   version: 13.15.10
   resolution: "@types/validator@npm:13.15.10"
   checksum: 6a1964a617fdd9967d15e7ce1e6231255febe4e9fc2a6c381471b47a0f26d19b3309f0c15448cdeaf46e8f3d0e4baf49ed1181b2aef57b90ceace4f010eee2f3
@@ -3601,13 +3601,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"class-validator@npm:^0.13.2":
-  version: 0.13.2
-  resolution: "class-validator@npm:0.13.2"
+"class-validator@npm:^0.14.0":
+  version: 0.14.4
+  resolution: "class-validator@npm:0.14.4"
   dependencies:
-    libphonenumber-js: ^1.9.43
-    validator: ^13.7.0
-  checksum: 0deb4c29faa18345f6989fd7eaaaa07b05caae5298603fcd6485531c6daad503e5d2b24cc1342e4fc88ae5ba0acffdc24d0fc333110ef3f21a667cd8a79e1258
+    "@types/validator": ^13.15.3
+    libphonenumber-js: ^1.11.1
+    validator: ^13.15.22
+  checksum: 1f06f71ea97f82b6b3b855176b7613b7da4ae502fec3bfd5281992caf08544b06f947efd7102c30c49ad3e1d7aaea450ef66e7ca51341854379c1203c2b8ed1d
   languageName: node
   linkType: hard
 
@@ -7650,10 +7651,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"libphonenumber-js@npm:^1.9.43":
-  version: 1.10.6
-  resolution: "libphonenumber-js@npm:1.10.6"
-  checksum: 8754240b52f87bacfec01aa55f0cf6393d898ec5548c6da92a68ed1b4cb6129a1be9353e0f4c1b7e7ba9035b380d5a0d7d3142929dea5ad44bfe8d21934fbc2d
+"libphonenumber-js@npm:^1.11.1":
+  version: 1.13.15
+  resolution: "libphonenumber-js@npm:1.13.15"
+  checksum: 40dcaa2415fcae8d6625162c141c773bd87a37f0823a30f1a94ee68282a2d9f630ea1c9c5a31f90cff7fbfaebc5f50f5a7f6425575fdab2bab7e50dd4636f6df
   languageName: node
   linkType: hard
 
@@ -10913,7 +10914,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.30.6
     "@typescript-eslint/parser": ^5.30.6
     class-transformer: ^0.5.1
-    class-validator: ^0.13.2
+    class-validator: ^0.14.0
     common-tags: ^1.8.2
     dtsgenerator: ^3.19.2
     eslint: ^8.57.1
@@ -11772,6 +11773,13 @@ __metadata:
     spdx-correct: ^3.0.0
     spdx-expression-parse: ^3.0.0
   checksum: 35703ac889d419cf2aceef63daeadbe4e77227c39ab6287eeb6c1b36a746b364f50ba22e88591f5d017bc54685d8137bc2d328d0a896e4d3fd22093c0f32a9ad
+  languageName: node
+  linkType: hard
+
+"validator@npm:^13.15.22":
+  version: 13.15.35
+  resolution: "validator@npm:13.15.35"
+  checksum: c7ff69e12dcee71f0672c5f4b392aec9c2dbef68fb1fc6ec8546a4b2bdb2623bdfe4a9b112188566962be7d422d7d21de2ac731ae596dbd33ab1594c4cec4782
   languageName: node
   linkType: hard
 
