@@ -5141,7 +5141,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["class-validator", "npm:0.13.2"],\
             ["libphonenumber-js", "npm:1.10.6"],\
-            ["validator", "npm:13.7.0"]\
+            ["validator", "npm:13.15.35"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13537,7 +13537,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["typeorm", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:0.2.45"],\
             ["typescript", "patch:typescript@npm%3A4.7.4#~builtin<compat/typescript>::version=4.7.4&hash=f456af"],\
             ["uuid", "npm:8.3.2"],\
-            ["validator", "npm:13.7.0"],\
+            ["validator", "npm:13.15.35"],\
             ["webpack", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:5.73.0"],\
             ["webpack-cli", "virtual:dac8dd672af74e6a501bd9e40afd87b42167b474dda02437d869a7abd4c94f609390cd000c0d8d62bfa01f5024dff7583f22651969d9611f67ed2c85d5bd7d23#npm:4.10.0"],\
             ["webpack-pnp-externals", "npm:1.1.0"]\
@@ -14665,10 +14665,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["validator", [\
-        ["npm:13.7.0", {\
-          "packageLocation": "./.yarn/cache/validator-npm-13.7.0-624277e841-2b83283de1.zip/node_modules/validator/",\
+        ["npm:13.15.35", {\
+          "packageLocation": "./.yarn/cache/validator-npm-13.15.35-eaad1e4bed-c7ff69e12d.zip/node_modules/validator/",\
           "packageDependencies": [\
-            ["validator", "npm:13.7.0"]\
+            ["validator", "npm:13.15.35"]\
           ],\
           "linkType": "HARD"\
         }]\
